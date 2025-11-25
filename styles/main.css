@@ -1,0 +1,71 @@
+  /* --- CORE CSS --- */
+        html, body { height: 100%; width: 100%; overflow: hidden; overscroll-behavior: none; background-color: #f9fafb; -webkit-tap-highlight-color: transparent; }
+        
+        /* Security: Disable Selection Globally */
+        *, *:before, *:after { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+        
+        #app-root { position: absolute; top: 0; left: 0; width: 100%; height: 100dvh; display: flex; flex-direction: column; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); padding-left: env(safe-area-inset-left); padding-right: env(safe-area-inset-right); background-color: #fff; }
+        .custom-scroll::-webkit-scrollbar { width: 6px; height: 6px; }
+        .custom-scroll::-webkit-scrollbar-track { background: #f1f1f1; }
+        .custom-scroll::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 4px; }
+        .palette-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; }
+        .status-btn { height: 32px; width: 100%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 0.85rem; border: 1px solid #d1d5db; cursor: pointer; transition: all 0.1s; position: relative; }
+        .status-btn:hover { transform: scale(1.05); z-index: 10; }
+        .st-answered { background-color: #22c55e; color: white; border-color: #16a34a; clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%); }
+        .st-not-answered { background-color: #ef4444; color: white; border-color: #dc2626; clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0% 75%); }
+        .st-marked { background-color: #a855f7; color: white; border-radius: 50%; border-color: #9333ea; }
+        .st-marked-answered { background-color: #a855f7; color: white; border-radius: 50%; border-color: #9333ea; position: relative; }
+        .st-marked-answered::after { content: '✓'; position: absolute; bottom: 0; right: 0; font-size: 10px; background: #22c55e; border-radius: 50%; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; }
+        .st-not-visited { background-color: #f3f4f6; color: #374151; border-radius: 4px; }
+        .st-current { border: 2px solid #2563eb !important; box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3); }
+        #calc-modal { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); }
+        .calc-key:active { transform: translateY(1px); }
+        
+        /* Security: Allow input selection but block everything else */
+        input { -webkit-user-select: text !important; user-select: text !important; pointer-events: auto; }
+        
+        /* WATERMARK STYLING */
+        .watermark-container { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            pointer-events: none; z-index: 9998; 
+            overflow: hidden; display: flex; flex-wrap: wrap; 
+            opacity: 0.08; /* Slightly more visible */
+            mix-blend-mode: multiply;
+        }
+        .watermark-item { 
+            width: 250px; height: 250px; 
+            display: flex; flex-direction: column; align-items: center; justify-content: center; 
+            transform: rotate(-30deg); 
+            font-weight: 900; font-size: 1.1rem; color: #000; 
+            white-space: nowrap; 
+            user-select: none;
+        }
+        .watermark-ts { font-size: 0.8rem; font-weight: 500; margin-top: 4px; }
+
+        #question-text img, #options-area img, .qp-image { max-width: 100% !important; max-height: 35vh !important; width: auto !important; height: auto !important; object-fit: contain !important; display: block; margin: 0.5rem auto; border: 1px solid #e2e8f0; border-radius: 6px; cursor: zoom-in; background-color: white; padding: 4px; pointer-events: auto; }
+        #lightbox-modal { background-color: rgba(0, 0, 0, 0.95); cursor: zoom-out; }
+        .drawer-backdrop { background-color: rgba(0,0,0,0.5); position: absolute; inset: 0; z-index: 45; transition: opacity 0.3s; }
+        
+        /* Obfuscation Class */
+        .blur-sensitive { filter: blur(4px); transition: filter 0.2s; }
+        .blur-sensitive:hover { filter: blur(0); }
+        
+        /* Content Blur on Violation/Blur */
+        .content-blurred { filter: blur(8px) !important; pointer-events: none; user-select: none; }
+
+        /* Security Overlay - Invisible shield against Right Click/Drag */
+        #security-shield { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9999; pointer-events: none; }
+
+        /* PRINT PROTECTION */
+        @media print {
+            body { display: none !important; }
+            html::after { 
+                content: "SCREENSHOT/PRINTING ATTEMPT DETECTED. VIOLATION LOGGED."; 
+                position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+                background: #000; color: #ff0000; 
+                display: flex; justify-content: center; align-items: center; 
+                font-size: 24px; font-weight: bold; z-index: 10000; text-align: center;
+            }
+        }
+
+        @media (max-width: 640px) { .status-btn { height: 32px; font-size: 0.75rem; } .compact-header, .compact-footer { height: 48px !important; } }
