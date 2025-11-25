@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>JEE Advanced Mock Platform (Secure Mode)</title>
+    
+    <!-- Security: Content Security Policy to restrict data sources -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:;">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="scripts/script.js"></script>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- KaTeX (Math Rendering) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <link href="styles/main.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], mono: ['JetBrains Mono', 'monospace'] },
+                    colors: {
+                        jee: { green: '#22c55e', red: '#ef4444', gray: '#e5e7eb', purple: '#a855f7', blue: '#2563eb' }
+                    },
+                    animation: {
+                        'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'spin-slow': 'spin 3s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body class="text-gray-800" oncontextmenu="return false;">
+
+<div id="security-shield"></div>
+
+<div id="app-root">
+    <!-- SCREEN 1: PAPER SELECTION -->
+    <div id="screen-setup" class="absolute inset-0 z-50 bg-gradient-to-br from-slate-900 to-slate-800 flex flex-col items-center justify-start overflow-y-auto custom-scroll p-4 w-full h-full">
+        <div class="text-center mb-6 mt-4 animate-fade-in-down max-w-2xl shrink-0">
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-2 tracking-tight">JEE <span class="text-blue-400">Mains</span> 2026</h1>
+            <p class="text-slate-400 mb-4 text-sm">SECURE BROWSER EDITION • 70 Papers</p>
+            
+            <button id="btn-go-fullscreen" class="bg-slate-700 border border-slate-600 hover:bg-slate-600 text-slate-200 px-4 py-2 rounded-full text-xs font-bold transition mb-4 shadow-lg inline-flex items-center">
+                <i class="fas fa-expand mr-2"></i> GO FULL SCREEN
+            </button>
+            
+            <div class="w-full"></div> <!-- Spacer to force break if needed -->
+
+            <div id="resume-alert" class="hidden bg-emerald-600 text-white px-4 py-2 rounded-lg shadow-lg cursor-pointer hover:bg-emerald-500 transition text-sm font-medium inline-block">
+                <i class="fas fa-history mr-2"></i> Resume Previous Session
+            </div>
+        </div>
+        
+        <!-- Grid of 70 Papers -->
+        <div id="paper-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 w-full max-w-7xl px-2 pb-10">
+            <!-- Injected via JS -->
+        </div>
+    </div>
+
+    <!-- SCREEN 2: INSTRUCTIONS -->
+    <div id="screen-instructions" class="hidden fixed inset-0 z-[60] bg-white flex flex-col w-full h-full">
+        <header class="bg-slate-800 text-white p-4 shadow-md flex justify-between items-center shrink-0 h-14">
+            <h2 class="text-lg md:text-xl font-bold">Instructions</h2>
+            <button id="btn-close-inst" class="text-slate-300 hover:text-white"><i class="fas fa-times"></i></button>
+        </header>
+        <div class="flex-1 overflow-y-auto custom-scroll p-5 md:p-8 max-w-5xl mx-auto text-sm leading-relaxed text-gray-700">
+             <h3 class="font-bold text-lg mb-2">Paper Configuration:</h3>
+             <ul class="list-disc pl-5 mb-4">
+                 <li><strong id="inst-paper-name"></strong></li>
+                 <li>Total Questions: 90 (30 per subject)</li>
+                 <li>Correct: +4, Wrong: -1 (Marking applied to both Sections)</li>
+                 <li><strong>Note:</strong> Paper sequence is randomized for security.</li>
+             </ul>
+             <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6 text-sm rounded-r">
+                 <p class="font-bold text-red-700">STRICT PROCTORING ENABLED:</p>
+                 <ul class="list-disc pl-5 text-red-600">
+                     <li>Fullscreen is mandatory.</li>
+                     <li>Tab switching/minimizing is logged as a violation.</li>
+                     <li>Right-click, Copy/Paste, and Keyboard Shortcuts are disabled.</li>
+                     <li>Developer Tools access is blocked and logged.</li>
+                 </ul>
+             </div>
+        </div>
+        <div class="p-4 border-t bg-gray-50 flex justify-center shrink-0">
+            <button id="btn-start-exam" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-10 rounded shadow-lg transition w-full md:w-auto">Start Exam</button>
+        </div>
+    </div>
+
+    <!-- SCREEN 3: EXAM INTERFACE -->
+    <div id="screen-exam" class="hidden flex-col h-full w-full relative">
+        <!-- Header -->
+        <header class="bg-slate-800 text-white h-12 md:h-14 flex items-center justify-between px-3 md:px-4 shadow-md shrink-0 z-50 compact-header">
+            <div class="flex items-center space-x-2 md:space-x-3 overflow-hidden">
+                <div class="font-bold text-sm md:text-lg tracking-wide whitespace-nowrap"><span class="text-blue-400">JEE</span> Mock</div>
+                <div class="hidden md:block h-6 w-px bg-slate-600"></div>
+                <div id="exam-name-display" class="hidden md:block text-sm text-slate-300 truncate max-w-[200px]">Paper 1</div>
+                <div class="flex items-center space-x-1 md:space-x-2 bg-red-900/50 border border-red-500/50 px-2 py-0.5 rounded text-[10px] md:text-xs text-red-200"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span></span><span class="hidden sm:inline">Secure Browser</span></div>
+            </div>
+            <div class="flex items-center space-x-2 md:space-x-4">
+                <div class="flex items-center space-x-2 bg-slate-700 px-2 md:px-3 py-0.5 md:py-1 rounded-full border border-slate-600">
+                    <i class="far fa-clock text-blue-400 text-xs md:text-sm"></i>
+                    <span id="timer-display" class="font-mono text-xs md:text-xl font-bold">00:00:00</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-2">
+                    <button id="btn-toggle-calc" class="p-2 hover:bg-slate-700 rounded text-slate-300 hover:text-white" title="Scientific Calculator"><i class="fas fa-calculator"></i></button>
+                    <button id="btn-show-qp" class="p-2 hover:bg-slate-700 rounded text-slate-300 hover:text-white" title="Question Paper"><i class="fas fa-file-alt"></i></button>
+                    <div class="flex text-xs bg-slate-700 rounded border border-slate-600">
+                        <button id="btn-font-dec" class="px-2 py-1 hover:bg-slate-600 border-r border-slate-600">A-</button>
+                        <button id="btn-font-inc" class="px-2 py-1 hover:bg-slate-600">A+</button>
+                    </div>
+                </div>
+                <button id="btn-mobile-menu" class="md:hidden p-1.5 text-slate-300 hover:text-white"><i class="fas fa-ellipsis-v"></i></button>
+                <button id="btn-palette-mob" class="md:hidden p-1.5 hover:bg-slate-700 rounded text-white bg-blue-600"><i class="fas fa-th"></i></button>
+            </div>
+        </header>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-700 text-white p-2 flex justify-around border-b border-slate-600 z-40 absolute top-12 left-0 right-0 shadow-lg">
+            <button id="btn-mob-calc" class="p-2 flex flex-col items-center text-[10px]"><i class="fas fa-calculator mb-1"></i> Calc</button>
+            <button id="btn-mob-qp" class="p-2 flex flex-col items-center text-[10px]"><i class="fas fa-file-alt mb-1"></i> Paper</button>
+        </div>
+
+        <!-- Workspace -->
+        <div class="flex flex-1 overflow-hidden relative z-0">
+            <div id="exam-watermark" class="watermark-container"></div>
+            <div id="palette-backdrop" class="hidden md:hidden drawer-backdrop"></div>
+            
+            <main class="flex-1 flex flex-col bg-white overflow-hidden relative w-full z-10" id="exam-main-area">
+                <div class="bg-gray-100 border-b border-gray-200 px-2 md:px-4 py-1.5 md:py-2 flex items-center space-x-2 overflow-x-auto no-scrollbar shrink-0" id="subject-tabs"></div>
+                <div class="px-3 md:px-6 py-2 border-b border-gray-100 flex justify-between items-center bg-white shrink-0">
+                    <div class="flex flex-col">
+                        <div class="flex items-center space-x-2">
+                            <span class="font-bold text-sm md:text-lg text-gray-700">Q.<span id="q-num">1</span></span>
+                            <span id="q-type-badge" class="text-[10px] md:text-xs font-semibold px-1.5 py-0.5 rounded bg-blue-100 text-blue-700 uppercase">MCQ</span>
+                        </div>
+                        <div class="text-[10px] text-gray-500 mt-0.5" id="section-badge">Section A</div>
+                    </div>
+                    <div class="text-[10px] md:text-sm font-medium flex items-center">
+                        <span class="text-green-600 mr-2 md:mr-3">+4</span><span class="text-red-500">-1</span>
+                    </div>
+                </div>
+                <div class="flex-1 overflow-y-auto custom-scroll p-3 md:p-6 relative" id="question-area">
+                    <div id="question-text" class="text-sm md:text-lg leading-relaxed text-gray-800 mb-4 md:mb-6 break-words select-none overflow-x-auto" oncopy="return false" oncut="return false"></div>
+                    <div id="options-area" class="space-y-2 md:space-y-3 max-w-4xl transition-all pb-2 select-none"></div>
+                </div>
+                <div class="h-12 md:h-16 bg-gray-50 border-t border-gray-200 flex items-center justify-between px-3 md:px-6 shrink-0 z-10 compact-footer">
+                    <div class="flex space-x-2">
+                        <button id="btn-clear" class="px-2 md:px-4 py-1 md:py-2 text-[10px] md:text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded hover:bg-gray-50">Clear</button>
+                        <button id="btn-review" class="px-2 md:px-4 py-1 md:py-2 text-[10px] md:text-sm font-medium text-white bg-purple-600 rounded hover:bg-purple-700">Review</button>
+                    </div>
+                    <div class="flex space-x-2">
+                        <button id="btn-prev" class="px-3 md:px-4 py-1 md:py-2 text-[10px] md:text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded hover:bg-gray-50">Prev</button>
+                        <button id="btn-next" class="px-4 md:px-6 py-1 md:py-2 text-[10px] md:text-sm font-bold text-white bg-blue-600 rounded hover:bg-blue-700 shadow-sm">Next</button>
+                    </div>
+                </div>
+            </main>
+
+            <aside id="palette-sidebar" class="absolute inset-y-0 right-0 w-72 md:w-80 bg-white border-l border-gray-200 flex flex-col z-50 transform translate-x-full md:translate-x-0 md:relative md:flex transition-transform duration-300 shadow-2xl md:shadow-none h-full">
+                <div class="p-3 md:p-4 border-b border-gray-200 bg-gray-50 flex items-center space-x-3 shrink-0">
+                    <div class="h-8 w-8 md:h-10 md:w-10 rounded-full bg-slate-300 flex items-center justify-center text-slate-600 font-bold text-xs md:text-base">U</div>
+                    <div class="flex-1 min-w-0">
+                        <div class="text-xs md:text-sm font-bold text-gray-800 truncate">Candidate</div>
+                        <div class="text-[10px] md:text-xs text-gray-500">ID: JEEPREMIUM</div>
+                    </div>
+                    <button id="btn-close-palette" class="ml-auto md:hidden text-gray-500 p-2"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="p-2 md:p-3 grid grid-cols-2 gap-2 text-[10px] border-b border-gray-200 bg-white shrink-0">
+                    <div class="flex items-center"><span class="w-3 h-3 bg-jee-green mr-1"></span> Answered</div>
+                    <div class="flex items-center"><span class="w-3 h-3 bg-jee-red mr-1"></span> Not Answered</div>
+                    <div class="flex items-center"><span class="w-3 h-3 bg-gray-200 mr-1 border border-gray-300"></span> Not Vis</div>
+                    <div class="flex items-center"><span class="w-3 h-3 bg-jee-purple rounded-full mr-1"></span> Marked</div>
+                </div>
+                <div class="flex-1 overflow-y-auto custom-scroll p-3 md:p-4 bg-slate-50">
+                    <h3 class="font-bold text-gray-700 text-xs md:text-sm mb-2 md:mb-3" id="palette-section-title">Physics</h3>
+                    <div id="question-grid" class="palette-grid"></div>
+                </div>
+                <div class="p-3 md:p-4 border-t border-gray-200 bg-white shrink-0">
+                    <button id="btn-submit-main" class="w-full py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded shadow text-xs md:text-base transition">SUBMIT</button>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- RESULTS SCREEN -->
+    <div id="screen-result" class="hidden absolute inset-0 bg-white z-50 overflow-y-auto w-full h-full custom-scroll">
+        <div class="max-w-4xl mx-auto p-4 md:p-8">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-6 text-gray-800">Exam Summary</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-center"><div class="text-gray-500 text-xs font-medium uppercase">Score</div><div class="text-3xl font-bold text-blue-600 mt-2" id="res-score">0</div><div class="text-xs text-blue-400 mt-1">/ <span id="res-max-score">300</span></div></div>
+                <div class="bg-green-50 p-4 rounded-xl border border-green-100 text-center"><div class="text-gray-500 text-xs font-medium uppercase">Correct</div><div class="text-3xl font-bold text-green-600 mt-2" id="res-correct">0</div></div>
+                <div class="bg-red-50 p-4 rounded-xl border border-red-100 text-center"><div class="text-gray-500 text-xs font-medium uppercase">Incorrect</div><div class="text-3xl font-bold text-red-600 mt-2" id="res-wrong">0</div></div>
+            </div>
+            <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden overflow-x-auto custom-scroll">
+                <table class="w-full text-left border-collapse min-w-[500px]">
+                    <thead class="bg-gray-50 text-gray-600 text-xs uppercase"><tr><th class="p-3 font-semibold">Q. No</th><th class="p-3 font-semibold">Status</th><th class="p-3 font-semibold">Result</th><th class="p-3 font-semibold">Marked Ans</th></tr></thead>
+                    <tbody id="result-table-body" class="text-xs md:text-sm"></tbody>
+                </table>
+            </div>
+            <div class="mt-8 text-center flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4 pb-8">
+                <button id="btn-retake" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded shadow-lg">Retake Test</button>
+                <button id="btn-home" class="bg-gray-800 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded shadow-lg">Home</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALS -->
+    <!-- RESTORED: Orientation Overlay for Landscape Lock -->
+    <div id="orientation-overlay" class="hidden fixed inset-0 z-[100] bg-slate-900 flex flex-col items-center justify-center text-white p-6 text-center backdrop-blur-lg">
+        <i class="fas fa-rotate-right text-4xl animate-spin-slow text-blue-400 mb-4"></i>
+        <h2 class="text-xl font-bold">Rotate Device</h2>
+        <p class="text-slate-300 text-sm">Landscape mode required for optimal exam experience.</p>
+    </div>
+    
+    <div id="calc-modal" class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-900 rounded-lg w-72 z-[60] border border-gray-700 shadow-2xl touch-none">
+        <div id="calc-header" class="bg-gray-800 p-2 rounded-t-lg flex justify-between items-center cursor-move"><span class="text-xs text-gray-400 pl-2">Scientific Calc</span><button id="btn-close-calc" class="text-gray-400 hover:text-white px-2">&times;</button></div>
+        <div class="p-4">
+            <input type="text" id="calc-display" readonly class="w-full bg-gray-200 text-right text-xl font-mono p-2 mb-3 rounded text-black" value="0">
+            <div class="grid grid-cols-4 gap-2" id="calc-keys">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-qp" class="hidden fixed inset-0 bg-black/50 z-[60] flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg w-full max-w-5xl h-[90vh] flex flex-col shadow-2xl">
+            <div class="p-4 border-b flex justify-between items-center bg-gray-100 rounded-t-lg"><h3 class="font-bold text-lg">Question Paper</h3><button id="btn-close-qp" class="text-2xl hover:text-red-500 px-2">&times;</button></div>
+            <div class="p-6 overflow-y-auto flex-1 custom-scroll" id="qp-content"></div>
+        </div>
+    </div>
+
+    <div id="modal-submit" class="hidden fixed inset-0 bg-black/60 z-[70] flex items-center justify-center backdrop-blur-sm p-4">
+        <div class="bg-white rounded-lg p-6 max-w-sm w-full shadow-2xl">
+            <h3 class="text-xl font-bold mb-4">Submit Exam?</h3>
+            <p class="text-gray-600 mb-6">Are you sure? You cannot change answers after submitting.</p>
+            <div class="flex justify-end space-x-3">
+                <button id="btn-cancel-submit" class="px-4 py-2 text-gray-700 bg-gray-100 rounded">Cancel</button>
+                <button id="btn-confirm-submit" class="px-4 py-2 bg-blue-600 text-white rounded font-bold">Submit</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-warning" class="hidden fixed inset-0 bg-red-900/95 z-[80] flex items-center justify-center backdrop-blur-md p-4">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full shadow-2xl text-center border-4 border-red-500">
+            <div class="text-5xl text-red-600 mb-4"><i class="fas fa-exclamation-triangle"></i></div>
+            <h3 class="text-xl font-bold mb-2 text-red-700">Security Violation</h3>
+            <p class="text-gray-700 mb-6">Activity outside the exam environment detected.</p>
+            <div class="bg-red-50 p-4 rounded-lg mb-6"><p class="text-red-800 font-bold text-lg">Warnings: <span id="warning-count">0</span>/3</p></div>
+            <button id="btn-resume-warning" class="w-full px-4 py-3 bg-red-600 hover:bg-red-700 text-white rounded font-bold">Return to Exam</button>
+        </div>
+    </div>
+
+    <div id="lightbox-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center backdrop-blur-md">
+        <img id="lightbox-img" src="" class="rounded-lg shadow-2xl max-w-[95vw] max-h-[85vh]">
+        <button id="btn-close-lightbox" class="absolute top-4 right-4 text-white text-3xl">&times;</button>
+    </div>
+</div>
+</body>
+</html>
