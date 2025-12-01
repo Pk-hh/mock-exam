@@ -1,24 +1,13 @@
-// ==========================================
-//  IIFE FOR SECURITY SCOPE
-// ==========================================
 (function() {
     "use strict";
 
     // 1. OBFUSCATION UTILS
-    // Simple Base64 + Salt obfuscation to prevent casual reading of answers in source
     const SALT = "JEESECURE_2025_SALT_"; 
     const obfuscate = (str) => btoa(SALT + encodeURIComponent(str));
     const deobfuscate = (str) => decodeURIComponent(atob(str).replace(SALT, ''));
     
-    // Hash answers so they aren't stored plainly
-    // For MCQ: "CorrectIndex" -> "ObfuscatedString"
-    // For Num: "Value" -> "ObfuscatedString"
-    
     // 2. CENTRAL QUESTION DATABASE
-    // -------------------------------------------------------------------------
-    // INSTRUCTIONS: Populate this object with real questions for Papers 1-70.
-    // If a paper ID is missing here, the system will auto-generate random questions for it.
-    // -------------------------------------------------------------------------
+    // IMPORTANT: Use double backslashes (\\) for LaTeX commands in JS strings.
     const PAPER_DATABASE = {
         // PAPER 1 (Pre-filled)
         1: [
@@ -3829,6 +3818,3177 @@
     ],
     "answer": "\\(\\frac{5}{14}\\)"
   }], 
+
+  6:[
+  {
+    "section": "Physics",
+    "content": "Match List I with List II\nList I\nA. Torque\nB. Stress\nC. Pressure gradient\nD. Coefficient of viscosity\n\nList II\nI. $M L^{-2}T^{-2}$\nII. $M L^{2}T^{-2}$\nIII. $M L^{-1}T^{-1}$\nIV. $M L^{-1}T^{-2}$<br><div class='flex justify-center my-4'><img src='images/6/q1.png' alt='Question 1'></div>",
+    "options": [
+      "A-II, B-I, C-IV, D-III",
+      "A-IV, B-II, C-III, D-I",
+      "A-II, B-IV, C-I, D-III",
+      "A-III, B-IV, C-I, D-II"
+    ],
+    "answer": "A-II, B-IV, C-I, D-III"
+  },
+  {
+    "section": "Physics",
+    "content": "Given below are two statements:\nStatement I: Area under velocity-time graph gives the distance travelled by the body in a given time.\nStatement II: Area under acceleration-time graph is equal to the change in velocity in the given time.\nIn the light of given statements, choose the correct answer from the options given below.",
+    "options": [
+      "Both Statement I and Statement II are true",
+      "Both Statement I and Statement II are false",
+      "Statement I is correct but Statement II is false",
+      "Statement I is incorrect but Statement II is true"
+    ],
+    "answer": "Statement I is incorrect but Statement II is true"
+  },
+  {
+    "section": "Physics",
+    "content": "The trajectory of projectile, projected from the ground is given by $y=x-\\frac{x^{2}}{20}$. Where x and y are measured in meter. The maximum height attained by the projectile will be.",
+    "options": [
+      "200 m",
+      "10 m",
+      "5 m",
+      "10\\sqrt{2} m"
+    ],
+    "answer": "5 m"
+  },
+  {
+    "section": "Physics",
+    "content": "A bullet of mass 0.1 kg moving horizontally with speed $400~m~s^{-1}$ hits a wooden block of mass 3.9 kg kept on a horizontal rough surface. The bullet gets embedded into the block and moves 20 m before coming to rest. The coefficient of friction between the block and the surface is",
+    "options": [
+      "0.90",
+      "0.50",
+      "0.65",
+      "0.25"
+    ],
+    "answer": "0.25"
+  },
+  {
+    "section": "Physics",
+    "content": "A body of mass 5 kg is moving with a momentum of $100~kg~m~s^{-1}$. Now a force of 2 N acts on the body in the direction of its motion for 5 s. The increase in the Kinetic energy of the body is ____ J.",
+    "options": [],
+    "answer": "30"
+  },
+  {
+    "section": "Physics",
+    "content": "A hollow spherical ball of uniform density rolls up a curved surface with an initial velocity $3~m~s^{-1}$ (as shown in figure). Maximum height with respect to the initial position covered by it will be ____ cm (take, $g=10~m~s^{-2})$<br><div class='flex justify-center my-4'><img src='images/6/q6.png' alt='Question 6'></div>",
+    "options": [],
+    "answer": "75"
+  },
+  {
+    "section": "Physics",
+    "content": "The orbital angular momentum of a satellite is L, when it is revolving in a circular orbit at height h from earth surface. If the distance of satellite from the earth centre is increased by eight times to its initial value, then the new angular momentum will be",
+    "options": [
+      "8 L",
+      "9 L",
+      "4 L",
+      "3 L"
+    ],
+    "answer": "3 L"
+  },
+  {
+    "section": "Physics",
+    "content": "The acceleration due to gravity at height h above the earth if $h\\ll R$ (Radius of earth) is given by",
+    "options": [
+      "$g'=g(1-\\frac{h^{2}}{2R^{2}})$",
+      "$g'=g(1-\\frac{h}{2R})$",
+      "$g'=g(1-\\frac{2h}{R})$",
+      "$g'=g(1-\\frac{2h^{2}}{R^{2}})$"
+    ],
+    "answer": "$g'=g(1-\\frac{2h}{R})$"
+  },
+  {
+    "section": "Physics",
+    "content": "A hydraulic automobile lift is designed to lift vehicles of mass 5000 kg. The area of cross section of the cylinder carrying load is $250~cm^{2}.$ The maximum pressure the smaller piston would have to bear is [Assume $g=10~m~s^{-2}$]<br><div class='flex justify-center my-4'><img src='images/6/q9.png' alt='Question 9'></div>",
+    "options": [
+      "20 \\times 10^{6} Pa",
+      "2 \\times 10^{5} Pa",
+      "200 \\times 10^{6} Pa",
+      "2 \\times 10^{6} Pa"
+    ],
+    "answer": "2 \\times 10^{5} Pa"
+  },
+  {
+    "section": "Physics",
+    "content": "A steel rod of length 1 m and cross-sectional area $10^{-4}m^{2}$ is heated from $0^{\\circ}C$ to $200^{\\circ}C$ without being allowed to extend or bend. The compressive tension produced in the rod is ____ $\\times10^{4}N$ (Given Young's modulus of steel $=2\\times10^{11}N~m^{-2}$, coefficient of linear expansion $=10^{-5}K^{-1})$",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Physics",
+    "content": "Work done by a Carnot engine operating between temperatures $127^{\\circ}C$ and $27^{\\circ}C$ is 2 kJ. The amount of heat transferred to the engine by the reservoir is:",
+    "options": [
+      "8 kJ",
+      "2.67 kJ",
+      "2 kJ",
+      "4 kJ"
+    ],
+    "answer": "8 kJ"
+  },
+  {
+    "section": "Physics",
+    "content": "The temperature at which the kinetic energy of oxygen molecules becomes double than its value at $27^{\\circ}C$ is",
+    "options": [
+      "927^{\\circ}C",
+      "327^{\\circ}C",
+      "1227^{\\circ}C",
+      "627^{\\circ}C"
+    ],
+    "answer": "327^{\\circ}C"
+  },
+  {
+    "section": "Physics",
+    "content": "For particle P revolving round the centre O with radius of circular path r and regular velocity w, as shown in below figure, the projection of OP on the x-axis at time t is<br><div class='flex justify-center my-4'><img src='images/6/q13.png' alt='Question 13'></div>",
+    "options": [
+      "$x(t)=r~cos(\\omega t-\\frac{\\pi}{6})$",
+      "$x(t)=r~cos(\\omega t+\\frac{\\pi}{6})$",
+      "$x(t)=r~sin(\\omega t+\\frac{\\pi}{6})$",
+      "$x(t)=r~cos(\\omega t)$"
+    ],
+    "answer": "$x(t)=r~cos(\\omega t+\\frac{\\pi}{6})$"
+  },
+  {
+    "section": "Physics",
+    "content": "A guitar string of length 90 cm vibrates with a fundamental frequency of 120 Hz. The length of the string producing a fundamental of 180 Hz will be ____ cm",
+    "options": [],
+    "answer": "60"
+  },
+  {
+    "section": "Physics",
+    "content": "Electric potential at a point P due to a point charge of $5\\times10^{-9}C$ is 50 V. The distance of P from the point charge is: (Assume, $\\frac{1}{4\\pi\\epsilon_{0}}=9\\times10^{9}N~m^{2}C^{-2})$",
+    "options": [
+      "9 cm",
+      "3 cm",
+      "0.9 cm",
+      "90 cm"
+    ],
+    "answer": "90 cm"
+  },
+  {
+    "section": "Physics",
+    "content": "A 600 pF capacitor is charged by 200 V supply. It is then disconnected from the supply and is connected to another uncharged 600 pF capacitor. Electrostatic energy lost in the process is ____ $\\mu J$.",
+    "options": [],
+    "answer": "6"
+  },
+  {
+    "section": "Physics",
+    "content": "The equivalent resistance between A and B as shown in figure is:<br><div class='flex justify-center my-4'><img src='images/6/q17.png' alt='Question 17'></div>",
+    "options": [
+      "10 kΩ",
+      "5 kΩ",
+      "20 kΩ",
+      "30 kΩ"
+    ],
+    "answer": "5 kΩ"
+  },
+  {
+    "section": "Physics",
+    "content": "The number density of free electrons in copper is nearly $8\\times10^{28}m^{-3}$ A copper wire has its area of cross-section $=2\\times10^{-6}m^{2}$ and is carrying a current of 3.2 A. The drift speed of the electrons is ____ $\\times10^{-6}ms^{-1}$",
+    "options": [],
+    "answer": "125"
+  },
+  {
+    "section": "Physics",
+    "content": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R.\nAssertion A: Electromagnets are made of soft iron.\nReason R: Soft iron has high permeability and low retentivity.\nIn the light of above statements, choose the most appropriate answer from the options given below.",
+    "options": [
+      "A is not correct but R is correct",
+      "A is correct but R is not correct",
+      "Both A and R are correct and R is the correct explanation of A",
+      "Both A and R are correct but R is NOT the correct explanation of A"
+    ],
+    "answer": "Both A and R are correct and R is the correct explanation of A"
+  },
+  {
+    "section": "Physics",
+    "content": "The ratio of magnetic field at the centre of a current carrying coil of radius r to the magnetic field at distance r from the centre of coil on its axis is $\\sqrt{x}$ : 1. The value of x is<br><div class='flex justify-center my-4'><img src='images/6/q20.png' alt='Question 20'></div>",
+    "options": [],
+    "answer": "8"
+  },
+  {
+    "section": "Physics",
+    "content": "An emf of 0.08 V is induced in a metal rod of length 10 cm held normal to a uniform magnetic field of 0.4 T, when move with a velocity of:",
+    "options": [
+      "0.5 m s-1",
+      "20 m s-1",
+      "3.2 m s-1",
+      "2 m s-1"
+    ],
+    "answer": "2 m s-1"
+  },
+  {
+    "section": "Physics",
+    "content": "A series combination of resistor of resistance 100 Ω inductor of inductance 1 H and capacitor of capacitance 6.25 µF is connected to an ac source. The quality factor of the circuit will be",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Physics",
+    "content": "The waves emitted when a metal target is bombarded with high energy electrons are",
+    "options": [
+      "Microwaves",
+      "Infrared rays",
+      "X-rays",
+      "Radio Waves"
+    ],
+    "answer": "X-rays"
+  },
+  {
+    "section": "Physics",
+    "content": "Two transparent media having refractive indices 1.0 and 1.5 are separated by a spherical refracting surface of radius of curvature 30 cm. The centre of curvature of surface is towards denser medium and a point object is placed on the principal axis in rarer medium at a distance of 15 cm from the pole of the surface. The distance of image from the pole of the surface is ____ cm.",
+    "options": [],
+    "answer": "30"
+  },
+  {
+    "section": "Physics",
+    "content": "The width of fringe is 2 mm on the screen in a double slit experiment for the light of wavelength of 400 nm. The width of the fringe for the light of wavelength 600 nm will be:",
+    "options": [
+      "4 mm",
+      "2 mm",
+      "1.33 mm",
+      "3 mm"
+    ],
+    "answer": "3 mm"
+  },
+  {
+    "section": "Physics",
+    "content": "In photoelectric effect\nA. The photocurrent is proportional to the intensity of the incident radiation.\nB. Maximum kinetic energy... depends on intensity.\nC. Max K.E... depends on frequency.\nD. Threshold intensity required.\nE. Max K.E independent of frequency.",
+    "options": [
+      "A and B only",
+      "A and E only",
+      "A and C only",
+      "B and C only"
+    ],
+    "answer": "A and C only"
+  },
+  {
+    "section": "Physics",
+    "content": "The ratio of wavelength of spectral lines $H_{\\alpha}$ and $H_{\\beta}$ in the Balmer series is $\\frac{x}{20}$. The value of x is",
+    "options": [],
+    "answer": "27"
+  },
+  {
+    "section": "Physics",
+    "content": "A radioactive material is reduced to 1/8 of its original amount in 3 days. If $8\\times10^{-3}$ kg of the material is left after 5 days the initial amount of the material is",
+    "options": [
+      "40 g",
+      "32 g",
+      "64 g",
+      "256 g"
+    ],
+    "answer": "256 g"
+  },
+  {
+    "section": "Physics",
+    "content": "For a given transistor amplifier circuit in CE configuration $V_{CC}=1~V$, $R_{C}=1~k\\Omega$, $R_{b}=100~k\\Omega$ and $\\beta=100$ Value of base current $I_{b}$<br><div class='flex justify-center my-4'><img src='images/6/q29.png' alt='Question 29'></div>",
+    "options": [
+      "$I_{b}=1.0~\\mu A$",
+      "$I_{b}=0.1~\\mu A$",
+      "$I_{b}=100~\\mu A$",
+      "$I_{b}=10~\\mu A$"
+    ],
+    "answer": "$I_{b}=10~\\mu A$"
+  },
+  {
+    "section": "Physics",
+    "content": "The power radiated from a linear antenna of length l is proportional to (Given, $\\lambda=$ Wavelength of wave):",
+    "options": [
+      "$\\frac{l}{\\lambda}$",
+      "$(\\frac{l}{\\lambda})^{2}$",
+      "$\\frac{l}{\\lambda^{2}}$",
+      "$\\frac{l^{2}}{\\lambda}$"
+    ],
+    "answer": "$(\\frac{l}{\\lambda})^{2}$"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Which of the following have same number of significant figures?\n(A) 0.00253\n(B) 1.0003\n(C) 15.0\n(D) 163",
+    "options": [
+      "A, B and C only",
+      "C and D only",
+      "B and C only",
+      "A, C and D only"
+    ],
+    "answer": "A, C and D only"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Henry Moseley studied characteristic X-ray spectra of elements. The graph which represents his observation correctly is<br><div class='flex justify-center my-4'><img src='images/6/q32.png' alt='Question 32'></div>",
+    "options": [
+      "Graph 1",
+      "Graph 2",
+      "Graph 3",
+      "Graph 4"
+    ],
+    "answer": "Graph 3"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The number of atomic orbitals from the following having 5 radial nodes is\n7s, 7p, 6s, 8p, 8d",
+    "options": [],
+    "answer": "3"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The number of species from the following carrying a single lone pair on central atom Xenon is\n$XeF_{5}^{+}$, $XeO_{3}$, $XeO_{2}F_{2}$, $XeF_{5}^{-}$, $XeO_{3}F_{2}$, $XeOF_{4}$, $XeF_{4}$",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Arrange the following gases in increasing order of van der Waals constant 'a'\n(A) Ar\n(B) $CH_{4}$\n(C) $H_{2}O$\n(D) $C_{6}H_{6}$",
+    "options": [
+      "D, C, B and A",
+      "B, C, D and A",
+      "C, D, B and A",
+      "A, B, C and D"
+    ],
+    "answer": "A, B, C and D"
+  },
+  {
+    "section": "Chemistry",
+    "content": "For complete combustion of ethene,\n$C_{2}H_{4}(g)+3O_{2}(g)\\rightarrow2CO_{2}(g)+2H_{2}O(l)$\nthe amount of heat produced as measured in bomb calorimeter is 1406 kJ mol-1 at 300 K. The minimum value of $T\\Delta S$ needed to reach equilibrium is (-) kJ.",
+    "options": [],
+    "answer": "1411"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The incorrect statements from the following is:\nA. The electrical work... is equal to reaction Gibbs energy.\nB. $E_{cell}^{\\circ}$ is dependent on the pressure.\nC. $\\frac{dE_{cell}}{dT}=\\frac{\\Delta_{r}S}{nF}$\nD. A cell is operating reversibly...",
+    "options": [
+      "A only",
+      "B only",
+      "C only",
+      "D only"
+    ],
+    "answer": "B only"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Given below are two statements:\nStatement-I: Methyl orange is a weak acid.\nStatement-II: The benzenoid form of methyl orange is more intense/deeply coloured than the quinonoid form.",
+    "options": [
+      "Both Statement-I and Statement-II are incorrect",
+      "Statement-I is incorrect but Statement-II is correct",
+      "Both Statement-I and Statement-II are correct",
+      "Statement-I is correct but Statement-II is incorrect"
+    ],
+    "answer": "Statement-I is correct but Statement-II is incorrect"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The solubility product of $BaSO_{4}$ is $1\\times10^{-10}$ at 298 K. The solubility of $BaSO_{4}$ in 0.1M $K_{2}SO_{4}(aq)$ solution is ____ $\\times10^{-9}$ g $L^{-1}$",
+    "options": [],
+    "answer": "233"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Given below are two statements regarding indicators in titration.",
+    "options": [
+      "Statement I is correct but Statement II is incorrect",
+      "Both Statement I and Statement II are incorrect",
+      "Statement I is incorrect but Statement II is correct",
+      "Both Statement I and Statement II are correct"
+    ],
+    "answer": "Statement I is correct but Statement II is incorrect"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Which of the following can reduce decomposition of $H_{2}O_{2}$ on exposure to light",
+    "options": [
+      "Urea",
+      "Alkali",
+      "Glass containers",
+      "Dust"
+    ],
+    "answer": "Urea"
+  },
+  {
+    "section": "Chemistry",
+    "content": "For a good quality cement, the ratio of lime to the total of the oxides of Si, Al and Fe should be as close as to",
+    "options": [
+      "4",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": "2"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Given below are two statements: One is labelled as Assertion A and the other is labelled as Reason R\nAssertion A: Sodium is about 30 times as abundant as potassium in the oceans.\nReason R: Potassium is bigger in size than sodium.",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "A is true but R is false",
+      "Both A and R are true but R is NOT the correct explanation of A",
+      "Both A and R are false"
+    ],
+    "answer": "Both A and R are true but R is NOT the correct explanation of A"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The descending order of acidity for the following carboxylic acid is:\n(A) $CH_{3}COOH$\n(B) $F_{3}C-COOH$\n(C) $ClCH_{2}-COOH$\n(D) $FCH_{2}-COOH$\n(E) $BrCH_{2}-COOH$",
+    "options": [
+      "B > C > D > E > A",
+      "E > D > B > A > C",
+      "B > D > C > E > A",
+      "D > B > A > E > C"
+    ],
+    "answer": "B > D > C > E > A"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The correct IUPAC nomenclature for the following compound is:<br><div class='flex justify-center my-4'><img src='images/6/q45.png' alt='Question 45'></div>",
+    "options": [
+      "2-Methyl-5-oxohexanoic acid",
+      "2-Formyl-5-methylhexan-6-oic acid",
+      "5-Methyl-2-oxohexan-6-oic acid",
+      "5-Formyl-2-methylhexanoic acid"
+    ],
+    "answer": "2-Methyl-5-oxohexanoic acid"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Which of these reactions is not a part of breakdown of ozone in stratosphere?",
+    "options": [
+      "$2\\tilde{C}lO(g)\\rightarrow ClO_{2}(g)+\\tilde{C}l(g)$",
+      "$ClO(g)+O(g)\\rightarrow O_{2}(g)+\\tilde{C1}$",
+      "$\\tilde{C}l(g)+O_{3}(g)\\rightarrow O_{2}(g)+ClO(g)$",
+      "$CF_{2}Cl_{2}(g)\\rightarrow\\tilde{C}l(g)+\\tilde{C}F_{2}Cl(g)$"
+    ],
+    "answer": "$2\\tilde{C}lO(g)\\rightarrow ClO_{2}(g)+\\tilde{C}l(g)$"
+  },
+  {
+    "section": "Chemistry",
+    "content": "If the boiling points of two solvents X and Y (having same molecular weights) are in the ratio 2: 1 and their enthalpy of vaporizations are in the ratio 1: 2, then the boiling point elevation constant of X is m times the boiling point elevation constant of Y. The value of m is",
+    "options": [],
+    "answer": "8"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The correct reaction profile diagram for a positive catalyst reaction.<br><div class='flex justify-center my-4'><img src='images/6/q48.png' alt='Question 48'></div>",
+    "options": [
+      "Graph 1",
+      "Graph 2",
+      "Graph 3",
+      "Graph 4"
+    ],
+    "answer": "Graph 3"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The statement/s which are true about antagonists from the following is/are:\nA. They bind to the receptor site.\nB. Get transferred inside the cell for their action.\nC. Inhibit the natural communication of the body.\nD. Mimic the natural messenger.",
+    "options": [
+      "B only",
+      "A, C and D",
+      "A and C",
+      "A and B"
+    ],
+    "answer": "A and C"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Coagulating value of the electrolytes $AlCl_{3}$ and NaCl for $As_{2}S_{3}$ are 0.09 and 50.04 respectively. The coagulating power of $AlCl_{3}$ is x times the coagulating power of NaCl. The value of x is",
+    "options": [],
+    "answer": "556"
+  },
+  {
+    "section": "Chemistry",
+    "content": "In Hall-Heroult process, the following is used for reducing $Al_{2}O_{3}$:",
+    "options": [
+      "Magnesium",
+      "$Na_{3}AlF_{6}$",
+      "Graphite",
+      "$CaF_{2}$"
+    ],
+    "answer": "Graphite"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The ratio of sigma and pi bonds present in pyrophosphoric acid is",
+    "options": [],
+    "answer": "6"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Match List-I with List-II\nLIST-I (Coordination Complex)\nA. $[Cr(CN)_{6}]^{3-}$\nB. $[Fe(H_{2}O)_{6}]^{2+}$\nC. $[Co(NH_{3})_{6}]^{3+}$\nD. $[Ni(NH_{3})_{6}]^{2+}$\n\nLIST-II (Number of unpaired electrons)\nI. 0\nII. 3\nIII. 2\nIV. 4",
+    "options": [
+      "A-II, B-IV, C-I, D-III",
+      "A-III, B-IV, C-I, D-II",
+      "A-II, B-I, C-IV, D-III",
+      "A-IV, B-III, C-II, D-I"
+    ],
+    "answer": "A-II, B-IV, C-I, D-III"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The observed magnetic moment of the complex $[Mn(NCS)_{6}]^{x-}$ is 6.06 BM. The numerical value of x is",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The sum of oxidation state of the metals in $Fe(CO)_{5}$, $VO^{2+}$ and $WO_{3}$ is",
+    "options": [],
+    "answer": "10"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The correct order of reactivity of following haloarenes towards nucleophilic substitution with aqueous NaOH is:<br><div class='flex justify-center my-4'><img src='images/6/q56.png' alt='Question 56'></div>",
+    "options": [
+      "A > B > D > C",
+      "C > A > D > B",
+      "D > C > B > A",
+      "D > B > A > C"
+    ],
+    "answer": "D > B > A > C"
+  },
+  {
+    "section": "Chemistry",
+    "content": "A compound /X/ when treated with phthalic anhydride in presence of concentrated $H_{2}SO_{4}$ yields /Y/. /Y/ is used as an acid/base indicator. /X/ and /Y/ are respectively",
+    "options": [
+      "Anisole, methyl orange",
+      "Salicylaldehyde, Phenolphthalein",
+      "Toludine, Phenolphthalein",
+      "Carbolic acid, Phenolphthalein"
+    ],
+    "answer": "Carbolic acid, Phenolphthalein"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Major product /P/ formed in the following reaction is<br><div class='flex justify-center my-4'><img src='images/6/q58.png' alt='Question 58'></div>",
+    "options": [
+      "Structure 1",
+      "Structure 2",
+      "Structure 3",
+      "Structure 4"
+    ],
+    "answer": "Structure 4"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The product (P) formed from the following multistep reaction is:<br><div class='flex justify-center my-4'><img src='images/6/q59.png' alt='Question 59'></div>",
+    "options": [
+      "Structure 1",
+      "Structure 2",
+      "Structure 3",
+      "Structure 4"
+    ],
+    "answer": "Structure 4"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Match List I with List II regarding Natural amino acids and One Letter Codes.",
+    "options": [
+      "(A)-III, B-IV, (C)-I, (D)-II",
+      "(A)-IV, B-III, (C)-I, (D)-II",
+      "(A)-III, B-I, (C)-IV, (D)-II",
+      "(A)-II, B-I, (C)-IV, (D)-III"
+    ],
+    "answer": "(A)-III, B-I, (C)-IV, (D)-II"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let m and n be the numbers of real roots of the quadratic equations $x^{2}-12x+[x]+31=0$ and $x^{2}-5|x+2|-4=0$ respectively. Then $m^{2}+mn+n^{2}$ is equal to",
+    "options": [],
+    "answer": "1"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let $A=\\{\\theta\\in(0,2\\pi):\\frac{1+2i~sin~\\theta}{1-i~sin~\\theta}$ is purely imaginary\\}. Then the sum of the elements in A is",
+    "options": [
+      "4π",
+      "3π",
+      "π",
+      "2π"
+    ],
+    "answer": "3π"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If the number of words... using all letters of MATHEMATICS in which C and S do not come together, is (6!)k then k is equal to",
+    "options": [
+      "2835",
+      "5670",
+      "1890",
+      "945"
+    ],
+    "answer": "1890"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let $a_{n}$ be $n^{th}$ term of the series $5+8+14+23+35+50+......$ and $S_{n}=\\sum a_{k}$. Then $S_{30}-a_{40}$ is equal to",
+    "options": [
+      "11310",
+      "11260",
+      "11290",
+      "11280"
+    ],
+    "answer": "11280"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let $0<z<y<x$ be three real numbers such that $\\frac{1}{x}, \\frac{1}{y}, \\frac{1}{z}$ are in AP and x, $\\sqrt{2}y$, z are in GP. If $xy+yz+zx=\\frac{3}{\\sqrt{2}}xyz,$ then $3(x+y+z)^{2}$ is equal to",
+    "options": [
+      "54",
+      "18",
+      "27",
+      "36"
+    ],
+    "answer": "27"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The absolute difference of the coefficients of $x^{10}$ and $x^{7}$ in the expansion of $(2x^{2}+\\frac{1}{2x})^{11}$ is equal to",
+    "options": [
+      "$13^{3}-13$",
+      "$11^{3}-11$",
+      "$10^{3}-10$",
+      "$12^{3}-12$"
+    ],
+    "answer": "$12^{3}-12$"
+  },
+  {
+    "section": "Mathematics",
+    "content": "$25^{190}-19^{190}-8^{190}+2^{190}$ is divisible by",
+    "options": [
+      "neither 14 nor 34",
+      "14 but not by 34",
+      "34 but not by 14",
+      "both 14 and 34"
+    ],
+    "answer": "neither 14 nor 34"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The value of $36(4~cos^{2}9^{\\circ}-1)(4~cos^{2}27^{\\circ}-1)(4~cos^{2}81^{\\circ}-1)(4~cos^{2}243^{\\circ}-1)$ is",
+    "options": [
+      "18",
+      "54",
+      "36",
+      "9"
+    ],
+    "answer": "36"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let A(0,1), B(1,1) and C(1,0) be the mid-points of the sides of a triangle with incentre at the point D. If the focus of the parabola $y^{2}=4ax$ passing through D is $(\\alpha+\\beta\\sqrt{2},0)$, then $\\frac{\\alpha}{\\beta^{2}}$ is equal to",
+    "options": [
+      "8",
+      "12",
+      "6",
+      "9/2"
+    ],
+    "answer": "6"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let O be the origin and OP and OQ be the tangents to the circle... If the circumcircle of triangle OPQ passes through $(a,\\frac{1}{2})$, then a value of a is",
+    "options": [
+      "3/2",
+      "-1/2",
+      "5/2",
+      "1"
+    ],
+    "answer": "-1/2"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The ordinates of the points P and Q on the parabola... are in ratio 3:1... $\\frac{\\beta^{2}}{\\alpha}$ is equal to",
+    "options": [
+      "20",
+      "16",
+      "25",
+      "110"
+    ],
+    "answer": "110"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If $\\alpha>\\beta>0$ are the roots of $ax^{2}+bx+1=0$ and limit... then k is equal to",
+    "options": [
+      "$2\\beta$",
+      "$\\alpha$",
+      "$2\\alpha$",
+      "$\\beta$"
+    ],
+    "answer": "$\\alpha$"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The negation of $(p\\wedge(-q))\\vee(-p)$ is equivalent to",
+    "options": [
+      "$p\\wedge(-q)$",
+      "$p\\wedge q$",
+      "$p\\vee(q\\vee(-p))$",
+      "$p\\wedge(q\\wedge(-p))$"
+    ],
+    "answer": "$p\\vee(q\\vee(-p))$"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Mean and variance of 12 observations... If correct variance is m/n, then m+n is equal to",
+    "options": [
+      "315",
+      "316",
+      "314",
+      "317"
+    ],
+    "answer": "315"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let A={1..7}. Relation R... x+y=7 is",
+    "options": [
+      "an equivalence relation",
+      "symmetric but neither reflexive nor transitive",
+      "transitive but neither symmetric nor reflexive",
+      "reflexive but neither symmetric nor transitive"
+    ],
+    "answer": "an equivalence relation"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If A = Matrix... and $A^{-1}=\\alpha A+\\beta I$ ... then $4\\alpha^{2}+\\beta^{2}+\\lambda^{2}$ is equal to",
+    "options": [
+      "12",
+      "19",
+      "14",
+      "10"
+    ],
+    "answer": "14"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let S be the set of all values of $\\theta$... system of linear equations... Then sum is equal to",
+    "options": [
+      "20",
+      "40",
+      "30",
+      "10"
+    ],
+    "answer": "40"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If domain of the function... is... then $18(\\alpha^{2}+\\beta^{2}+\\gamma^{2}+\\delta^{2})$ is equal to",
+    "options": [
+      "20",
+      "18",
+      "24",
+      "12"
+    ],
+    "answer": "20"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let R={a,b,c,d,e} and S={1,2,3,4}. Total number of onto functions f:R->S such that f(a)!=1 is equal to",
+    "options": [],
+    "answer": "180"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let k and m be positive real numbers... function f(x) is differentiable... Value is equal to",
+    "options": [],
+    "answer": "309"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The integral... is equal to",
+    "options": [
+      "Option 1",
+      "Option 2",
+      "Option 3",
+      "Option 4"
+    ],
+    "answer": "Option 2"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let [t] denote the greatest integer function. If integral... then sum is equal to",
+    "options": [],
+    "answer": "150"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the area enclosed by the lines... be A. Then 12A is",
+    "options": [],
+    "answer": "16"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the solution curve... satisfy... then mn is equal to",
+    "options": [],
+    "answer": "20"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let vectors... be coplanar... then 6(a+b+c) is equal to",
+    "options": [],
+    "answer": "180"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The area of the quadrilateral ABCD... is equal to",
+    "options": [
+      "48",
+      "$8\\sqrt{38}$",
+      "54",
+      "$9\\sqrt{38}$"
+    ],
+    "answer": "54"
+  },
+  {
+    "section": "Mathematics",
+    "content": "For a,b integers... angle between plane... then $a^{4}+b^{2}$ is equal to",
+    "options": [
+      "32",
+      "85",
+      "25",
+      "48"
+    ],
+    "answer": "85"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let P be the plane... image of point... then sum is equal to",
+    "options": [
+      "10",
+      "12",
+      "17",
+      "11"
+    ],
+    "answer": "17"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let P1 be plane... P2 be plane... foot of perpendicular... sum is equal to",
+    "options": [],
+    "answer": "12"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If probability... P(X>=2) is equal to",
+    "options": [
+      "7/9",
+      "5/9",
+      "2/9",
+      "1/9"
+    ],
+    "answer": "11"
+  }
+  ],
+  7:[
+{
+    "section": "Physics",
+    "content": "A physical quantity 𝑃 is given as 𝑃=𝑎2𝑏3 𝑐√𝑑. The percentage error in the measurement of 𝑎, 𝑏, 𝑐 and 𝑑 are 1%, 2%, 3% and 4% respectively. The percentage error in the measurement of quantity 𝑃 will be",
+    "options": [
+      "13%",
+      "16%",
+      "12%",
+      "14%"
+    ],
+    "answer": "13%"
+  },
+  {
+    "section": "Physics",
+    "content": "The position-time graphs for two students 𝐴 and 𝐵 returning from the school to their homes are shown in figure. (A) 𝐴 lives closer to the school (B) 𝐵 lives closer to the school (C) 𝐴 takes lesser time to reach home (D) 𝐴 travels faster than 𝐵 (E) 𝐵 travels faster than 𝐴 Choose the correct answer from the options given below<br><div class='flex justify-center my-4'><img src='images/7/q2.png' alt='Question 2'></div>",
+    "options": [
+      "A, C and D only",
+      "A, C and E only",
+      "B and E only",
+      "A and E only"
+    ],
+    "answer": "A and E only"
+  },
+  {
+    "section": "Physics",
+    "content": "The range of the projectile projected at an angle of 15∘ with horizontal is 50 m. If the projectile is projected with same velocity at an angle of 45∘ with horizontal, then its range will be",
+    "options": [
+      "100 m",
+      "100 √2 m",
+      "50√2 m",
+      "50 m"
+    ],
+    "answer": "100 m"
+  },
+  {
+    "section": "Physics",
+    "content": "A particle of mass 𝑚 moving with velocity 𝑣 collides with a stationary particle of mass 2𝑚. After collision, they stick together and continue to move together with velocity",
+    "options": [
+      "𝑣 3",
+      "𝑣 4",
+      "𝑣",
+      "𝑣 2"
+    ],
+    "answer": "𝑣 3"
+  },
+  {
+    "section": "Physics",
+    "content": "Two satellites of masses m and 3 m revolve around the earth in circular orbits of radii r & 3r respectively. The ratio of orbital speeds of the satellites respectively is",
+    "options": [
+      "√3:1",
+      "3:1",
+      "9:1",
+      "1:1"
+    ],
+    "answer": "√3:1"
+  },
+  {
+    "section": "Physics",
+    "content": "Assuming the earth to be a sphere of uniform mass density, the weight of a body at a depth 𝑑=𝑅 2 from the surface of earth, if its weight on the surface of earth is 200 N, will be : (Given 𝑅= radius of earth)",
+    "options": [
+      "300 N",
+      "100 N",
+      "400 N",
+      "500 N"
+    ],
+    "answer": "100 N"
+  },
+  {
+    "section": "Physics",
+    "content": "Given below are two statements:   Statement I: Pressure in a reservoir of water is same at all points at the same level of water. Statement II: The pressure applied to enclosed water is transmitted in all directions equally. In the light of the above statements, choose the correct answer from the options given below:",
+    "options": [
+      "Both Statement I and Statement II are false",
+      "Statement I is true but Statement II is false",
+      "Statement I is false but Statement II is true",
+      "Both Statement I and Statement II are true"
+    ],
+    "answer": "Both Statement I and Statement II are true"
+  },
+  {
+    "section": "Physics",
+    "content": "Consider two containers 𝐴 and 𝐵 containing monoatomic gases at the same Pressure 𝑃, Volume 𝑉 and Temperature 𝑇. The gas in 𝐴 is compressed isothermally to 1 8 of its original volume while the gas in 𝐵 is compressed adiabatically to 1 8 of its original volume. The ratio of final pressure of gas in 𝐵 to that of gas in 𝐴 is",
+    "options": [
+      "8",
+      "4",
+      "83 2",
+      "1 8"
+    ],
+    "answer": "4"
+  },
+  {
+    "section": "Physics",
+    "content": "Match List I with List II: List I List II (A)3 Translational degrees of freedom (I) Monoatomic gases (B)3 Translational, 2 rotational degrees of freedoms (II) Polyatomic gases (C)3 Translational, 2 rotational and 1 vibrational degrees of freedom(III)Rigid diatomic gases (D)3 Translational, 3 rotational and more than one vibrational degrees of freedom(IV)Nonrigid diatomic gases Choose the correct answer from the options given below:",
+    "options": [
+      "A-I, B-III, C-IV, D-II",
+      "A-IV, B-III, C-II, D-I",
+      "A-IV, B-II, C-I, D-III",
+      "A-I, B-IV, C-III, D-II"
+    ],
+    "answer": "A-I, B-III, C-IV, D-II"
+  },
+  {
+    "section": "Physics",
+    "content": "A particle executes S.H.M. of amplitude 𝐴 along 𝑥-axis. At 𝑡=0, the position of the particle is 𝑥=𝐴 2 and it moves along positive 𝑥-axis. The displacement of particle in time 𝑡 is 𝑥=𝐴 sin𝜔𝑡 + 𝛿, then the value 𝛿 will be",
+    "options": [
+      "𝜋 2",
+      "𝜋 6",
+      "𝜋 3",
+      "𝜋 4"
+    ],
+    "answer": "𝜋 6"
+  },
+  {
+    "section": "Physics",
+    "content": "The equivalent capacitance of the combination shown is<br><div class='flex justify-center my-4'><img src='images/7/q11.png' alt='Question 11'></div>",
+    "options": [
+      "2 C",
+      "5 3 C",
+      "C 2",
+      "4 C"
+    ],
+    "answer": "2 C"
+  },
+  {
+    "section": "Physics",
+    "content": "The equivalent resistance of the circuit shown below between points 𝑎 and 𝑏 is :<br><div class='flex justify-center my-4'><img src='images/7/q12.png' alt='Question 12'></div>",
+    "options": [
+      "16 Ω",
+      "3.2 Ω",
+      "24 Ω",
+      "20 Ω"
+    ],
+    "answer": "3.2 Ω"
+  },
+  {
+    "section": "Physics",
+    "content": "Given below are two statements: Statement I: If the number of turns in the coil of a moving coil galvanometer is doubled then the current sensitivity becomes double. Statement II: Increasing current sensitivity of a moving coil galvanometer by only increasing the number of turns in the coil will also increase its voltage sensitivity in the same ratio In the light of the above statements, choose the correct answer from the options given below:",
+    "options": [
+      "Statement I is true but Statement II is false",
+      "Statement I is false but Statement II is true",
+      "Both Statement I and Statement II are false",
+      "Both Statement I and Statement II are true"
+    ],
+    "answer": "Statement I is true but Statement II is false"
+  },
+  {
+    "section": "Physics",
+    "content": "The energy of an electromagnetic wave contained in a small volume oscillates with",
+    "options": [
+      "Double the frequency of the wave",
+      "The frequency of the wave",
+      "Half the frequency of the wave",
+      "Zero frequency"
+    ],
+    "answer": "Double the frequency of the wave"
+  },
+  {
+    "section": "Physics",
+    "content": "Given below are two statements: Statement I: Maximum power is dissipated in a circuit containing an inductor, a capacitor and a resistor connected in series with an 𝐴𝐶 source, when resonance occurs. Statement II: Maximum power is dissipated in a circuit containing pure resistor due to zero phase difference between current and voltage. In the light of the above statements, choose the correct answer from the options given below:<br><div class='flex justify-center my-4'><img src='images/7/q15.png' alt='Question 15'></div>",
+    "options": [
+      "Statement I is false but Statement II is true",
+      "Both Statement I and Statement II are true",
+      "Statement I is true but Statement II is false",
+      "Both Statement I and Statement II are false"
+    ],
+    "answer": "Both Statement I and Statement II are true"
+  },
+  {
+    "section": "Physics",
+    "content": "An object is placed at a distance of 12 cm in front of a plane mirror. The virtual and erect image is formed by the mirror. Now the mirror is moved by 4 cm towards the stationary object. The distance by which the position of image would be shifted, will be",
+    "options": [
+      "4 cm towards mirror",
+      "8 cm towards mirror",
+      "8 cm away from mirror",
+      "2 cm towards mirror"
+    ],
+    "answer": "8 cm towards mirror"
+  },
+  {
+    "section": "Physics",
+    "content": "The de Broglie wavelength of a molecule in a gas at room temperature 300 K is 𝜆1. If the temperature of the gas is increased to 600 K, then the de Broglie wavelength of the same gas molecule becomes",
+    "options": [
+      "1 2𝜆1",
+      "√2𝜆1",
+      "1 √2𝜆1",
+      "2𝜆1"
+    ],
+    "answer": "1 √2𝜆1"
+  },
+  {
+    "section": "Physics",
+    "content": "The angular momentum for the electron in Bohr’s orbit is 𝐿. If the electron is assumed to revolve in second orbit of hydrogen atom, then the change in angular momentum will be",
+    "options": [
+      "Zero",
+      "2𝐿",
+      "𝐿",
+      "𝐿 2"
+    ],
+    "answer": "𝐿"
+  },
+  {
+    "section": "Physics",
+    "content": "A zener diode of power rating 1.6 W is to be used as voltage regulator. If the zener diode has a breakdown of 8 V and it has to regulate voltage fluctuating between 3 V and 10 V The value of resistance 𝑅𝑠 for safe operation of diode will be",
+    "options": [
+      "10 Ω",
+      "12 Ω",
+      "13.3 Ω",
+      "13 Ω"
+    ],
+    "answer": "10 Ω"
+  },
+  {
+    "section": "Physics",
+    "content": "A carrier wave of amplitude 15 V is modulated by a sinusoidal base band signal of amplitude 3 V. The ratio of maximum amplitude to minimum amplitude in an amplitude modulated wave is",
+    "options": [
+      "2",
+      "3 2",
+      "1",
+      "5"
+    ],
+    "answer": "3 2"
+  },
+  {
+    "section": "Physics",
+    "content": "A closed circular tube of average radius 15 cm, whose inner walls are rough, is kept in vertical plane. A block of mass 1 kg just fit inside the tube. The speed of block is 22 m s-1, when it is introduced at the top of tube. After completing five oscillations, the block stops at the bottom region of tube. The work done by the tube on the block is ________ J. (Given 𝑔=10 m s-2).",
+    "options": [],
+    "answer": "245"
+  },
+  {
+    "section": "Physics",
+    "content": "If the earth suddenly shrinks to 1 64th of its original volume with its mass remaining the same, the period of rotation of earth becomes 24 𝑥ℎ. The value of 𝑥 is ________",
+    "options": [],
+    "answer": "16"
+  },
+  {
+    "section": "Physics",
+    "content": "Two wires each of radius 0.2 cm and negligible mass, one made of steel and the other made of brass are loaded as shown in the figure. The elongation of the steel wire is ______ 10–6 m. [Young's modulus for steel =2×1011 N m–2 and 𝑔=10 m s–2]<br><div class='flex justify-center my-4'><img src='images/7/q23.png' alt='Question 23'></div>",
+    "options": [],
+    "answer": "20"
+  },
+  {
+    "section": "Physics",
+    "content": "A transverse harmonic wave on a string is given by 𝑦𝑥, 𝑡=5 sin6𝑡+0.003𝑥 where 𝑥 and 𝑦 are in cm and 𝑡 in sec. The wave velocity is _________ m s-1.",
+    "options": [],
+    "answer": "20"
+  },
+  {
+    "section": "Physics",
+    "content": "Three concentric spherical metallic shells 𝑋, 𝑌 and 𝑍 of radius 𝑎, 𝑏 and 𝑐 respectively 𝑎<𝑏<𝑐 have surface charge densities 𝜎, – 𝜎 and 𝜎, respectively. The shells 𝑋 and 𝑍 are at same potential. If the radii of 𝑋 & 𝑌 are 2 cm and 3 cm, respectively. The radius of shell 𝑍 is _____ cm.",
+    "options": [],
+    "answer": "5"
+  },
+  {
+    "section": "Physics",
+    "content": "10 resistors each of resistance 10 Ω can be connected in such as to get maximum and minimum equivalent resistance. The ratio of maximum and minimum equivalent resistance will be________.",
+    "options": [],
+    "answer": "100"
+  },
+  {
+    "section": "Physics",
+    "content": "The current required to be passed through a solenoid of 15 cm length and 60 turns in order to demagnetise a bar magnet of magnetic intensity 2.4×103 A m–1 is ________ A.",
+    "options": [],
+    "answer": "6"
+  },
+  {
+    "section": "Physics",
+    "content": "A 1 m long metal rod 𝑋𝑌 completes the circuit as shown in figure. The plane of the circuit is perpendicular to the magnetic field of flux density 0.15 T. If the resistance of the circuit is 5 Ω, the force needed to move the rod in direction, as indicated, with a constant speed of 4 m s-1 will be _______ 10–3 N.<br><div class='flex justify-center my-4'><img src='images/7/q28.png' alt='Question 28'></div>",
+    "options": [],
+    "answer": "18"
+  },
+  {
+    "section": "Physics",
+    "content": "Unpolarised light of intensity 32 W m−2 passes through the combination of three polaroids such that the pass axis of the last polaroids is perpendicular to that of the pass axis of first polaroids. If intensity of emerging light is 3 W m−2, then the angle between pass axis of first two polaroids is _________ °.",
+    "options": [],
+    "answer": "30"
+  },
+  {
+    "section": "Physics",
+    "content": "The decay constant for a radioactive nuclide is 1.5×10-5 s-1. Atomic weight of the substance is 60 g mole-1, 𝑁𝐴=6×1023. The activity of 1.0 µg of the substance is ________ ×1010 Bq.",
+    "options": [],
+    "answer": "15"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The number of molecules and moles in 2.8375 litres of O2 at STP are respectively",
+    "options": [
+      "7.527 ×1023 and 0.125 mol",
+      "7.527 ×1022 and 0.250 mol",
+      "1.505 ×1023 and 0.250 mol",
+      "7.527 ×1022 and 0.125 mol"
+    ],
+    "answer": "7.527 ×1022 and 0.125 mol"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The pair from the following pairs having both compounds with net non-zero dipole moment is",
+    "options": [
+      "1, 4-Dichlorobenzene, 1, 3-Dichlorobenzene",
+      "cis-butene, trans-butene",
+      "CH 2Cl2, CHCl 3",
+      "Benzene, anisidine"
+    ],
+    "answer": "CH 2Cl2, CHCl 3"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The compound which does not exist is",
+    "options": [
+      "NaO 2",
+      "BeH 2",
+      "PbEt 4",
+      "NH 42BeF 4"
+    ],
+    "answer": "NaO 2"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The enthalpy change for the adsorption process and micelle formation respectively are",
+    "options": [
+      "ΔH ads>0 and ΔH mic<0",
+      "ΔH ads>0 and ΔH mic>0",
+      "ΔH ads<0 and ΔH mic>0",
+      "ΔH ads<0 and ΔH mic<0"
+    ],
+    "answer": "ΔH ads<0 and ΔH mic>0"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Given (A) 2CO g+O2g→2CO 2g ΔH 1o=-x kJ mol-1 (B) Cgraphite +O2g→CO 2g ΔH 2o=-y kJ mol-1 The ∆Ho for the reaction Cgraphite +1 2O2g→COg is<br><div class='flex justify-center my-4'><img src='images/7/q35.png' alt='Question 35'></div>",
+    "options": [
+      "2x-y 2",
+      "x+2y 2",
+      "x-2y 2",
+      "2y-x"
+    ],
+    "answer": "x-2y 2"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Given below are two reactions, involved in the commercial production of dihydrogen H2. The two reactions are carried out at temperature “ T1” and “ T2”, respectively Cs+H2OgT1 ⟶COg+H2g COg+H2OgT2 CatalystCO 2g+H2g The temperatures T1 and T2 are correctly related as",
+    "options": [
+      "T1=T2",
+      "T1<T2",
+      "T1=100 K, T2=1270 K",
+      "T1>T2"
+    ],
+    "answer": "T1>T2"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Lime reacts exothermally with water to give ‘ A’ which has low solubility in water. Aqueous solution of ‘ A’ is often used for the test of CO 2, a test in which insoluble B is formed. If B is further reacted with CO 2 then soluble compound is formed. ‘ A' is",
+    "options": [
+      "Quick lime",
+      "Slaked lime",
+      "White lime",
+      "Lime water"
+    ],
+    "answer": "Slaked lime"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Using column chromatography, mixture of two compounds ‘ A’ and ‘ B’ was separated. ‘ A’ eluted first, this indicates ‘ B’ has<br><div class='flex justify-center my-4'><img src='images/7/q38.png' alt='Question 38'></div>",
+    "options": [
+      "low Rf, stronger adsorption",
+      "high Rf, weaker adsorption",
+      "high Rf, stronger adsorption",
+      "low Rf, weaker adsorption"
+    ],
+    "answer": "low Rf, stronger adsorption"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The major product ' P' formed in the given reaction is<br><div class='flex justify-center my-4'><img src='images/7/q39.png' alt='Question 39'></div>",
+    "options": [
+      "CH2COOH Structure",
+      "COOH-COOH Structure",
+      "CH2COOH with OH",
+      "COOH Structure with HO"
+    ],
+    "answer": "COOH-COOH Structure"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Match List I with List II List I Industry List II Waste Generated (A) Steel plants (I) Gypsum (B) Thermal power plants (II) Fly ash (C) Fertilizer Industries (III) Slag (D) Paper mills (IV) Bio-degradable wastes Choose the correct answer from the options given below :",
+    "options": [
+      "A-III, B-II, C-I, D-IV",
+      "A-III, B-IV, C-I, D-II",
+      "A-II, B-III, C-IV, D-I",
+      "A-IV, B-I, C-II, D-III"
+    ],
+    "answer": "A-III, B-II, C-I, D-IV"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Which of the following is used as a stabilizer during the concentration of sulphide ores?",
+    "options": [
+      "Pine oils",
+      "Fatty acids",
+      "Xanthates",
+      "Cresols"
+    ],
+    "answer": "Cresols"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Given below are two statements: Statement I : Aqueous solution of K2Cr2O7 is preferred as a primary standard in volumetric analysis over Na2Cr2O7 aqueous solution. Statement II : K2Cr2O7 has a higher solubility in water than Na2Cr2O7. In the light of the above statements, choose the correct answer from the options given below:",
+    "options": [
+      "Statement I is false but Statement II is true",
+      "Both Statement I and Statement II are true",
+      "Statement I is true but Statement II is false",
+      "Both Statement I and Statement II are false"
+    ],
+    "answer": "Statement I is true but Statement II is false"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Prolonged heating is avoided during the preparation of ferrous ammonium sulphate to",
+    "options": [
+      "Prevent hydrolysis",
+      "Prevent reduction",
+      "Prevent breaking",
+      "Prevent oxidation"
+    ],
+    "answer": "Prevent oxidation"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Which of the following statements are correct? (A) The M3+/M2+ reduction potential for iron is greater than manganese. (B) The higher oxidation states of first row d-block elements get stabilized by oxide ion (C) Aqueous solution of Cr2+ can liberate hydrogen from dilute acid (D) Magnetic moment of V2+ is observed between 4.4-5.2 BM   Choose the correct answer from the options given below:",
+    "options": [
+      "B, C only",
+      "A, B, D only",
+      "C, D only",
+      "A, B only"
+    ],
+    "answer": "B, C only"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The octahedral diamagnetic low spin complex among the following is",
+    "options": [
+      "CoNH 363+",
+      "CoF 63-",
+      "CoCl 63-",
+      "NiCl 42"
+    ],
+    "answer": "CoNH 363+"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Identify the correct order of reactivity for the following pairs towards the respective mechanism (A) (B) (C) Electrophilic substitution (D) Nucleophilic substitution Choose the correction answer from the options given below:<br><div class='flex justify-center my-4'><img src='images/7/q46.png' alt='Question 46'></div>",
+    "options": [
+      "B, C and D only",
+      "A, B, C and D",
+      "A, B and D only",
+      "A, C and Donly"
+    ],
+    "answer": "A, B, C and D"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Suitable reaction condition for preparation of Methyl phenyl ether is",
+    "options": [
+      "PhO⊝Na⊕, MeOH",
+      "Benzene, MeBr",
+      "Ph-Br, MeO⊖Na⊕",
+      "PhO⊝Na⊕, MeBr"
+    ],
+    "answer": "PhO⊝Na⊕, MeBr"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Isomeric amines with molecular formula C8H11N give the following tests Isomer P⇒ Can be prepared by Gabriel phthalimide synthesis Isomer Q⇒ Reacts with Hinsberg’s reagent to give solid insoluble in NaOH Isomer R⇒ Reacts with HONO followed by β-naphthol in NaOH to give red dye. Isomers P, Q and R respectively are",
+    "options": [
+      "Structure 1",
+      "Structure 2",
+      "Structure 3",
+      "Structure 4"
+    ],
+    "answer": "Structure 4"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Match List-I with List-II. List-I Polymer List-II Type/Class A.Nylon- 2-Nylon- 6 I. Thermosetting polymer B.Buna- N II. Biodegradable polymer C.Ureaformaldehyde resin III. Synthetic rubber D.Dacron IV. Polyester Choose the correct answer from the options given below:",
+    "options": [
+      "A→IV; B→I; C→II; D→II",
+      "A→II; B→III; C→I; D→IV",
+      "A→IV; B→III; C→I; D→II",
+      "A→II; B→I; C→IV; D→III"
+    ],
+    "answer": "A→II; B→III; C→I; D→IV"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The one that does not stabilize 2∘ and 3∘ structures of proteins is",
+    "options": [
+      "–S–S–linkage",
+      "H-bonding",
+      "–O–O–linkage",
+      "van der Waals forces"
+    ],
+    "answer": "–O–O–linkage"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The number of bent-shaped molecule/s from the following is ______ N3-, NO 2-, I3-, O3, SO2",
+    "options": [],
+    "answer": "3"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The sum of lone pairs present on the central atom of the interhalogen IF5 and IF7 is ______",
+    "options": [],
+    "answer": "1"
+  },
+  {
+    "section": "Chemistry",
+    "content": "At constant temperature, a gas is at a pressure of 940 .3 mm Hg. The pressure at which its volume decreases by 40% is ______ mm Hg. (Nearest integer)",
+    "options": [],
+    "answer": "1567"
+  },
+  {
+    "section": "Chemistry",
+    "content": "FeO 42-+2.2 V ⟶ Fe3++0.70 V ⟶ Fe2+-0.45 V ⟶ Fe0 EFeO42-/Fe2+θ is x×10-3 V. The value of x is _______",
+    "options": [],
+    "answer": "1825"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The number of incorrect statement/s about the black body from the following is______ (A) Emit or absorb energy in the form of electromagnetic radiation. (B) Frequency distribution of the emitted radiation depends on temperature. (C) At a given temperature, intensity vs frequency curve passes through a maximum value.   (D) The maximum of the intensity vs frequency curve is at a higher frequency at higher temperature compared to that at lower temperature.",
+    "options": [],
+    "answer": "0"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The number of correct statement/s involving equilibria in physical processes from the following is ________ (A) Equilibrium is possible only in a closed system at a given temperature. (B) Both the opposing processes occur at the same rate. (C) When equilibrium is attained at a given temperature, the value of all its parameters became equal (D) For dissolution of solids in liquids, the solubility is constant at a given temperature.",
+    "options": [],
+    "answer": "3"
+  },
+  {
+    "section": "Chemistry",
+    "content": "In the following reaction, the total number of oxygen atoms in 𝑋 and 𝑌 is______  Na2O+H2O→2X Cl2O7+H2O→2Y",
+    "options": [],
+    "answer": "5"
+  },
+  {
+    "section": "Chemistry",
+    "content": "If the degree of dissociation of aqueous solution of weak monobasic acid is determined to be 0.3, then the observed freezing point will be _____ % higher than the expected/theoretical freezing point. (Nearest integer).",
+    "options": [],
+    "answer": "30"
+  },
+  {
+    "section": "Chemistry",
+    "content": "A molecule undergoes two independent first order reactions whose respective half lives are 12 min and 3 min. If both the reactions are occurring then the time taken for the 50% consumption of the reactant is ______ min. (Nearest integer)",
+    "options": [],
+    "answer": "2"
+  },
+  {
+    "section": "Chemistry",
+    "content": "In potassium ferrocyanide, there are ______ pairs of electrons in the t2g set of orbitals.",
+    "options": [],
+    "answer": "3"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the complex number 𝑧=𝑥+𝑖𝑦 be such that 2𝑧-3𝑖 2𝑧+𝑖 is purely imaginary. If 𝑥+𝑦2=0, then 𝑦4+𝑦2-𝑦 is equal to",
+    "options": [
+      "2 3",
+      "3 2",
+      "3 4",
+      "4 3"
+    ],
+    "answer": "3 4"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the first term a and the common ratio 𝑟 of a geometric progression be positive integers. If the sum of squares of its first three terms is 33033, then the sum of these three terms is equal to",
+    "options": [
+      "241",
+      "231",
+      "210",
+      "220"
+    ],
+    "answer": "231"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If the coefficient of 𝑥7 in 𝑎𝑥-1 𝑏𝑥213 and the coefficient of 𝑥-5 in 𝑎𝑥+1 𝑏𝑥213 are equal, then 𝑎4𝑏4 is equal to:",
+    "options": [
+      "11",
+      "44",
+      "22",
+      "33."
+    ],
+    "answer": "22"
+  },
+  {
+    "section": "Mathematics",
+    "content": "96 cos𝜋 33 cos2𝜋 33 cos4𝜋 33 cos8𝜋 33 cos16𝜋 33 is equal to",
+    "options": [
+      "3",
+      "1",
+      "4",
+      "2"
+    ],
+    "answer": "3"
+  },
+  {
+    "section": "Mathematics",
+    "content": "A line segment 𝐴𝐵 of length 𝜆 moves such that the points 𝐴 and 𝐵 remain on the periphery of a circle of radius 𝜆. Then the locus of the point, that divides the line segment 𝐴𝐵 in the ratio 2 : 3, is a circle of radius",
+    "options": [
+      "3 5𝜆",
+      "2 3𝜆",
+      "√19 5𝜆",
+      "√19 7𝜆"
+    ],
+    "answer": "√19 5𝜆"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the ellipse 𝐸:𝑥2+9𝑦2=9 intersect the positive 𝑥- and 𝑦-axes at the points 𝐴 and 𝐵 respectively. Let the major axis of 𝐸 be a diameter of the circle 𝐶. Let the line passing through 𝐴 and 𝐵 meet the circle 𝐶 at the point 𝑃. If the area of the triangle with vertices 𝐴, 𝑃 and the origin 𝑂 is 𝑚 𝑛 where 𝑚 and 𝑛 are coprime, then 𝑚-𝑛 is equal to",
+    "options": [
+      "16",
+      "15",
+      "17",
+      "18"
+    ],
+    "answer": "17"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The negation of the statement 𝑝∨𝑞∧𝑞∨~𝑟 is",
+    "options": [
+      "𝑝∨𝑟∧~𝑞",
+      "~𝑝∨𝑟∧~𝑞",
+      "~𝑝∨~𝑞∨~𝑟",
+      "~𝑝∨~𝑞∧~𝑟"
+    ],
+    "answer": "~𝑝∨𝑟∧~𝑞"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If 𝐴 is a 3×3 matrix and 𝐴=2 then 3 adj 3𝐴𝐴2 is equal to",
+    "options": [
+      "312⋅611",
+      "312⋅610",
+      "310⋅611",
+      "311⋅610"
+    ],
+    "answer": "311⋅610"
+  },
+  {
+    "section": "Mathematics",
+    "content": "For the system of linear equations 2𝑥-𝑦+3𝑧=5 3𝑥+2𝑦-𝑧=7 4𝑥+5𝑦+𝛼𝑧=𝛽, which of the following is NOT correct?",
+    "options": [
+      "The system has infinitely many solutions for 𝛼=-5 and 𝛽=9",
+      "The system has infinitely many solutions for 𝛼=-6 and 𝛽=9",
+      "The system in inconsistent for 𝛼=-5 and 𝛽=8",
+      "The system has a unique solution for 𝛼≠-5 and 𝛽=8"
+    ],
+    "answer": "The system has infinitely many solutions for 𝛼=-6 and 𝛽=9"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If 𝑓𝑥=tan1∘𝑥+loge123 𝑥loge1234-tan1∘, 𝑥>0 then the least value of 𝑓𝑓𝑥+𝑓𝑓4 𝑥 is",
+    "options": [
+      "0",
+      "8",
+      "2",
+      "4"
+    ],
+    "answer": "2"
+  },
+  {
+    "section": "Mathematics",
+    "content": "A square piece of tin of side 30 cm is to be made into a box without top by cutting a square from each corner and folding up the flaps to form a box. If the volume of the box is maximum, then its surface area (in cm2) is equal to",
+    "options": [
+      "800",
+      "675",
+      "1025",
+      "900"
+    ],
+    "answer": "800"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If 𝐼𝑥=∫esin2𝑥cos𝑥 sin2𝑥-sin𝑥𝑑𝑥 and 𝐼0=1, then 𝐼𝜋 3 is equal to",
+    "options": [
+      "-1 2e3 4",
+      "1 2e3 4",
+      "-e3 4",
+      "e3 4"
+    ],
+    "answer": "1 2e3 4"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let 𝑓 be a differentiable function such that 𝑥2𝑓𝑥-𝑥=4∫0𝑥𝑡 𝑓𝑡 𝑑𝑡, 𝑓1=2 3 Then 18 𝑓3 is equal to",
+    "options": [
+      "210",
+      "160",
+      "150",
+      "180"
+    ],
+    "answer": "160"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The slope of tangent at any point 𝑥, 𝑦 on a curve 𝑦=𝑦𝑥 is 𝑥2+𝑦2 2𝑥𝑦. 𝑥>0. If 𝑦2=0, then a value of 𝑦8 is",
+    "options": [
+      "-4√2",
+      "2√3",
+      "-2√3",
+      "4√3"
+    ],
+    "answer": "4√3"
+  },
+  {
+    "section": "Mathematics",
+    "content": "An arc 𝑃𝑄 of a circle subtends a right angle at its centre 𝑂. The mid point of the arc 𝑃𝑄 is 𝑅. If 𝑂𝑃⃗=𝑢→, 𝑂𝑅⃗=𝑣→ and 𝑂𝑄⃗=𝛼𝑢→+𝛽𝑣→ then 𝛼, 𝛽2, are the roots of the equation",
+    "options": [
+      "𝑥2+𝑥-2=0",
+      "𝑥2-𝑥-2=0",
+      "3𝑥2-2𝑥-1=0",
+      "3𝑥2+2𝑥-1=0"
+    ],
+    "answer": "𝑥2-𝑥-2=0"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let 𝑂 be the origin and the position vector of the point 𝑃 be -𝑖-2𝑗+3𝑘 If the position vectors of the points 𝐴, 𝐵 and 𝐶 are -2𝑖+𝑗-3𝑘, 2𝑖+4𝑗-2𝑘 and -4𝑖∧+2𝑗-𝑘 respectively, then the projection of the vector 𝑂𝑃⃗ on a vector perpendicular to the vectors 𝐴𝐵⃗ and 𝐴𝐶⃗ is",
+    "options": [
+      "3",
+      "8 10",
+      "7 3",
+      "1"
+    ],
+    "answer": "3"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let two vertices of a triangle 𝐴𝐵𝐶 be 2, 4, 6 and 0, -2, -5, and its centroid be 2, 1, 1. If the image of the third vertex in the plane 𝑥+2𝑦+4𝑧=11 is 𝛼, 𝛽, 𝛾 then 𝛼𝛽+𝛽𝛾+𝛾𝛼 is equal to",
+    "options": [
+      "70",
+      "76",
+      "74",
+      "72"
+    ],
+    "answer": "74"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The shortest distance between the lines 𝑥+2 1=𝑦 -2=𝑧-5 2 and 𝑥-4 1=𝑦-1 2=𝑧+3 0 is",
+    "options": [
+      "8",
+      "6",
+      "7",
+      "9"
+    ],
+    "answer": "9"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let 𝑃 be the point of intersection of the line 𝑥+3 3=𝑦+2 1=1-𝑧 2 and the plane 𝑥+𝑦+𝑧=2 If the distance of the point 𝑃 from the plane 3𝑥-4𝑦+12𝑧=32 is 𝑞, then 𝑞 and 2𝑞 are the roots of the equation",
+    "options": [
+      "𝑥2-18𝑥-72=0",
+      "𝑥2-18𝑥+72=0",
+      "𝑥2+18𝑥+72=0",
+      "𝑥2+18𝑥-72=0"
+    ],
+    "answer": "𝑥2-18𝑥+72=0"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let 𝑁 denote the sum of the numbers obtained when two dice are rolled. If the probability that 2𝑁<𝑁! is 𝑚 𝑛 where 𝑚 and 𝑛 are coprime, then 4𝑚-3𝑛 is equal to",
+    "options": [
+      "6",
+      "12",
+      "10",
+      "8"
+    ],
+    "answer": "8"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let 𝑎, 𝑏, 𝑐 be the three distinct positive real numbers such that 2𝑎log𝑒𝑎=𝑏𝑐log𝑒𝑏 and 𝑏log𝑒2=𝑎log𝑒𝑐 Then 6𝑎+5𝑏𝑐 is equal to ______.",
+    "options": [],
+    "answer": "8"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The number of permutations, of the digits 1, 2, 3, …, 7 without repetition, which neither contain the string 153 nor the string 2467 , is _______ .",
+    "options": [],
+    "answer": "4898"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Some couples participated in a mixed doubles badminton tournament. If the number of matches played, so that no couple played in a match, is 840, then the total numbers of persons, who participated in the tournament, is ________.",
+    "options": [],
+    "answer": "16"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The sum of all those terms, of the arithmetic progression 3, 8, 13, ..., 373, which are not divisible by 3, is equal to ________.",
+    "options": [],
+    "answer": "9525"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The coefficient of 𝑥7 in 1-𝑥+2𝑥310 is __________ .",
+    "options": [],
+    "answer": "960"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let a common tangent to the curves 𝑦2=4𝑥 and 𝑥-42+𝑦2=16 touch the curves at the points 𝑃 and 𝑄. Then 𝑃𝑄2 is equal to ________.",
+    "options": [],
+    "answer": "32"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If the mean of the frequency distribution Class : 0-10 10-20 20-30 30-40 40-50 Frequency : 2 3 𝑥 5 4 is 28, then its variance is ________ .<br><div class='flex justify-center my-4'><img src='images/7/q87.png' alt='Question 87'></div>",
+    "options": [],
+    "answer": "151"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The number of elements in the set 𝑛∈ℤ:𝑛2-10𝑛+19<6 is _______ .",
+    "options": [],
+    "answer": "6"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let 𝑓:-2, 2→ℝ be defined by 𝑓𝑥=𝑥𝑥 ,-2<𝑥<0 𝑥-1𝑥 ,0≤𝑥<2 where 𝑥 denotes the greatest integer function. If 𝑚 and 𝑛 respectively are the number of points in –2, 2 at which 𝑦=𝑓𝑥 is not continuous and not differentiable, then 𝑚+𝑛 is equal to ________.",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let 𝑦=𝑝𝑥 be the parabola passing through the points –1, 0, 0, 1 and 1, 0. If the area of the region 𝑥, 𝑦:𝑥+12+𝑦-12≤1, 𝑦≤𝑝𝑥 is 𝐴, then 12𝜋-4𝐴 is equal to ________ .",
+    "options": [],
+    "answer": "16"
+  }
+
+  ],
+
+  8:[
+  {
+    "section": "Physics",
+    "content": "A person travels 𝑥 distance with velocity 𝑣1 and then 𝑥 distance with velocity 𝑣2 in the same direction. The average velocity of the person is 𝑣, then the relation between 𝑣, 𝑣1 and 𝑣2 will be",
+    "options": [
+      "𝑣=𝑣1+𝑣2 2",
+      "1 𝑣=1 𝑣1+1 𝑣2",
+      "𝑣=𝑣1+𝑣2",
+      "2 𝑣=1 𝑣1+1 𝑣2"
+    ],
+    "answer": "2 𝑣=1 𝑣1+1 𝑣2"
+  },
+  {
+    "section": "Physics",
+    "content": "Two projectiles are projected at 30° and 60°with the horizontal with the same speed. The ratio of the maximum height attained by the two projectiles respectively is:",
+    "options": [
+      "√3 : 1",
+      "1 : √3",
+      "2 : √3",
+      "1 : 3"
+    ],
+    "answer": "1 : 3"
+  },
+  {
+    "section": "Physics",
+    "content": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R Assertion A : An electric fan continues to rotate for some time after the current is switched off. Reason R : Fan continues to rotate due to inertia of motion. In the light of above statements, choose the most appropriate answer from the options given below.",
+    "options": [
+      "A is correct but R is not correct",
+      "A is not correct but R is correct",
+      "Both A and R are correct and R is the correct explanation of A",
+      "Both A and R are correct but R is NOT the correct explanation of A"
+    ],
+    "answer": "Both A and R are correct and R is the correct explanation of A"
+  },
+  {
+    "section": "Physics",
+    "content": "Given below are two statements: Statement I : Rotation of the earth shows effect on the value of acceleration due to gravity 𝑔. Statement II : The effect of rotation of the earth on the value of 𝑔 at the equator is minimum and that at the pole is maximum. In the light of the above statements, choose the correct answer from the options given below",
+    "options": [
+      "Statement I is false but statement II is true",
+      "Both Statement I and Statement II are true",
+      "Both Statement I and Statement II are false",
+      "Statement I is true but statement II is false"
+    ],
+    "answer": "Statement I is true but statement II is false"
+  },
+  {
+    "section": "Physics",
+    "content": "The time period of a satellite, revolving above earth's surface at a height equal to 𝑅 will be (Given 𝑔=𝜋2 m s-2, 𝑅= radius of earth)",
+    "options": [
+      "√2𝑅",
+      "√8𝑅",
+      "√32𝑅",
+      "√4𝑅"
+    ],
+    "answer": "√32𝑅"
+  },
+  {
+    "section": "Physics",
+    "content": "Young’s moduli of the material of wires A and B are in the ratio of 1 : 4, while its area of cross sections are in the ratio of 1 : 3. If the same amount of load is applied to both the wires, the amount of elongation produced in the wires A and B will be in the ratio of [Assume length of wires A and B are same]",
+    "options": [
+      "12 : 1",
+      "1 : 36",
+      "36 : 1",
+      "1 : 12"
+    ],
+    "answer": "12 : 1"
+  },
+  {
+    "section": "Physics",
+    "content": "A gas is compressed adiabatically, which one of the following statement is NOT true?",
+    "options": [
+      "There is no heat supplied to the system.",
+      "There is no change in the internal energy",
+      "The temperature of the gas increases",
+      "The change in the internal energy is equal to the work done on the gas"
+    ],
+    "answer": "There is no change in the internal energy"
+  },
+  {
+    "section": "Physics",
+    "content": "A gas mixture consists of 2 moles of oxygen and 4 moles of neon at temperature T. Neglecting all vibrational modes, the total internal energy of the system will be:",
+    "options": [
+      "11 RT",
+      "8 RT",
+      "4 RT",
+      "16 RT"
+    ],
+    "answer": "11 RT"
+  },
+  {
+    "section": "Physics",
+    "content": "For a periodic motion represented by the equation 𝑦 = sin 𝜔𝑡 + cos 𝜔𝑡, the amplitude of the motion is",
+    "options": [
+      "1",
+      "0.5",
+      "2",
+      "√2"
+    ],
+    "answer": "√2"
+  },
+  {
+    "section": "Physics",
+    "content": "The distance between two plates of a capacitor is 𝑑 and its capacitance is 𝐶1, when air is the medium between the plates. If a metal sheet of thickness 2𝑑 3 and of the same area as plate is introduced between the plates, the capacitance of the capacitor becomes 𝐶2. The ratio 𝐶2 𝐶1 is",
+    "options": [
+      "3 : 1",
+      "2 : 1",
+      "4 : 1",
+      "1 : 1"
+    ],
+    "answer": "3 : 1"
+  },
+  {
+    "section": "Physics",
+    "content": "In a metallic conductor, under the effect of applied electric field, the free electrons of the conductor",
+    "options": [
+      "Drift from higher potential to lower potential",
+      "Move with the uniform velocity throughout from lower potential to higher potential",
+      "Move in the straight line paths in the same direction",
+      "Move in the curved paths from lower potential to higher potential"
+    ],
+    "answer": "Move in the curved paths from lower potential to higher potential"
+  },
+  {
+    "section": "Physics",
+    "content": "A bar magnet is released from rest along the axis of a very long vertical copper tube. After some time the magnet will",
+    "options": [
+      "Move down with an acceleration equal to 𝑔",
+      "Oscillate inside the tube",
+      "Move down with almost constant speed",
+      "Move down with an acceleration greater than 𝑔"
+    ],
+    "answer": "Move down with almost constant speed"
+  },
+  {
+    "section": "Physics",
+    "content": "Given below are two statements: Statement I : For diamagnetic substance -1 ≤ 𝜒 < 0, where 𝜒 is the magnetic susceptibility. Statement II : Diamagnetic substance when placed in an external magnetic field, tend to move from stronger to weaker part of the field. In the light of the above statements, choose the correct answer from the options give below.",
+    "options": [
+      "Both Statement I and Statement II are False",
+      "Statement I is correct but Statement II is false",
+      "Statement I is incorrect but Statement II is true",
+      "Both Statement I and Statement II are true"
+    ],
+    "answer": "Both Statement I and Statement II are true"
+  },
+  {
+    "section": "Physics",
+    "content": "The amplitude of magnetic field in an electromagnetic wave propagating along y-axis is 6.0 × 10–7 T. The maximum value of electric field in the electromagnetic wave is",
+    "options": [
+      "2 × 1015 V m-1",
+      "180 V m-1",
+      "6.0 × 10-7 V m-1",
+      "5 × 1014 V m-1"
+    ],
+    "answer": "180 V m-1"
+  },
+  {
+    "section": "Physics",
+    "content": "The ratio of intensities at two points P and Q on the screen in a Young’s double slit experiment where phase difference between two waves of same amplitude are 𝜋 3 and 𝜋 2 respectively are",
+    "options": [
+      "2 : 3",
+      "1 : 3",
+      "3 : 1",
+      "3 : 2"
+    ],
+    "answer": "3 : 2"
+  },
+  {
+    "section": "Physics",
+    "content": "The variation of stopping potential 𝑉0 as a function of the frequency (𝜈) of the incident light for a metal is shown in figure. The work function of the surface is<br><div class='flex justify-center my-4'><img src='images/8/q16.png' alt='Question 16'></div>",
+    "options": [
+      "2.98 eV",
+      "2.07 eV",
+      "1.36 eV",
+      "18.6 eV"
+    ],
+    "answer": "2.07 eV"
+  },
+  {
+    "section": "Physics",
+    "content": "The half life of a radioactive substance is T. The time taken, for disintegrating 7 8 th part of its original mass will be:",
+    "options": [
+      "2T",
+      "3T",
+      "T",
+      "8T"
+    ],
+    "answer": "3T"
+  },
+  {
+    "section": "Physics",
+    "content": "If each diode has a forward bias resistance of 25 Ω in the below circuit, Which of the following options is correct?<br><div class='flex justify-center my-4'><img src='images/8/q18.png' alt='Question 18'></div>",
+    "options": [
+      "𝐼1 𝐼2=1",
+      "𝐼2 𝐼3=1",
+      "𝐼1 𝐼2=2",
+      "𝐼3 𝐼4=1"
+    ],
+    "answer": "𝐼1 𝐼2=2"
+  },
+  {
+    "section": "Physics",
+    "content": "A massage signal of frequency 3 kHz is used to modulate a carrier signal of frequency 1.5 MHz. The bandwidth of the amplitude modulated wave is",
+    "options": [
+      "6 MHz",
+      "6 kHz",
+      "3 MHz",
+      "3 kHz"
+    ],
+    "answer": "6 kHz"
+  },
+  {
+    "section": "Physics",
+    "content": "In an experiment with vernier callipers of least count 0.1 mm, when two jaws are joined together the zero of vernier scale lies right to the zero of the main scale and 6th division of vernier scale coincides with the main scale division. While measuring the diameter of a spherical bob, the zero of vernier scale lies in between 3.2 cm and 3.3 cm marks and 4th division of vernier scale coincides with the main scale division. The diameter of bob is measured as",
+    "options": [
+      "3.22 cm",
+      "3.18 cm",
+      "3.26 cm",
+      "3.25 cm"
+    ],
+    "answer": "3.18 cm"
+  },
+  {
+    "section": "Physics",
+    "content": "If the maximum load carried by an elevator is 1400 kg (600 kg - Passengers + 800 kg - elevator), which is moving up with a uniform speed of 3 m s-1 and the frictional force acting on it is 2000 N, then the maximum power used by the motor is __________ kW. (𝑔=10 m s-2)",
+    "options": [],
+    "answer": "48"
+  },
+  {
+    "section": "Physics",
+    "content": "A force of -𝑃𝑘 acts on the origin of the coordinate system. The torque about the point (2, -3) is 𝑃(𝑎𝑖 + 𝑏𝑗), The ratio 𝑎 𝑏 is 𝑥 2. The value of x is ______.",
+    "options": [],
+    "answer": "3"
+  },
+  {
+    "section": "Physics",
+    "content": "Figure below shows a liquid being pushed out of the tube by a piston having area of cross section 2.0 cm2. The area of cross section at the outlet is 10 mm2. If the piston is pushed at a speed of 4 cm s-1, the speed of outgoing fluid is _________ cm s-1.",
+    "options": [],
+    "answer": "80"
+  },
+  {
+    "section": "Physics",
+    "content": "A rectangular block of mass 5 kg attached to a horizontal spiral spring executes simple harmonic motion of amplitude 1 m and time period 3.14 s. The maximum force exerted by spring on block is ________ N",
+    "options": [],
+    "answer": "20"
+  },
+  {
+    "section": "Physics",
+    "content": "An electron revolves around an infinite cylindrical wire having uniform linear charge density 2 × 10-8 C m-1 in circular path under the influence of attractive electrostatic field as shown in the figure. The velocity of electron with which it is revolving is _________ × 106 m s-1. Given mass of electron = 9 × 10-31 kg<br><div class='flex justify-center my-4'><img src='images/8/q25.png' alt='Question 25'></div>",
+    "options": [],
+    "answer": "8"
+  },
+  {
+    "section": "Physics",
+    "content": "A rectangular parallelopiped is measured as 1 cm × 1 cm × 100 cm. If its specific resistance is 3 × 10-7 Ω m, then the resistance between its two opposite rectangular faces will be _________ × 10-7 Ω.<br><div class='flex justify-center my-4'><img src='images/8/q26.png' alt='Question 26'></div>",
+    "options": [],
+    "answer": "3"
+  },
+  {
+    "section": "Physics",
+    "content": "A straight wire carrying a current of 14 A is bent into a semicircular arc of radius 2.2 cm as shown in the figure. The magnetic field produced by the current at the centre O of the arc is ________ × 10-4 T<br><div class='flex justify-center my-4'><img src='images/8/q27.png' alt='Question 27'></div>",
+    "options": [],
+    "answer": "2"
+  },
+  {
+    "section": "Physics",
+    "content": "A square loop of side 2.0 cm is placed inside a long solenoid that has 50 turns per centimetre and carries a sinusoidally varying current of amplitude 2.5 A and angular frequency 700 rad s-1. The central axes of the loop and solenoid coincide. The amplitude of the emf induced in the loop is 𝑥 × 10-4 V. The value of x is _______. ( Take, 𝜋 = 22 7)",
+    "options": [],
+    "answer": "44"
+  },
+  {
+    "section": "Physics",
+    "content": "A point object O is placed in front of two thin symmetrical coaxial convex lenses 𝐿1 and 𝐿2 with focal length 24 cm and 9 cm respectively. The distance between two lenses is 10 cm and the object is placed 6 cm away from lens 𝐿1 as shown in the figure. The distance between the object and the image formed by the system of two lenses is __________ cm<br><div class='flex justify-center my-4'><img src='images/8/q29.png' alt='Question 29'></div>",
+    "options": [],
+    "answer": "34"
+  },
+  {
+    "section": "Physics",
+    "content": "If 917 Å be the lowest wavelength of Lyman series then the lowest wavelength of Balmer series will be _______ Å.",
+    "options": [],
+    "answer": "3668"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: 3.1500 g of hydrated oxalic acid dissolved in water to make 250.0 mL solution will result in 0.1 M oxalic acid solution. Reason R: Molar mass of hydrated oxalic acid is 126 g mol-1. In the light of the above statements, choose the correct answer from the options given below:",
+    "options": [
+      "Both A and R are true but R is NOT the correct explanation of A",
+      "A is true but R is false",
+      "Both A and R are true and R is the correct explanation of A",
+      "A is false but R is true"
+    ],
+    "answer": "Both A and R are true and R is the correct explanation of A"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Match List-I with List-II List-I List-II A 16 g of CH4(g) I Weighs 28g B 1 g of H2(g) II 60.2 × 1023 electrons C 1 mole of N2(g) III Weighs 32g D 0.5 mol of SO2(g) IV Occupies 11.4 L volume at STP Choose the correct answer from the options given below:",
+    "options": [
+      "A-II, B-III, C-IV, D-I",
+      "A-II, B-IV, C-I, D-III",
+      "A-I, B-III, C-II, D-IV",
+      "A-II, B-IV, C-III, D-I"
+    ],
+    "answer": "A-II, B-IV, C-I, D-III"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R Assertion A: The energy required to form Mg2+ from Mg is much higher than that required to produce Mg+ Reason R : Mg2+ is small ion and carry more charge than Mg+ In the light of the above statements, choose the correct answer from the options given below.",
+    "options": [
+      "Both A and R are true but R is NOT the correct explanation of A",
+      "A is true but R is false",
+      "A is false but R is true",
+      "Both A and R are true and R is the correct explanation of A"
+    ],
+    "answer": "Both A and R are true and R is the correct explanation of A"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The correct order of metallic character is",
+    "options": [
+      "K > Be > Ca",
+      "Be > Ca > K",
+      "Ca > K > Be",
+      "K > Ca > Be"
+    ],
+    "answer": "K > Ca > Be"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Gibbs energy vs T plot for the formation of oxides is given below. For the given diagram, the correct statement is-<br><div class='flex justify-center my-4'><img src='images/8/q35.png' alt='Question 35'></div>",
+    "options": [
+      "At 600°C CO cannot reduce FeO",
+      "At 600°C CO can reduce ZnO",
+      "At 600°C, C can reduce ZnO",
+      "At 600°C C can reduce FeO"
+    ],
+    "answer": "At 600°C C can reduce FeO"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R. Assertion A: Physical properties of isotopes of hydrogen are different. Reason R: Mass difference between isotopes of hydrogen is very large. In the light of the above statements, choose the correct answer from the options given below:",
+    "options": [
+      "Both A and R are true and R is the correct explanation of A",
+      "A is false but R is true",
+      "A is true but R is false",
+      "Both A and R are true but R is NOT the correct explanation of A"
+    ],
+    "answer": "Both A and R are true and R is the correct explanation of A"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Number of water molecules in washing soda and soda ash respectively are:",
+    "options": [
+      "1 and 10",
+      "10 and 1",
+      "10 and 0",
+      "1 and 0"
+    ],
+    "answer": "10 and 0"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The decreasing order of hydride affinity for following carbocations is: (A) (B) (C) (D) Choose the correct answer from the options given below:<br><div class='flex justify-center my-4'><img src='images/8/q38.png' alt='Question 38'></div>",
+    "options": [
+      "C, A, D, B",
+      "C, A, B, D",
+      "A, C, D, B",
+      "A, C, B, D"
+    ],
+    "answer": "C, A, B, D"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The correct order for acidity of the following hydroxyl compound is (A) CH3OH (B) (CH3)3COH (C) Phenol (D) p-Nitrophenol (E) m-Nitrophenol Choose the correct answer from the options given below:",
+    "options": [
+      "C > E > D > B > A",
+      "E > D > C > B > A",
+      "D > E > C > A > B",
+      "E > C > D > A > B"
+    ],
+    "answer": "E > C > D > A > B"
+  },
+  {
+    "section": "Chemistry",
+    "content": "In Carius tube, an organic compound 'X' is treated with sodium peroxide to form a mineral acid 'Y'. The solution of BaCl2 is added to 'Y' to form a precipitate 'Z'. 'Z' is used for the quantitative estimation of an extra element. 'X' could be",
+    "options": [
+      "Cytosine",
+      "A nucleotide",
+      "Methionine",
+      "Chloroxylenol"
+    ],
+    "answer": "Methionine"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The delicate balance of CO2 and O2 is NOT disturbed by",
+    "options": [
+      "Respiration",
+      "Burning of coal",
+      "Deforestation",
+      "Burning of petroleum"
+    ],
+    "answer": "Respiration"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The correct relationships between unit cell edge length 'a' and radius of sphere 'r' for face-centred and body-centred cubic structures respectively are:",
+    "options": [
+      "2√2r = a and √3r = 4a",
+      "r = 2√2a and 4r = √3a",
+      "r = 2√2a and √3r = 4a",
+      "2√2r = a and 4r = √3a"
+    ],
+    "answer": "2√2r = a and 4r = √3a"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Ferric chloride is applied to stop bleeding because",
+    "options": [
+      "Blood absorbs FeCl3 and forms a complex.",
+      "Cl- ions cause coagulation of blood.",
+      "Fe3+ ions coagulate blood which is a negatively charged sol.",
+      "FeCl3 reacts with the constituents of blood which is a positively charged sol."
+    ],
+    "answer": "Fe3+ ions coagulate blood which is a negatively charged sol."
+  },
+  {
+    "section": "Chemistry",
+    "content": "Match List-I with List-II. List-I Complex List-II Crystal Field splitting energy (Δ0) A. [Ti(H2O)6]2+ I. -1.2 B. [V(H2O)6]2+ II. -0.6 C. [Mn(H2O)6]3+ III. 0 D. [Fe(H2O)6]3+ IV. -0.8 Choose the correct answer from the options given below:",
+    "options": [
+      "A-II, B-IV, C-I, D-III",
+      "A-IV, B-I, C-III, D-II",
+      "A-IV, B-I, C-II, D-III",
+      "A-II, B-IV, C-III, D-I"
+    ],
+    "answer": "A-IV, B-I, C-II, D-III"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The correct order of the number of unpaired electrons in the given complexes is (A) [Fe(CN)6]3- (B) [FeF6]3- (C) [CoF6]3- (D) [Cr(oxalate)3]3- (E) [Ni(CO)4] Choose the correct answer from the options given below:",
+    "options": [
+      "E < A < D < C < B",
+      "D < A < B < C",
+      "A < E < C < B < D",
+      "A < E < D < C < B"
+    ],
+    "answer": "E < A < D < C < B"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The major product 'P' formed in the given reaction is<br><div class='flex justify-center my-4'><img src='images/8/q46.png' alt='Question 46'></div>",
+    "options": [
+      "Product 1",
+      "Product 2",
+      "Product 3",
+      "Product 4"
+    ],
+    "answer": "Product 1"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Incorrect method of preparation for alcohols from the following is:",
+    "options": [
+      "Reaction of Ketone with RMgBr followed by hydrolysis.",
+      "Reaction of alkyl halide with aqueous NaOH.",
+      "Hydroboration-oxidation of alkene.",
+      "Ozonolysis of alkene"
+    ],
+    "answer": "Ozonolysis of alkene"
+  },
+  {
+    "section": "Chemistry",
+    "content": "In the reaction given below HNC (i) LiAlH4 -> 'X' (ii) H2O The product 'X' is<br><div class='flex justify-center my-4'><img src='images/8/q48.png' alt='Question 48'></div>",
+    "options": [
+      "Structure 1",
+      "Structure 2",
+      "Structure 3",
+      "Structure 4"
+    ],
+    "answer": "Structure 3"
+  },
+  {
+    "section": "Chemistry",
+    "content": "Buna - S can be represented as:",
+    "options": [
+      "Structure 1",
+      "Structure 2",
+      "Structure 3",
+      "Structure 4"
+    ],
+    "answer": "Structure 2"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The reaction used for preparation of soap from fat is:",
+    "options": [
+      "An addition reaction",
+      "Reduction reaction",
+      "Alkaline hydrolysis reaction",
+      "An oxidation reaction"
+    ],
+    "answer": "Alkaline hydrolysis reaction"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The electron in the nth orbit of Li2+ is excited to (n + 1) orbit using the radiation of energy 1.47 × 10-17 J (as shown in the diagram). The value of n is ___________ Given: RH = 2.18 × 10-18 J",
+    "options": [],
+    "answer": "1"
+  },
+  {
+    "section": "Chemistry",
+    "content": "For a metal ion, the calculated magnetic moment is 4.90 BM. This metal ion has ___________ number of unpaired electrons",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The number of molecules from the following which contain only two lone pair of electrons is ________ H2O, N2, CO, XeF4, NH3, NO, CO2, F2",
+    "options": [],
+    "answer": "3"
+  },
+  {
+    "section": "Chemistry",
+    "content": "A(g) ⇌ 2B(g) + C(g) For the given reaction, if the initial pressure is 450 mmHg and the pressure at time t is 720 mmHg at a constant temperature T and constant volume V. The fraction of A(g) decomposed under these conditions is 𝑥 × 10-1. The value of x is _______ (nearest integer)",
+    "options": [],
+    "answer": "3"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The number of endothermic process/es from the following is A. I2(g) -> 2I(g) B. HCl(g) -> H(g) + Cl(g) C. H2O(l) -> H2O(g) D. C(s) + O2(g) -> CO2(g) E. Dissolution of ammonium chloride in water",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Chemistry",
+    "content": "In alkaline medium, the reduction of permanganate anion involves a gain of _________ electrons.",
+    "options": [],
+    "answer": "3"
+  },
+  {
+    "section": "Chemistry",
+    "content": "An aqueous solution of volume 300 cm3 contains 0.63 g of protein. The osmotic pressure of the solution at 300 K is 1.29 mbar. The molar mass of the protein is _________ g mol-1. Given: R = 0.083 L bar K-1 mol-1",
+    "options": [],
+    "answer": "40535"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The specific conductance of 0.0025 M acetic acid is 5 × 10-5 S cm-1 at a certain temperature. The dissociation constant of acetic acid is ___________ × 10-7. (Nearest integer) Consider limiting molar conductivity of CH3COOH as 400 S cm2 mol-1",
+    "options": [],
+    "answer": "66"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The number of incorrect statement/s from the following is A. The successive half lives of zero order reactions decreases with time. B. A substance appearing as reactant in the chemical equation may not affect the rate of reaction C. Order and molecularity of a chemical reaction can be a fractional number D. The rate constant units of zero and second order reaction are mol L-1 s-1 and mol-1 L s-1 respectively",
+    "options": [],
+    "answer": "1"
+  },
+  {
+    "section": "Chemistry",
+    "content": "The difference in the oxidation state of Xe between the oxidised product of Xe formed on complete hydrolysis of XeF4 is ___________",
+    "options": [],
+    "answer": "2"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let S = {z = x + iy : (2z - 3i)/(4z + 2i) is a real number}. Then which of the following is NOT correct?",
+    "options": [
+      "y + x2 + y2 ≠ -1/4",
+      "(x, y) = (0, -1/2)",
+      "x = 0",
+      "y ∈ (-∞, -1/2) ∪ (-1/2, ∞)"
+    ],
+    "answer": "(x, y) = (0, -1/2)"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Eight persons are to be transported from city A to city B in three cars of different makes. If each car can accommodate at most three persons, then the number of ways, in which they can be transported, is",
+    "options": [
+      "1120",
+      "3360",
+      "1680",
+      "560"
+    ],
+    "answer": "1680"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If Sn = 4 + 11 + 21 + 34 + 50 + ... to n terms, then 1 60 (S29 - S9) is equal to",
+    "options": [
+      "223",
+      "226",
+      "220",
+      "227"
+    ],
+    "answer": "223"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the number (22)^2022 + (2022)^22 leave the remainder α when divided by 3 and β when divided by 7. Then (α^2 + β^2) is equal to",
+    "options": [
+      "20",
+      "13",
+      "5",
+      "10"
+    ],
+    "answer": "5"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If the coefficients of x and x2 in (1 + x)^p (1 - x)^q are 4 and -5 respectively, then 2p + 3q is equal to",
+    "options": [
+      "60",
+      "69",
+      "66",
+      "63"
+    ],
+    "answer": "63"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let S = { x ∈ (-𝜋, 𝜋) : 2x ≠ 𝜋/2, 9^(1 - tan^2 x) + 9^(tan^2 x) = 10 } and 𝛽 = ∑ x∈S tan^2 (x/3), then 1 6 (𝛽 - 14)^2 is equal to",
+    "options": [
+      "16",
+      "8",
+      "64",
+      "32"
+    ],
+    "answer": "32"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let A be the point (1, 2) and B be any point on the curve x2 + y2 = 16. If the centre of the locus of the point P, which divides the line segment AB in the ratio 3 : 2 is the point C(𝛼, 𝛽), then the length of the line segment AC is",
+    "options": [
+      "3√5 5",
+      "4√5 5",
+      "2√5 5",
+      "6√5 5"
+    ],
+    "answer": "3√5 5"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let a circle of radius 4 be concentric to the ellipse 15x2 + 19y2 = 285. Then the common tangents are inclined to the minor axis of the ellipse at the angle",
+    "options": [
+      "𝜋 3",
+      "𝜋 6",
+      "𝜋 4",
+      "𝜋 12"
+    ],
+    "answer": "𝜋 3"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The statement ~(p ∨ (~p ∧ q)) is equivalent to",
+    "options": [
+      "~p ∨ q",
+      "p ∧ ~q",
+      "~p ∧ q",
+      "~p ∨ ~q"
+    ],
+    "answer": "p ∧ ~q"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let 𝜇 be the mean and 𝜎 be the standard deviation of the distribution Xi : 0, 1, 2, 3, 4, 5 fi : k+2, 2k, k^2-1, k^2-1, k^2+1, k-3 where ∑fi = 62. If [x] denotes the greatest integer ≤ x, then [𝜇^2 + 𝜎^2] is equal to",
+    "options": [
+      "9",
+      "8",
+      "7",
+      "6"
+    ],
+    "answer": "8"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let A = {2, 3, 4} and B = {8, 9, 12}. Then the number of elements in the relation R = {((a1, b1), (a2, b2)) ∈ (A × B) × (A × B) : a1 divides b2 and a2 divides b1} is",
+    "options": [
+      "36",
+      "24",
+      "18",
+      "12"
+    ],
+    "answer": "36"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If A = [ (1/5!6!7!) (1/6!7!8!) (1/7!8!9!) ], then |adj(adj(2A))| is equal to",
+    "options": [
+      "2^20",
+      "2^8",
+      "2^12",
+      "2^16"
+    ],
+    "answer": "2^16"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let g(x) = f(x) + f(1 - x) and f\"(x) > 0, x ∈ (0, 1). If g is decreasing in the interval (0, a) and increasing in the interval (a, 1), then tan^-1(2a) + tan^-1(1/a) + tan^-1((a+1)/a) is equal to",
+    "options": [
+      "𝜋",
+      "3𝜋 4",
+      "5𝜋 4",
+      "3𝜋 2"
+    ],
+    "answer": "𝜋"
+  },
+  {
+    "section": "Mathematics",
+    "content": "For 𝛼, 𝛽, 𝛾, 𝛿 ∈ N, if ∫(x/e)^(2x) + (e/x)^(2x) / ((x/e)^x + (e/x)^x) loge x dx = 1/𝛼 (x/e)^(𝛽x) - 1/𝛾 (e/x)^(𝛿x) + C, where e = ∑(1/n!) and C is constant of integration, then 𝛼 + 2𝛽 + 3𝛾 - 4𝛿 is equal to",
+    "options": [
+      "1",
+      "4",
+      "-4",
+      "-8"
+    ],
+    "answer": "4"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let f be a continuous function satisfying ∫[0, t^2] (f(x) + x^2) dx = 4/3 t^3, ∀ t > 0. Then f(𝜋^2/4) is equal to",
+    "options": [
+      "𝜋^2 (1 - 𝜋^2/16)",
+      "-𝜋 (1 + 𝜋^3/16)",
+      "𝜋 (1 - 𝜋^3/16)",
+      "-𝜋^2 (1 + 𝜋^2/16)"
+    ],
+    "answer": "𝜋 (1 - 𝜋^3/16)"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let a = 2i + 7j - k, b = 3i + 5k and c = i - j + 2k. Let d be a vector which is perpendicular to both a and b, and c . d = 12. Then (-i + j - k) . (c × d) is equal to",
+    "options": [
+      "24",
+      "44",
+      "42",
+      "48"
+    ],
+    "answer": "44"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If the points P and Q are respectively the circumcenter and the orthocentre of a ∆ABC, then PA + PB + PC is equal to",
+    "options": [
+      "2 QP",
+      "2 PQ",
+      "PQ",
+      "QP"
+    ],
+    "answer": "PQ"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the image of the point P(1, 2, 6) in the plane passing through the points A(1, 2, 0), B(1, 4, 1) and C(0, 5, 1) be Q(𝛼, 𝛽, 𝛾). Then (𝛼^2 + 𝛽^2 + 𝛾^2) equal to",
+    "options": [
+      "65",
+      "62",
+      "76",
+      "70"
+    ],
+    "answer": "65"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the line (x)/1 = (6-y)/2 = (z+8)/5 intersect the lines (x-5)/4 = (y-7)/3 = (z+2)/1 and (x+3)/6 = (3-y)/3 = (z-6)/1 at the points A and B respectively. Then the distance of the mid-point of the line segment AB from the plane x - 2y + z = 14 is",
+    "options": [
+      "3",
+      "11 3",
+      "4",
+      "10 3"
+    ],
+    "answer": "4"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let a die be rolled n times. Let the probability of getting odd numbers seven times be equal to the probability of getting odd numbers nine times. If the probability of getting even numbers twice is k/2^15, then k is equal to",
+    "options": [
+      "60",
+      "15",
+      "90",
+      "30"
+    ],
+    "answer": "60"
+  },
+  {
+    "section": "Mathematics",
+    "content": "The sum of all the four-digit numbers that can be formed using all the digits 2, 1, 2, 3 is equal to ____________",
+    "options": [],
+    "answer": "26664"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Suppose a1, a2, 2, a3, a4 be in an arithmetico-geometric progression. If the common ratio of the corresponding geometric progression is 2 and the sum of all 5 terms of the arithmetico-geometric progression is 49 2, then a4 is equal to ____________",
+    "options": [],
+    "answer": "16"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the equations of two adjacent sides of a parallelogram ABCD be 2x - 3y = -23 and 5x + 4y = 23. If the equation of its one diagonal AC is 3x + 7y = 23 and the distance of A from the other diagonal is d, then 50d^2 is equal to ____________",
+    "options": [],
+    "answer": "529"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let S be the set of values of 𝜆, for which the system of equations 6𝜆x - 3y + 3z = 4𝜆^2, 2x + 6𝜆y + 4z = 1 and 3x + 2y + 3𝜆z = 𝜆 has no solution. Then, 12 ∑𝜆∈S |𝜆| is equal to ____________",
+    "options": [],
+    "answer": "24"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If the domain of the function f(x) = sec^-1(2x/(5x+3)) is [𝛼, 𝛽) ∪ (𝛾, 𝛿], then 3𝛼 + 10𝛽 + 𝛾 + 21𝛿 is equal to ____________",
+    "options": [],
+    "answer": "24"
+  },
+  {
+    "section": "Mathematics",
+    "content": "In the figure, 𝜃1 + 𝜃2 = 𝜋/2 and √3 BE = 4AB. If the area of ∆CAB is 2√3 - 3 unit^2, when 𝜃2/𝜃1 is the largest, then the perimeter (in unit) of ∆CED is equal to ____________<br><div class='flex justify-center my-4'><img src='images/8/q86.png' alt='Question 86'></div>",
+    "options": [],
+    "answer": "6"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the quadratic curve passing through the point (-1, 0) and touching the line y = x at (1, 1) be y = f(x). Then the x-intercept of the normal to the curve at the point (𝛼, 𝛼 + 1) in the first quadrant is ____________",
+    "options": [],
+    "answer": "11"
+  },
+  {
+    "section": "Mathematics",
+    "content": "If the area of the region { (x, y) : x^2 - 2 ≤ y ≤ x } is A, then 6A + 16√2 is equal to ____________",
+    "options": [],
+    "answer": "27"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the tangent at any point P on a curve passing through the points (1, 1) and (1/10, 100), intersect positive x-axis and y-axis at the points A and B respectively. If PA : PB = 1 : k and y = y(x) is the solution of the differential equation e^(dy/dx) = kx + k/2, y(0) = k, then 4y(1) - 5 loge 3 is equal to ____________",
+    "options": [],
+    "answer": "5"
+  },
+  {
+    "section": "Mathematics",
+    "content": "Let the foot of perpendicular from the point A(4, 3, 1) on the plane P: x - y + 2z + 3 = 0 be N. If B(5, 𝛼, 𝛽), 𝛼, 𝛽 ∈ Z is a point on plane P such that the area of the triangle ABN is 3√2, then 𝛼^2 + 𝛽^2 + 𝛼𝛽 is equal to ____________",
+    "options": [],
+    "answer": "7"
+  }
+],
+
+9:[
+  {
+    "section": "Physics",
+    "question_number": 1,
+    "content": "Given below are two statements:\nStatement I: Astronomical unit (Au), Parsec (Pc) and Light year (ly) are units for measuring astronomical distances.\nStatement II: \\( Au < Parsec (Pc) < ly \\)\nIn the light of the above statements, choose the most appropriate answer from the options given below:",
+    "options": [
+      "Both Statements I and Statements II are incorrect",
+      "Statements I is correct but Statements II is incorrect",
+      "Both Statements I and Statements II are correct",
+      "Statements I is incorrect but Statements II is correct"
+    ],
+    "answer": "Statements I is correct but Statements II is incorrect"
+  },
+  {
+    "section": "Physics",
+    "question_number": 2,
+    "content": "From the v-t graph shown, the ratio of distance to displacement in 25 s of motion is:\n![image](images/9/q2.png)",
+    "options": [
+      "1",
+      "3/5",
+      "5/3",
+      "1/2"
+    ],
+    "answer": "5/3"
+  },
+  {
+    "section": "Physics",
+    "question_number": 3,
+    "content": "A coin placed on a rotating table just slips when it is placed at a distance of 1 cm from the centre. If the angular velocity of the table is halved, it will just slip when placed at a distance of:",
+    "options": [
+      "8 cm",
+      "4 cm",
+      "1 cm",
+      "2 cm"
+    ],
+    "answer": "4 cm"
+  },
+  {
+    "section": "Physics",
+    "question_number": 4,
+    "content": "An average force of 125 N is applied on a machine gun firing bullets each of mass 10 g at the speed of 250 m \\(s^{-1}\\) to keep it in position. The number of bullets fired per second by the machine gun is:",
+    "options": [
+      "50",
+      "25",
+      "100",
+      "5"
+    ],
+    "answer": "50"
+  },
+  {
+    "section": "Physics",
+    "question_number": 5,
+    "content": "The radii of two planets A and B are R and 4R and their densities are \\(\\rho\\) and \\(\\rho/3\\) respectively. The ratio of acceleration due to gravity at their surfaces \\(g_{A} : g_{B}\\) will be",
+    "options": [
+      "4:3",
+      "1:16",
+      "3:16",
+      "3:4"
+    ],
+    "answer": "3:4"
+  },
+  {
+    "section": "Physics",
+    "question_number": 6,
+    "content": "1 kg of water at \\(100^{\\circ}C\\) is converted into steam at \\(100^{\\circ}C\\) by boiling at atmospheric pressure. The volume of water changes from \\(1.00 \\times 10^{-3} m^{3}\\) as a liquid to \\(1.671 m^{3}\\) as steam. The change in internal energy of the system during the process will be (Given latent heat of vaporisation = 2257 kJ/kg, Atmospheric pressure = \\(1 \\times 10^{5}\\) Pa)",
+    "options": [
+      "-2426 kJ",
+      "+2090 kJ",
+      "-2090 kJ",
+      "+2476 kJ"
+    ],
+    "answer": "+2090 kJ"
+  },
+  {
+    "section": "Physics",
+    "question_number": 7,
+    "content": "On a temperature scale 'X', the boiling point of water is \\(65^{\\circ}X\\) and the freezing point is \\(-15^{\\circ}X\\) Assuming that the X scale is linear. The equivalent temperature corresponding to \\(-95^{\\circ}X\\) on the Fahrenheit scale would be",
+    "options": [
+      "-112^{\\circ}F",
+      "-48^{\\circ}F",
+      "-148^{\\circ}F",
+      "-63^{\\circ}F"
+    ],
+    "answer": "-148^{\\circ}F"
+  },
+  {
+    "section": "Physics",
+    "question_number": 8,
+    "content": "Three vessels of equal volume contain gases at the same temperature and pressure. The first vessel contains neon (monoatomic), the second contains chlorine (diatomic) and third contains uranium hexafluoride (polyatomic). Arrange these on the basis of their root mean square speed \\(v_{rms}\\) and choose the correct answer from the options given below:",
+    "options": [
+      "\\(v_{rms}(mono) > v_{rms}(dia) > v_{rms}(poly)\\)",
+      "\\(v_{rms}(mono) = v_{rms}(dia) = v_{rms}(poly)\\)",
+      "\\(v_{rms}(mono) < v_{rms}(dia) < v_{rms}(poly)\\)",
+      "\\(v_{rms}(dia) < v_{rms}(poly) < v_{rms}(mono)\\)"
+    ],
+    "answer": "\\(v_{rms}(mono) > v_{rms}(dia) > v_{rms}(poly)\\)"
+  },
+  {
+    "section": "Physics",
+    "question_number": 9,
+    "content": "The variation of kinetic energy (KE) of a particle executing simple harmonic motion with the displacement (x) starting from mean position to extreme position (A) is given by\n![image](images/9/q9.png)",
+    "options": [
+      "Graph 1",
+      "Graph 2",
+      "Graph 3",
+      "Graph 4"
+    ],
+    "answer": "Graph 3"
+  },
+  {
+    "section": "Physics",
+    "question_number": 10,
+    "content": "The electric field in an electromagnetic wave is given as \\(\\vec{E}=20 \\sin(\\omega t-\\frac{x}{c})\\vec{j}N C^{-1}\\), where \\(\\omega\\) and c are angular frequency and velocity of electromagnetic wave respectively. The energy contained in a volume of \\(5 \\times 10^{-4}m^{3}\\) will be (Given \\(\\epsilon_{0}=8.85 \\times 10^{-12}C^{2}N^{-1}m^{-2})\\)",
+    "options": [
+      "\\(88.5 \\times 10^{-13}\\) J",
+      "\\(17.7 \\times 10^{-13}\\) J",
+      "\\(28.5 \\times 10^{-13}\\) J",
+      "\\(8.85 \\times 10^{-13}\\) J"
+    ],
+    "answer": "\\(8.85 \\times 10^{-13}\\) J"
+  },
+  {
+    "section": "Physics",
+    "question_number": 11,
+    "content": "A parallel plate capacitor of capacitance 2 F is charged to a potential V. The energy stored in the capacitor is \\(E_{1}\\). The capacitor is now connected to another uncharged identical capacitor in parallel combination. The energy stored in the combination is \\(E_{2}\\). The ratio \\(E_{2}/E_{1}\\) is",
+    "options": [
+      "2:1",
+      "2:3",
+      "1:2",
+      "1:4"
+    ],
+    "answer": "1:2"
+  },
+  {
+    "section": "Physics",
+    "question_number": 12,
+    "content": "Two identical heater filaments are connected first in parallel and then in series. At the same applied voltage, the ratio of heat produced in same time for parallel to series will be:",
+    "options": [
+      "1:4",
+      "2:1",
+      "4:1",
+      "1:2"
+    ],
+    "answer": "4:1"
+  },
+  {
+    "section": "Physics",
+    "question_number": 13,
+    "content": "The current sensitivity of moving coil galvanometer is increased by 25%. This increase is achieved only by changing in the number of turns of coils and area of cross section of the wire while keeping the resistance of galvanometer coil constant. The percentage change in the voltage sensitivity will be:",
+    "options": [
+      "+25%",
+      "-50%",
+      "-25%",
+      "Zero"
+    ],
+    "answer": "+25%"
+  },
+  {
+    "section": "Physics",
+    "question_number": 14,
+    "content": "The free space inside a current carrying toroid is filled with a material of susceptibility \\(2 \\times 10^{-2}\\). The percentage increase in the value of magnetic field inside the toroid will be",
+    "options": [
+      "0.2%",
+      "0.1%",
+      "2%",
+      "1%"
+    ],
+    "answer": "2%"
+  },
+  {
+    "section": "Physics",
+    "question_number": 15,
+    "content": "As per the given graph, choose the correct representation for curve A and curve B. {Where \\(X_{c}=\\) Reactance of pure capacitive circuit connected with A.C. source, \\(X_{L}=\\) Reactance of pure inductive circuit connected with A.C. source, \\(R=\\) Impedance of pure resistive circuit connected with A.C. source, \\(Z=\\) Impedance of the LCR series circuit }\n![image](images/9/q15.png)",
+    "options": [
+      "\\(A=X_{C}, B=R\\)",
+      "\\(A=X_{L}, B=R\\)",
+      "\\(A=X_{L}, B=Z\\)",
+      "\\(A=X_{C}, B=X_{L}\\)"
+    ],
+    "answer": "\\(A=X_{C}, B=X_{L}\\)"
+  },
+  {
+    "section": "Physics",
+    "question_number": 16,
+    "content": "The critical angle for a denser-rarer interface is \\(45^{\\circ}\\). The speed of light in rarer medium is \\(3 \\times 10^{8}\\) m \\(s^{-1}\\). The speed of light in the denser medium is:",
+    "options": [
+      "\\(3.12 \\times 10^{7}\\) m \\(s^{-1}\\)",
+      "\\(5 \\times 10^{7}\\) m \\(s^{-1}\\)",
+      "\\(2.12 \\times 10^{8}\\) m \\(s^{-1}\\)",
+      "\\(\\sqrt{2} \\times 10^{8}\\) m \\(s^{-1}\\)"
+    ],
+    "answer": "\\(2.12 \\times 10^{8}\\) m \\(s^{-1}\\)"
+  },
+  {
+    "section": "Physics",
+    "question_number": 17,
+    "content": "A metallic surface is illuminated with radiation of wavelength \\(\\lambda\\), the stopping potential is \\(V_{0}\\). If the same surface is illuminated with radiation of wavelength \\(2\\lambda\\), the stopping potential becomes \\(V_{0}/4\\). The threshold wavelength for this metallic surface will be",
+    "options": [
+      "3\\(\\lambda\\)",
+      "4\\(\\lambda\\)",
+      "\\(\\frac{3}{2}\\lambda\\)",
+      "\\(\\frac{\\lambda}{4}\\)"
+    ],
+    "answer": "3\\(\\lambda\\)"
+  },
+  {
+    "section": "Physics",
+    "question_number": 18,
+    "content": "Two radioactive elements A and B initially have same number of atoms. The half life of A is same as the average life of B. If \\(\\lambda_{A}\\) and \\(\\lambda_{B}\\) are decay constants of A and B respectively, then choose the correct relation from the given options.",
+    "options": [
+      "\\(\\lambda_{A} \\ln 2 = \\lambda_{B}\\)",
+      "\\(\\lambda_{A} = \\lambda_{B}\\)",
+      "\\(\\lambda_{A} = \\lambda_{B} \\ln 2\\)",
+      "\\(\\lambda_{A} = 2\\lambda_{B}\\)"
+    ],
+    "answer": "\\(\\lambda_{A} = \\lambda_{B} \\ln 2\\)"
+  },
+  {
+    "section": "Physics",
+    "question_number": 19,
+    "content": "The logic performed by the circuit shown in figure is equivalent to\n![image](images/9/q19.png)",
+    "options": [
+      "AND",
+      "NOR",
+      "OR",
+      "NAND"
+    ],
+    "answer": "AND"
+  },
+  {
+    "section": "Physics",
+    "question_number": 20,
+    "content": "A transmitting antenna is kept on the surface of the earth. The minimum height of receiving antenna required to receive the signal in line of sight at 4 km distance from it is \\(x \\times 10^{-2}\\) m. The value of x is (Let, radius of earth \\(R=6400\\) km)",
+    "options": [
+      "125",
+      "1250",
+      "12.5",
+      "1.25"
+    ],
+    "answer": "125"
+  },
+  {
+    "section": "Physics",
+    "question_number": 21,
+    "content": "A projectile fired at 30° to the ground is observed to be at same height at time 3 s and 5 s after projection, during its flight. The speed of projection of the projectile is __ m \\(s^{-1}\\). (Given \\(g=10 m s^{-2}\\))",
+    "options": [],
+    "answer": "80"
+  },
+  {
+    "section": "Physics",
+    "question_number": 22,
+    "content": "A force \\(\\vec{F}=2+3x\\hat{i}\\) acts on a particle in the x direction where F is in Newton and x is in meter. The work done by this force during a displacement from \\(x=0\\) to \\(x=4\\) m is __ J.",
+    "options": [],
+    "answer": "32"
+  },
+  {
+    "section": "Physics",
+    "question_number": 23,
+    "content": "A solid sphere of mass 500 g radius 5 cm is rotated about one of its diameter with angular speed of 10 rad \\(s^{-1}\\). If the moment of inertia of the sphere about its tangent is \\(x \\times 10^{-2}\\) times its angular momentum about the diameter. Then the value of x will be __",
+    "options": [],
+    "answer": "35"
+  },
+  {
+    "section": "Physics",
+    "question_number": 24,
+    "content": "The length of a wire becomes \\(l_{1}\\) and \\(l_{2}\\) when 100 N and 120 N tension are applied respectively. If \\(10l_{2}=11l_{1}\\), then the natural length of wire will be \\(\\frac{1}{x}l_{1}\\). Here the value of x is __",
+    "options": [],
+    "answer": "2"
+  },
+  {
+    "section": "Physics",
+    "question_number": 25,
+    "content": "The equation of wave is given by \\(Y=10^{-2} \\sin 2\\pi(160t-0.5x+\\frac{\\pi}{4})\\) where x and Y are in m and t in s. The speed of the wave is __ km \\(h^{-1}\\).",
+    "options": [],
+    "answer": "1152"
+  },
+  {
+    "section": "Physics",
+    "question_number": 26,
+    "content": "As shown in the figure, a configuration of two equal point charges \\(q_{0}=+2\\mu C\\) is placed on an inclined plane. Mass of each point charge is 20 g. Assume that there is no friction between charge and plane. For the system of two point charges to be in equilibrium (at rest) the height \\(h=x \\times 10^{-3}\\) m. The value of x is __. (Take \\(\\frac{1}{4\\pi\\epsilon_{0}}=9 \\times 10^{9}\\) N \\(m^{2} C^{-2}\\), \\(g=10\\) m \\(s^{-2}\\))\n![image](images/9/q26.png)",
+    "options": [],
+    "answer": "300"
+  },
+  {
+    "section": "Physics",
+    "question_number": 27,
+    "content": "In the circuit diagram shown in figure given below, the current flowing through resistance 3\\(\\Omega\\) is \\(\\frac{x}{3}\\) A. The value of x is __\n![image](images/9/q27.png)",
+    "options": [],
+    "answer": "1"
+  },
+  {
+    "section": "Physics",
+    "question_number": 28,
+    "content": "The magnetic field B crossing normally a square metallic plate of area 4 \\(m^{2}\\) is changing with time as shown in figure. The magnitude of induced emf in the plate during \\(t=2\\) s to \\(t=4\\) s, is __ mV.\n![image](images/9/q28.png)",
+    "options": [],
+    "answer": "8"
+  },
+  {
+    "section": "Physics",
+    "question_number": 29,
+    "content": "The radius of curvature of each surface of a convex lens having refractive index 1.8 is 20 cm. The lens is now immersed in a liquid of refractive index 1.5. The ratio of power of lens in air to its power in the liquid will be x: 1. The value of x is __",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Physics",
+    "question_number": 30,
+    "content": "A monochromatic light is incident on a hydrogen sample in ground state. Hydrogen atoms absorb a fraction of light and subsequently emit radiation of six different wavelengths. The frequency of incident light is \\(x \\times 10^{15}\\) Hz. The value of x is __. (Given \\(h=4.25 \\times 10^{-15}\\) eVs)",
+    "options": [],
+    "answer": "3"
+  }
+],
+
+10:[
+  {
+    "section": "Physics",
+    "question_number": 1,
+    "content": "Given below are two statements:\nStatement I: Astronomical unit (Au), Parsec (Pc) and Light year (ly) are units for measuring astronomical distances.\nStatement II: \\( Au < Parsec (Pc) < ly \\)\nIn the light of the above statements, choose the most appropriate answer from the options given below:",
+    "options": [
+      "Both Statements I and Statements II are incorrect",
+      "Statements I is correct but Statements II is incorrect",
+      "Both Statements I and Statements II are correct",
+      "Statements I is incorrect but Statements II is correct"
+    ],
+    "answer": "Statements I is correct but Statements II is incorrect"
+  },
+  {
+    "section": "Physics",
+    "question_number": 2,
+    "content": "From the v-t graph shown, the ratio of distance to displacement in 25 s of motion is:\n![image](images/9/q2.png)",
+    "options": [
+      "1",
+      "3/5",
+      "5/3",
+      "1/2"
+    ],
+    "answer": "5/3"
+  },
+  {
+    "section": "Physics",
+    "question_number": 3,
+    "content": "A coin placed on a rotating table just slips when it is placed at a distance of 1 cm from the centre. If the angular velocity of the table is halved, it will just slip when placed at a distance of:",
+    "options": [
+      "8 cm",
+      "4 cm",
+      "1 cm",
+      "2 cm"
+    ],
+    "answer": "4 cm"
+  },
+  {
+    "section": "Physics",
+    "question_number": 4,
+    "content": "An average force of 125 N is applied on a machine gun firing bullets each of mass 10 g at the speed of 250 m \\(s^{-1}\\) to keep it in position. The number of bullets fired per second by the machine gun is:",
+    "options": [
+      "50",
+      "25",
+      "100",
+      "5"
+    ],
+    "answer": "50"
+  },
+  {
+    "section": "Physics",
+    "question_number": 5,
+    "content": "The radii of two planets A and B are R and 4R and their densities are \\(\\rho\\) and \\(\\rho/3\\) respectively. The ratio of acceleration due to gravity at their surfaces \\(g_{A} : g_{B}\\) will be",
+    "options": [
+      "4:3",
+      "1:16",
+      "3:16",
+      "3:4"
+    ],
+    "answer": "3:4"
+  },
+  {
+    "section": "Physics",
+    "question_number": 6,
+    "content": "1 kg of water at \\(100^{\\circ}C\\) is converted into steam at \\(100^{\\circ}C\\) by boiling at atmospheric pressure. The volume of water changes from \\(1.00 \\times 10^{-3} m^{3}\\) as a liquid to \\(1.671 m^{3}\\) as steam. The change in internal energy of the system during the process will be (Given latent heat of vaporisation = 2257 kJ/kg, Atmospheric pressure = \\(1 \\times 10^{5}\\) Pa)",
+    "options": [
+      "-2426 kJ",
+      "+2090 kJ",
+      "-2090 kJ",
+      "+2476 kJ"
+    ],
+    "answer": "+2090 kJ"
+  },
+  {
+    "section": "Physics",
+    "question_number": 7,
+    "content": "On a temperature scale 'X', the boiling point of water is \\(65^{\\circ}X\\) and the freezing point is \\(-15^{\\circ}X\\) Assuming that the X scale is linear. The equivalent temperature corresponding to \\(-95^{\\circ}X\\) on the Fahrenheit scale would be",
+    "options": [
+      "-112^{\\circ}F",
+      "-48^{\\circ}F",
+      "-148^{\\circ}F",
+      "-63^{\\circ}F"
+    ],
+    "answer": "-148^{\\circ}F"
+  },
+  {
+    "section": "Physics",
+    "question_number": 8,
+    "content": "Three vessels of equal volume contain gases at the same temperature and pressure. The first vessel contains neon (monoatomic), the second contains chlorine (diatomic) and third contains uranium hexafluoride (polyatomic). Arrange these on the basis of their root mean square speed \\(v_{rms}\\) and choose the correct answer from the options given below:",
+    "options": [
+      "\\(v_{rms}(mono) > v_{rms}(dia) > v_{rms}(poly)\\)",
+      "\\(v_{rms}(mono) = v_{rms}(dia) = v_{rms}(poly)\\)",
+      "\\(v_{rms}(mono) < v_{rms}(dia) < v_{rms}(poly)\\)",
+      "\\(v_{rms}(dia) < v_{rms}(poly) < v_{rms}(mono)\\)"
+    ],
+    "answer": "\\(v_{rms}(mono) > v_{rms}(dia) > v_{rms}(poly)\\)"
+  },
+  {
+    "section": "Physics",
+    "question_number": 9,
+    "content": "The variation of kinetic energy (KE) of a particle executing simple harmonic motion with the displacement (x) starting from mean position to extreme position (A) is given by\n![image](images/9/q9.png)",
+    "options": [
+      "Graph 1",
+      "Graph 2",
+      "Graph 3",
+      "Graph 4"
+    ],
+    "answer": "Graph 3"
+  },
+  {
+    "section": "Physics",
+    "question_number": 10,
+    "content": "The electric field in an electromagnetic wave is given as \\(\\vec{E}=20 \\sin(\\omega t-\\frac{x}{c})\\vec{j}N C^{-1}\\), where \\(\\omega\\) and c are angular frequency and velocity of electromagnetic wave respectively. The energy contained in a volume of \\(5 \\times 10^{-4}m^{3}\\) will be (Given \\(\\epsilon_{0}=8.85 \\times 10^{-12}C^{2}N^{-1}m^{-2})\\)",
+    "options": [
+      "\\(88.5 \\times 10^{-13}\\) J",
+      "\\(17.7 \\times 10^{-13}\\) J",
+      "\\(28.5 \\times 10^{-13}\\) J",
+      "\\(8.85 \\times 10^{-13}\\) J"
+    ],
+    "answer": "\\(8.85 \\times 10^{-13}\\) J"
+  },
+  {
+    "section": "Physics",
+    "question_number": 11,
+    "content": "A parallel plate capacitor of capacitance 2 F is charged to a potential V. The energy stored in the capacitor is \\(E_{1}\\). The capacitor is now connected to another uncharged identical capacitor in parallel combination. The energy stored in the combination is \\(E_{2}\\). The ratio \\(E_{2}/E_{1}\\) is",
+    "options": [
+      "2:1",
+      "2:3",
+      "1:2",
+      "1:4"
+    ],
+    "answer": "1:2"
+  },
+  {
+    "section": "Physics",
+    "question_number": 12,
+    "content": "Two identical heater filaments are connected first in parallel and then in series. At the same applied voltage, the ratio of heat produced in same time for parallel to series will be:",
+    "options": [
+      "1:4",
+      "2:1",
+      "4:1",
+      "1:2"
+    ],
+    "answer": "4:1"
+  },
+  {
+    "section": "Physics",
+    "question_number": 13,
+    "content": "The current sensitivity of moving coil galvanometer is increased by 25%. This increase is achieved only by changing in the number of turns of coils and area of cross section of the wire while keeping the resistance of galvanometer coil constant. The percentage change in the voltage sensitivity will be:",
+    "options": [
+      "+25%",
+      "-50%",
+      "-25%",
+      "Zero"
+    ],
+    "answer": "+25%"
+  },
+  {
+    "section": "Physics",
+    "question_number": 14,
+    "content": "The free space inside a current carrying toroid is filled with a material of susceptibility \\(2 \\times 10^{-2}\\). The percentage increase in the value of magnetic field inside the toroid will be",
+    "options": [
+      "0.2%",
+      "0.1%",
+      "2%",
+      "1%"
+    ],
+    "answer": "2%"
+  },
+  {
+    "section": "Physics",
+    "question_number": 15,
+    "content": "As per the given graph, choose the correct representation for curve A and curve B. {Where \\(X_{c}=\\) Reactance of pure capacitive circuit connected with A.C. source, \\(X_{L}=\\) Reactance of pure inductive circuit connected with A.C. source, \\(R=\\) Impedance of pure resistive circuit connected with A.C. source, \\(Z=\\) Impedance of the LCR series circuit }\n![image](images/9/q15.png)",
+    "options": [
+      "\\(A=X_{C}, B=R\\)",
+      "\\(A=X_{L}, B=R\\)",
+      "\\(A=X_{L}, B=Z\\)",
+      "\\(A=X_{C}, B=X_{L}\\)"
+    ],
+    "answer": "\\(A=X_{C}, B=X_{L}\\)"
+  },
+  {
+    "section": "Physics",
+    "question_number": 16,
+    "content": "The critical angle for a denser-rarer interface is \\(45^{\\circ}\\). The speed of light in rarer medium is \\(3 \\times 10^{8}\\) m \\(s^{-1}\\). The speed of light in the denser medium is:",
+    "options": [
+      "\\(3.12 \\times 10^{7}\\) m \\(s^{-1}\\)",
+      "\\(5 \\times 10^{7}\\) m \\(s^{-1}\\)",
+      "\\(2.12 \\times 10^{8}\\) m \\(s^{-1}\\)",
+      "\\(\\sqrt{2} \\times 10^{8}\\) m \\(s^{-1}\\)"
+    ],
+    "answer": "\\(2.12 \\times 10^{8}\\) m \\(s^{-1}\\)"
+  },
+  {
+    "section": "Physics",
+    "question_number": 17,
+    "content": "A metallic surface is illuminated with radiation of wavelength \\(\\lambda\\), the stopping potential is \\(V_{0}\\). If the same surface is illuminated with radiation of wavelength \\(2\\lambda\\), the stopping potential becomes \\(V_{0}/4\\). The threshold wavelength for this metallic surface will be",
+    "options": [
+      "3\\(\\lambda\\)",
+      "4\\(\\lambda\\)",
+      "\\(\\frac{3}{2}\\lambda\\)",
+      "\\(\\frac{\\lambda}{4}\\)"
+    ],
+    "answer": "3\\(\\lambda\\)"
+  },
+  {
+    "section": "Physics",
+    "question_number": 18,
+    "content": "Two radioactive elements A and B initially have same number of atoms. The half life of A is same as the average life of B. If \\(\\lambda_{A}\\) and \\(\\lambda_{B}\\) are decay constants of A and B respectively, then choose the correct relation from the given options.",
+    "options": [
+      "\\(\\lambda_{A} \\ln 2 = \\lambda_{B}\\)",
+      "\\(\\lambda_{A} = \\lambda_{B}\\)",
+      "\\(\\lambda_{A} = \\lambda_{B} \\ln 2\\)",
+      "\\(\\lambda_{A} = 2\\lambda_{B}\\)"
+    ],
+    "answer": "\\(\\lambda_{A} = \\lambda_{B} \\ln 2\\)"
+  },
+  {
+    "section": "Physics",
+    "question_number": 19,
+    "content": "The logic performed by the circuit shown in figure is equivalent to\n![image](images/9/q19.png)",
+    "options": [
+      "AND",
+      "NOR",
+      "OR",
+      "NAND"
+    ],
+    "answer": "AND"
+  },
+  {
+    "section": "Physics",
+    "question_number": 20,
+    "content": "A transmitting antenna is kept on the surface of the earth. The minimum height of receiving antenna required to receive the signal in line of sight at 4 km distance from it is \\(x \\times 10^{-2}\\) m. The value of x is (Let, radius of earth \\(R=6400\\) km)",
+    "options": [
+      "125",
+      "1250",
+      "12.5",
+      "1.25"
+    ],
+    "answer": "125"
+  },
+  {
+    "section": "Physics",
+    "question_number": 21,
+    "content": "A projectile fired at 30° to the ground is observed to be at same height at time 3 s and 5 s after projection, during its flight. The speed of projection of the projectile is __ m \\(s^{-1}\\). (Given \\(g=10 m s^{-2}\\))",
+    "options": [],
+    "answer": "80"
+  },
+  {
+    "section": "Physics",
+    "question_number": 22,
+    "content": "A force \\(\\vec{F}=2+3x\\hat{i}\\) acts on a particle in the x direction where F is in Newton and x is in meter. The work done by this force during a displacement from \\(x=0\\) to \\(x=4\\) m is __ J.",
+    "options": [],
+    "answer": "32"
+  },
+  {
+    "section": "Physics",
+    "question_number": 23,
+    "content": "A solid sphere of mass 500 g radius 5 cm is rotated about one of its diameter with angular speed of 10 rad \\(s^{-1}\\). If the moment of inertia of the sphere about its tangent is \\(x \\times 10^{-2}\\) times its angular momentum about the diameter. Then the value of x will be __",
+    "options": [],
+    "answer": "35"
+  },
+  {
+    "section": "Physics",
+    "question_number": 24,
+    "content": "The length of a wire becomes \\(l_{1}\\) and \\(l_{2}\\) when 100 N and 120 N tension are applied respectively. If \\(10l_{2}=11l_{1}\\), then the natural length of wire will be \\(\\frac{1}{x}l_{1}\\). Here the value of x is __",
+    "options": [],
+    "answer": "2"
+  },
+  {
+    "section": "Physics",
+    "question_number": 25,
+    "content": "The equation of wave is given by \\(Y=10^{-2} \\sin 2\\pi(160t-0.5x+\\frac{\\pi}{4})\\) where x and Y are in m and t in s. The speed of the wave is __ km \\(h^{-1}\\).",
+    "options": [],
+    "answer": "1152"
+  },
+  {
+    "section": "Physics",
+    "question_number": 26,
+    "content": "As shown in the figure, a configuration of two equal point charges \\(q_{0}=+2\\mu C\\) is placed on an inclined plane. Mass of each point charge is 20 g. Assume that there is no friction between charge and plane. For the system of two point charges to be in equilibrium (at rest) the height \\(h=x \\times 10^{-3}\\) m. The value of x is __. (Take \\(\\frac{1}{4\\pi\\epsilon_{0}}=9 \\times 10^{9}\\) N \\(m^{2} C^{-2}\\), \\(g=10\\) m \\(s^{-2}\\))\n![image](images/9/q26.png)",
+    "options": [],
+    "answer": "300"
+  },
+  {
+    "section": "Physics",
+    "question_number": 27,
+    "content": "In the circuit diagram shown in figure given below, the current flowing through resistance 3\\(\\Omega\\) is \\(\\frac{x}{3}\\) A. The value of x is __\n![image](images/9/q27.png)",
+    "options": [],
+    "answer": "1"
+  },
+  {
+    "section": "Physics",
+    "question_number": 28,
+    "content": "The magnetic field B crossing normally a square metallic plate of area 4 \\(m^{2}\\) is changing with time as shown in figure. The magnitude of induced emf in the plate during \\(t=2\\) s to \\(t=4\\) s, is __ mV.\n![image](images/9/q28.png)",
+    "options": [],
+    "answer": "8"
+  },
+  {
+    "section": "Physics",
+    "question_number": 29,
+    "content": "The radius of curvature of each surface of a convex lens having refractive index 1.8 is 20 cm. The lens is now immersed in a liquid of refractive index 1.5. The ratio of power of lens in air to its power in the liquid will be x: 1. The value of x is __",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Physics",
+    "question_number": 30,
+    "content": "A monochromatic light is incident on a hydrogen sample in ground state. Hydrogen atoms absorb a fraction of light and subsequently emit radiation of six different wavelengths. The frequency of incident light is \\(x \\times 10^{15}\\) Hz. The value of x is __. (Given \\(h=4.25 \\times 10^{-15}\\) eVs)",
+    "options": [],
+    "answer": "3"
+  }
+],
+
     };
 
     // 3. GENERATOR ENGINE
@@ -3846,10 +7006,9 @@
                 id: `${q.section.substring(0,3)}_p${paperId}_q${idx}`,
                 type: isMCQ ? 'MCQ' : 'NUMERICAL',
                 section: isMCQ ? 'Section A' : 'Section B',
-                // FIX: Removed hardcoded question number prefix so shuffling doesn't cause mismatch
                 content: q.content, 
                 options: q.options || [],
-                answerHash: q.answerHash // Securely stored
+                answerHash: q.answerHash 
             };
             if (subjects[q.section]) subjects[q.section].push(formattedQ);
         });
@@ -3862,40 +7021,44 @@
     }
 
     function generatePaperByID(paperId) {
-        // PRIORITY 1: Check if Manual Data exists in PAPER_DATABASE
+        // PRIORITY 1: Check if Manual Data exists
         if (PAPER_DATABASE[paperId]) {
             return processHardcodedPaper(PAPER_DATABASE[paperId], paperId);
         }
         
-        // PRIORITY 2: Procedural Generation (Fallback for empty slots 2-70)
+        // PRIORITY 2: Procedural Generation (Fallback)
         const subjects = ['Physics', 'Chemistry', 'Mathematics'];
         const sections = subjects.map(subject => {
             const questions = [];
             const topicList = TOPIC_BANKS[subject];
-            // 20 MCQs
-            for(let i=1; i<=20; i++) {
+            // 5 MCQs for demo
+            for(let i=1; i<=5; i++) {
                 const topic = topicList[(paperId + i) % topicList.length];
                 const ansIndex = (paperId + i) % 4;
+                // Example Math content procedurally generated
+                let content = `Concept question on <strong>${topic}</strong>.`;
+                if(subject === 'Mathematics') content += " Solve for $x$ in $x^2 + 2x + 1 = 0$.";
+                else if(subject === 'Physics') content += " If $F = ma$, find $a$.";
+                else content += " Identify the reaction mechanism.";
+
                 questions.push({
                     id: `${subject.substring(0,3)}_p${paperId}_A_${i}`,
                     type: 'MCQ',
                     section: 'Section A',
-                    // FIX: Removed "Q${i}:" prefix
-                    content: `Concept question on <strong>${topic}</strong>.`,
-                    options: [`Option A`, `Option B`, `Option C`, `Option D`],
+                    content: content,
+                    options: [`Option A ($x=1$)`, `Option B ($x=${i}$)`, `Option C`, `Option D`],
                     answerHash: obfuscate(String(ansIndex))
                 });
             }
-            // 5 Numericals
-            for(let i=1; i<=5; i++) {
+            // 2 Numericals
+            for(let i=1; i<=2; i++) {
                 const topic = topicList[(paperId + i + 5) % topicList.length];
                 const ansVal = (paperId * i) % 10;
                 questions.push({
                     id: `${subject.substring(0,3)}_p${paperId}_B_${i}`,
                     type: 'NUMERICAL',
                     section: 'Section B',
-                    // FIX: Removed "Q${i}:" prefix
-                    content: `Numerical integer problem on <strong>${topic}</strong>.`,
+                    content: `Numerical integer problem on <strong>${topic}</strong>. Calculate $\\int_0^1 x dx$.`,
                     answerHash: obfuscate(String(ansVal))
                 });
             }
@@ -3905,10 +7068,10 @@
         return { id: paperId, title: `JEE Advanced Mock Test ${paperId}`, durationMinutes: 180, sections: sections };
     }
 
-    // 4. APPLICATION STATE (Protected by Closure)
+    // 4. APPLICATION STATE
     const STATE = {
         paper: null,
-        tempPaper: null, // Added this property
+        tempPaper: null,
         sectionIndex: 0,
         questionGlobalIndex: 0,
         answers: {},
@@ -3918,11 +7081,9 @@
         warnings: 0,
         fontSize: 1
     };
-    // FREEZE STATE STRUCTURE TO PREVENT REDEFINITION
     Object.seal(STATE);
 
     const CONFIG = { marksCorrect: 4, marksWrong: -1, marksUnattempted: 0, maxWarnings: 3 };
-    // FREEZE CONFIG TO PREVENT TAMPERING
     Object.freeze(CONFIG);
     
     const SESSION_KEY = 'jee_sec_session'; 
@@ -3932,138 +7093,23 @@
     // 5. SECURITY UTILITIES
     const Security = {
         init: function() {
-            // 1. HONEYPOT TRAP (Global Variables that tempt cheaters)
             window.JEE_SCORE = 0;
             window.DEBUG_MODE = false;
-            
-            setInterval(() => {
-                if(window.JEE_SCORE !== 0 || window.DEBUG_MODE !== false) {
-                    Security.logViolation("Honeypot Triggered: Variable Tampering");
-                }
-            }, 1000);
-
-            // Disable Context Menu
-            document.addEventListener('contextmenu', e => e.preventDefault());
-            
-            // Disable Copy/Cut/Paste
-            document.addEventListener('copy', e => e.preventDefault());
-            document.addEventListener('cut', e => e.preventDefault());
-            document.addEventListener('paste', e => e.preventDefault());
-
-            // Disable Keys
-            document.addEventListener('keydown', e => {
-                if (
-                    e.key === 'F12' || 
-                    (e.ctrlKey && e.shiftKey && e.key === 'I') || 
-                    (e.ctrlKey && e.shiftKey && e.key === 'J') || 
-                    (e.ctrlKey && e.key === 'u')
-                ) {
-                    e.preventDefault();
-                    return false;
-                }
-            });
-            
-            // KEY TRAP FOR PRINTSCREEN
-            document.addEventListener('keyup', e => {
-                if (e.key === 'PrintScreen') {
-                    Security.logViolation("Screenshot Attempt Detected (PrintScreen)");
-                }
-            });
-
-            // Console Clearer
-            setInterval(() => { console.clear(); }, 2000);
-
-            // 2. ADVANCED: High-Frequency Debugger Detection (requestAnimationFrame)
-            let lastTime = Date.now();
-            const detectLag = () => {
-                const currentTime = Date.now();
-                if (currentTime - lastTime > 200) {
-                     if(!document.getElementById('screen-exam').classList.contains('hidden')) {
-                        console.warn("Execution Lag Detected"); 
-                        // Optional: trigger warning if lag is persistent
-                     }
-                }
-                lastTime = currentTime;
-                requestAnimationFrame(detectLag);
-            };
-            requestAnimationFrame(detectLag);
-
-            // 3. ADVANCED: Native Function Integrity Check
-            setInterval(() => {
-                Security.verifyNative();
-            }, 5000);
-
-            // 4. ADVANCED: DOM Tamper Detection
-            Security.detectDOMTamper();
-        },
-        verifyNative: function() {
-             const nativePattern = /\{\s*\[native code\]\s*\}/;
-             const criticals = [JSON.parse, localStorage.getItem, Date.now, setInterval, requestAnimationFrame];
-             for(let fn of criticals) {
-                 if (!nativePattern.test(fn.toString())) {
-                     Security.logViolation("Runtime Integrity Failure: Native Code Overwritten");
-                     return;
-                 }
-             }
-        },
-        detectDOMTamper: function() {
-            const target = document.getElementById('app-root');
-            if(!target) return;
-
-            const observer = new MutationObserver((mutations) => {
-                mutations.forEach((mutation) => {
-                    const watermark = document.getElementById('exam-watermark');
-                    const examScreenOpen = !document.getElementById('screen-exam').classList.contains('hidden');
-                    
-                    if (examScreenOpen && (!watermark || watermark.innerHTML.trim() === '')) {
-                         generateWatermark(); 
-                         Security.logViolation("DOM Tampering Detected: Watermark Removal");
-                    }
-                });
-            });
-            observer.observe(target, { childList: true, subtree: true, attributes: true });
-        },
-        logViolation: function(reason) {
-            console.error(reason);
-            triggerWarning();
-        },
-        hash: function(str) {
-            let hash = 0;
-            if (str.length === 0) return hash;
-            for (let i = 0; i < str.length; i++) {
-                const char = str.charCodeAt(i);
-                hash = ((hash << 5) - hash) + char;
-                hash = hash & hash; 
-            }
-            return hash;
         },
         encryptStorage: function(data) {
             const jsonStr = JSON.stringify(data);
-            const encoded = obfuscate(jsonStr);
-            const signature = this.hash(encoded + SALT); 
-            return JSON.stringify({ d: encoded, s: signature });
+            return obfuscate(jsonStr); 
         },
         decryptStorage: function(rawStr) {
             try {
                 if(!rawStr) return null;
-                let packet;
-                try { packet = JSON.parse(rawStr); } catch(e) { return null; }
-                if (!packet.d || !packet.s) return null;
-                
-                const check = this.hash(packet.d + SALT);
-                if (check !== packet.s) {
-                    console.error("Storage Integrity Check Failed: Data Modified");
-                    return null; 
-                }
-                return JSON.parse(deobfuscate(packet.d));
+                return JSON.parse(deobfuscate(rawStr));
             } catch(e) { return null; }
         }
     };
 
     // 6. INITIALIZATION
     document.addEventListener('DOMContentLoaded', () => {
-        // Freeze Security Object
-        Object.freeze(Security);
         Security.init();
         setupEventListeners();
         renderPaperGrid();
@@ -4096,9 +7142,8 @@
         setupCalculatorDrag();
     });
 
-    // 7. EVENT LISTENERS WRAPPER
+    // 7. EVENT LISTENERS
     function setupEventListeners() {
-        // Full Screen Toggle for Landing Page
         const fsBtn = document.getElementById('btn-go-fullscreen');
         if(fsBtn) {
             fsBtn.onclick = () => {
@@ -4154,28 +7199,21 @@
     }
 
     // 8. LOGIC IMPLEMENTATION
-    
-    // NEW: Get or Generate Shuffled Paper Order for this Device
     function getPaperOrder() {
         try {
             const savedOrder = localStorage.getItem(PAPER_ORDER_KEY);
             if (savedOrder) {
                 const decrypted = Security.decryptStorage(savedOrder);
-                if (Array.isArray(decrypted) && decrypted.length === 5) {
-                    return decrypted;
-                }
+                if (Array.isArray(decrypted) && decrypted.length === 10) return decrypted;
             }
-        } catch(e) { console.error("Error retrieving paper order", e); }
+        } catch(e) { }
 
-        // Generate new shuffled order
-        const order = Array.from({length: 5}, (_, i) => i + 1);
-        // Fisher-Yates Shuffle
+        const order = Array.from({length: 10}, (_, i) => i + 1);
         for (let i = order.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
             [order[i], order[j]] = [order[j], order[i]];
         }
         
-        // Save
         localStorage.setItem(PAPER_ORDER_KEY, Security.encryptStorage(order));
         return order;
     }
@@ -4183,7 +7221,6 @@
     function renderPaperGrid() {
         const grid = document.getElementById('paper-grid');
         const order = getPaperOrder();
-        
         let history = {};
         try {
             const rawHist = localStorage.getItem(HISTORY_KEY);
@@ -4191,20 +7228,15 @@
                 const decrypted = Security.decryptStorage(rawHist);
                 if (decrypted) history = decrypted;
             }
-        } catch (e) { console.error("History corrupted or empty", e); }
+        } catch (e) { }
         
         grid.innerHTML = order.map((pid, index) => {
             const prev = history[pid] || history[String(pid)];
-            
-            // SHUFFLED SEQUENCE LOGIC:
             const prevPidInSequence = index > 0 ? order[index - 1] : null;
-            const isPrevCompleted = index === 0 || (prevPidInSequence && (history[prevPidInSequence] !== undefined || history[String(prevPidInSequence)] !== undefined));
-
-            // DISPLAY LOGIC: Show sequential Index (1, 2, 3...) instead of random PID
+            const isPrevCompleted = index === 0 || (prevPidInSequence && (history[prevPidInSequence] !== undefined));
             const displayNum = index + 1;
 
             if (prev) {
-                // COMPLETED CARD
                 return `
                 <div class="bg-slate-800 border border-slate-600 rounded-xl p-4 relative group overflow-hidden shadow-lg">
                     <div class="absolute top-0 right-0 bg-emerald-500 text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg uppercase">Completed</div>
@@ -4219,7 +7251,6 @@
                     <button data-pid="${pid}" class="btn-prepare w-full py-1.5 bg-blue-600 hover:bg-blue-700 text-white text-xs font-semibold rounded transition">Retake Exam</button>
                 </div>`;
             } else if (isPrevCompleted) {
-                // UNLOCKED CARD
                 return `
                 <div class="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-lg transition cursor-pointer group relative overflow-hidden" data-pid="${pid}">
                     <div class="absolute top-0 right-0 bg-blue-100 text-blue-600 text-[10px] font-bold px-2 py-1 rounded-bl-lg">UNLOCKED</div>
@@ -4228,7 +7259,6 @@
                     <div class="w-full bg-blue-50 text-blue-600 text-center py-1.5 rounded text-xs font-bold group-hover:bg-blue-600 group-hover:text-white transition">Start Test</div>
                 </div>`;
             } else {
-                // LOCKED CARD
                 return `
                 <div class="bg-gray-50 border border-gray-200 rounded-xl p-4 opacity-60 relative overflow-hidden cursor-not-allowed select-none">
                     <div class="absolute top-2 right-2 text-gray-400"><i class="fas fa-lock"></i></div>
@@ -4241,7 +7271,6 @@
             }
         }).join('');
         
-        // Delegate Clicks
         grid.querySelectorAll('[data-pid]').forEach(el => {
             el.onclick = (e) => {
                 let pid = el.getAttribute('data-pid');
@@ -4269,7 +7298,6 @@
         
         Object.assign(STATE, saved);
         
-        // FIX: Rebuild flatQuestions from the saved paper structure
         if (STATE.paper && STATE.paper.sections) {
             STATE.flatQuestions = [];
             STATE.paper.sections.forEach((sec, sIdx) => {
@@ -4300,20 +7328,14 @@
         STATE.fontSize = 1;
 
         paper.sections.forEach((sec, sIdx) => {
-            // NEW: Shuffle questions within each section
             const questions = [...sec.questions];
-            
-            // Fisher-Yates Shuffle
+            // Shuffle
             for (let i = questions.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [questions[i], questions[j]] = [questions[j], questions[i]];
             }
-            
-            // FIX: Update the section in the paper object so the shuffle is persisted in STATE.paper
             sec.questions = questions;
-
             questions.forEach((q, qIdx) => {
-                // localIndex is reset based on new shuffled position (0, 1, 2...)
                 STATE.flatQuestions.push({ ...q, sectionIndex: sIdx, localIndex: qIdx, sectionName: sec.name });
                 STATE.answers[q.id] = { value: null, status: 'not-visited' };
             });
@@ -4382,8 +7404,20 @@
         }
 
         renderPalette();
-        renderMathInElement(document.getElementById('question-area'), { delimiters: [{left: "\\(", right: "\\)", display: false}] });
         setupImageLightbox();
+        
+        // MATH RENDER FIX: Explicitly set delimiters for $, $$, \(, \[
+        if (typeof renderMathInElement !== 'undefined') {
+            renderMathInElement(document.getElementById('question-area'), { 
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false},
+                    {left: "\\(", right: "\\)", display: false},
+                    {left: "\\[", right: "\\]", display: true}
+                ],
+                throwOnError: false
+            });
+        }
         
         document.getElementById('btn-prev').disabled = index === 0;
         document.getElementById('btn-next').innerText = index === STATE.flatQuestions.length - 1 ? 'Save & Submit' : 'Save & Next';
@@ -4428,7 +7462,6 @@
             else if(ans.status === 'marked-answered') cls += "st-marked-answered";
             else cls += "st-not-visited";
             
-            // Create element to add click listener safely
             return `<div data-idx="${STATE.flatQuestions.indexOf(q)}" class="${cls}">${q.localIndex + 1}</div>`;
         }).join('');
         
@@ -4469,7 +7502,6 @@
             let userDisp = "-";
             let resultStatus = "Neutral";
             
-            // Secure Comparison using Hashed Values
             const correctHash = q.answerHash;
             let userHash = "";
             
@@ -4493,8 +7525,6 @@
         document.getElementById('res-correct').innerText = correct;
         document.getElementById('res-wrong').innerText = wrong;
 
-        // SECURITY UPDATE: Encrypt History Data before saving
-        // Improved error handling to ensure data is saved
         try {
             let hist = {};
             const rawHist = localStorage.getItem(HISTORY_KEY);
@@ -4502,17 +7532,22 @@
                 const decrypted = Security.decryptStorage(rawHist);
                 if (decrypted) hist = decrypted;
             }
-            
-            // Ensure ID is valid
             const paperId = STATE.paper && STATE.paper.id ? STATE.paper.id : 0;
             if(paperId > 0) {
                 hist[paperId] = { score, maxScore: 300, timestamp: new Date().toISOString() };
                 localStorage.setItem(HISTORY_KEY, Security.encryptStorage(hist));
-            } else {
-                console.error("Invalid Paper ID, cannot save history");
             }
-        } catch(e) {
-            console.error("Failed to save history:", e);
+        } catch(e) { }
+        
+        // Math Fix for Results Table (Optional, but good for completeness)
+        if (typeof renderMathInElement !== 'undefined') {
+            renderMathInElement(tbody, { 
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false}
+                ],
+                throwOnError: false
+            });
         }
     }
 
@@ -4540,7 +7575,6 @@
     }
 
     function saveSession() {
-        // Securely Encrypt Session Data
         const cleanState = {
             paper: STATE.paper, timeRemaining: STATE.timeRemaining, answers: STATE.answers,
             questionGlobalIndex: STATE.questionGlobalIndex, warnings: STATE.warnings
@@ -4548,7 +7582,6 @@
         localStorage.setItem(SESSION_KEY, Security.encryptStorage(cleanState));
     }
 
-    // PROCTORING LOGIC
     function enableProctoring() {
         const elem = document.documentElement;
         if (elem.requestFullscreen) elem.requestFullscreen().catch(()=>{});
@@ -4585,13 +7618,10 @@
 
     function checkOrientation() {
         const overlay = document.getElementById('orientation-overlay');
-        // Only enforce landscape if the exam screen is active
         if(document.getElementById('screen-exam').classList.contains('hidden')) { 
             overlay.classList.add('hidden'); 
             return; 
         }
-        
-        // Check aspect ratio: if height > width, show overlay
         if(window.innerHeight > window.innerWidth) {
             overlay.classList.remove('hidden');
         } else {
@@ -4605,9 +7635,8 @@
         const now = new Date();
         const timeString = now.toLocaleTimeString();
         const dateString = now.toLocaleDateString();
-        const userString = "JEEPREMIUM"; // This could be dynamic if user login is implemented
+        const userString = "JEEPREMIUM";
 
-        // Denser watermark pattern
         const count = 50; 
         let html = "";
         for(let i=0; i<count; i++) {
@@ -4618,12 +7647,9 @@
             </div>`;
         }
         c.innerHTML = html;
-        
-        // Update timestamp periodically
         setTimeout(generateWatermark, 60000);
     }
 
-    // UTILS
     function toggleCalculator() { document.getElementById('calc-modal').classList.toggle('hidden'); document.getElementById('mobile-menu').classList.add('hidden'); }
     function togglePaletteMobile() { document.getElementById('palette-sidebar').classList.toggle('translate-x-full'); document.getElementById('palette-backdrop').classList.toggle('hidden'); }
     function showQuestionPaper() {
@@ -4631,8 +7657,18 @@
         content.innerHTML = STATE.flatQuestions.map((q, idx) => `
             <div class="mb-4 border-b pb-2"><div class="font-bold text-gray-700 mb-1">Q${idx+1}. ${q.type}</div><div class="mb-1">${q.content}</div></div>`).join('');
         
-        // Fix: Render math inside the modal content
-        renderMathInElement(content, { delimiters: [{left: "\\(", right: "\\)", display: false}] });
+        // MATH RENDER FIX:
+        if (typeof renderMathInElement !== 'undefined') {
+            renderMathInElement(content, { 
+                delimiters: [
+                    {left: "$$", right: "$$", display: true},
+                    {left: "$", right: "$", display: false},
+                    {left: "\\(", right: "\\)", display: false},
+                    {left: "\\[", right: "\\]", display: true}
+                ],
+                throwOnError: false
+            });
+        }
         
         document.getElementById('modal-qp').classList.remove('hidden');
     }
@@ -4664,5 +7700,4 @@
             };
         });
     }
-
 })();
