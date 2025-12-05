@@ -7296,7 +7296,7 @@
   }
 ],
 
-10:[
+10:[[
   {
     "section": "Physics",
     "question_number": 1,
@@ -7312,7 +7312,7 @@
   {
     "section": "Physics",
     "question_number": 2,
-    "content": "From the v-t graph shown, the ratio of distance to displacement in 25 s of motion is:\n![image](images/9/q2.png)",
+    "content": "From the v-t graph shown, the ratio of distance to displacement in 25 s of motion is:<br><img src='images/9/q2.png' alt='Question 2'>",
     "options": [
       "1",
       "3/5",
@@ -7396,7 +7396,7 @@
   {
     "section": "Physics",
     "question_number": 9,
-    "content": "The variation of kinetic energy (KE) of a particle executing simple harmonic motion with the displacement (x) starting from mean position to extreme position (A) is given by\n![image](images/9/q9.png)",
+    "content": "The variation of kinetic energy (KE) of a particle executing simple harmonic motion with the displacement (x) starting from mean position to extreme position (A) is given by<br><img src='images/9/q9.png' alt='Question 9'>",
     "options": [
       "Graph 1",
       "Graph 2",
@@ -7468,7 +7468,7 @@
   {
     "section": "Physics",
     "question_number": 15,
-    "content": "As per the given graph, choose the correct representation for curve A and curve B. {Where \\(X_{c}=\\) Reactance of pure capacitive circuit connected with A.C. source, \\(X_{L}=\\) Reactance of pure inductive circuit connected with A.C. source, \\(R=\\) Impedance of pure resistive circuit connected with A.C. source, \\(Z=\\) Impedance of the LCR series circuit }\n![image](images/9/q15.png)",
+    "content": "As per the given graph, choose the correct representation for curve A and curve B. {Where \\(X_{c}=\\) Reactance of pure capacitive circuit connected with A.C. source, \\(X_{L}=\\) Reactance of pure inductive circuit connected with A.C. source, \\(R=\\) Impedance of pure resistive circuit connected with A.C. source, \\(Z=\\) Impedance of the LCR series circuit }<br><img src='images/9/q15.png' alt='Question 15'>",
     "options": [
       "\\(A=X_{C}, B=R\\)",
       "\\(A=X_{L}, B=R\\)",
@@ -7516,7 +7516,7 @@
   {
     "section": "Physics",
     "question_number": 19,
-    "content": "The logic performed by the circuit shown in figure is equivalent to\n![image](images/9/q19.png)",
+    "content": "The logic performed by the circuit shown in figure is equivalent to<br><img src='images/9/q19.png' alt='Question 19'>",
     "options": [
       "AND",
       "NOR",
@@ -7575,21 +7575,21 @@
   {
     "section": "Physics",
     "question_number": 26,
-    "content": "As shown in the figure, a configuration of two equal point charges \\(q_{0}=+2\\mu C\\) is placed on an inclined plane. Mass of each point charge is 20 g. Assume that there is no friction between charge and plane. For the system of two point charges to be in equilibrium (at rest) the height \\(h=x \\times 10^{-3}\\) m. The value of x is __. (Take \\(\\frac{1}{4\\pi\\epsilon_{0}}=9 \\times 10^{9}\\) N \\(m^{2} C^{-2}\\), \\(g=10\\) m \\(s^{-2}\\))\n![image](images/9/q26.png)",
+    "content": "As shown in the figure, a configuration of two equal point charges \\(q_{0}=+2\\mu C\\) is placed on an inclined plane. Mass of each point charge is 20 g. Assume that there is no friction between charge and plane. For the system of two point charges to be in equilibrium (at rest) the height \\(h=x \\times 10^{-3}\\) m. The value of x is __. (Take \\(\\frac{1}{4\\pi\\epsilon_{0}}=9 \\times 10^{9}\\) N \\(m^{2} C^{-2}\\), \\(g=10\\) m \\(s^{-2}\\))<br><img src='images/9/q26.png' alt='Question 26'>",
     "options": [],
     "answer": "300"
   },
   {
     "section": "Physics",
     "question_number": 27,
-    "content": "In the circuit diagram shown in figure given below, the current flowing through resistance 3\\(\\Omega\\) is \\(\\frac{x}{3}\\) A. The value of x is __\n![image](images/9/q27.png)",
+    "content": "In the circuit diagram shown in figure given below, the current flowing through resistance 3\\(\\Omega\\) is \\(\\frac{x}{3}\\) A. The value of x is __<br><img src='images/9/q27.png' alt='Question 27'>",
     "options": [],
     "answer": "1"
   },
   {
     "section": "Physics",
     "question_number": 28,
-    "content": "The magnetic field B crossing normally a square metallic plate of area 4 \\(m^{2}\\) is changing with time as shown in figure. The magnitude of induced emf in the plate during \\(t=2\\) s to \\(t=4\\) s, is __ mV.\n![image](images/9/q28.png)",
+    "content": "The magnetic field B crossing normally a square metallic plate of area 4 \\(m^{2}\\) is changing with time as shown in figure. The magnitude of induced emf in the plate during \\(t=2\\) s to \\(t=4\\) s, is __ mV.<br><img src='images/9/q28.png' alt='Question 28'>",
     "options": [],
     "answer": "8"
   },
@@ -7606,8 +7606,628 @@
     "content": "A monochromatic light is incident on a hydrogen sample in ground state. Hydrogen atoms absorb a fraction of light and subsequently emit radiation of six different wavelengths. The frequency of incident light is \\(x \\times 10^{15}\\) Hz. The value of x is __. (Given \\(h=4.25 \\times 10^{-15}\\) eVs)",
     "options": [],
     "answer": "3"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 31,
+    "content": "25 mL of silver nitrate solution (1M) is added dropwise to 25 mL of potassium iodide (1.05 M) solution. The ion(s) present in very small quantity in the solution is/are",
+    "options": [
+      "I only",
+      "\\(K^{+}\\) only",
+      "\\(NO_{3}^{-}\\)",
+      "\\(Ag^{+}\\) and I both"
+    ],
+    "answer": "\\(Ag^{+}\\) and I both"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 32,
+    "content": "Given below are two statements: one is labelled as Assertion A and the other is labelled as Reason R:\nAssertion A: In the photoelectric effect, the electrons are ejected from the metal surface as soon as the beam of light of frequency greater than threshold frequency strikes the surface.\nReason R: When the photon of any energy strikes an electron in the atom, transfer of energy from the photon to the electron takes place.\nIn the light of the above statements, choose the most appropriate answer from the options given below :",
+    "options": [
+      "Both A and R are correct and R is the correct explanation of A",
+      "A is correct but R is not correct",
+      "Both A and R are correct but R is NOT the correct explanation of A",
+      "A is not correct but R is correct"
+    ],
+    "answer": "A is correct but R is not correct"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 33,
+    "content": "For compound having the formula \\(GaAlCl_{4}\\), the correct option from the following is",
+    "options": [
+      "Ga is coordinated with Cl in \\(GaAlCl_{4}\\)",
+      "Ga is more electronegative than Al and is present as a cationic part of the salt \\(GaAlCl_{4}\\)",
+      "Cl forms bond with both Al and Ga in \\(GaAlCl_{4}\\)",
+      "Oxidation state of Ga in the salt \\(GaAlCl_{4}\\) is +3"
+    ],
+    "answer": "Ga is more electronegative than Al and is present as a cationic part of the salt \\(GaAlCl_{4}\\)"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 34,
+    "content": "For elements B, C, N, Li, Be, O and F, the correct order of first ionisation enthalpy is",
+    "options": [
+      "\\(Li < Be < B < C < O < N < F\\)",
+      "\\(B < Li < Be < C < N < O < F\\)",
+      "\\(Li < Be < B < C < N < O < F\\)",
+      "\\(Li < B < Be < C < O < N < F\\)"
+    ],
+    "answer": "\\(Li < B < Be < C < O < N < F\\)"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 35,
+    "content": "Match List-I with List-II:\nList-I (Species): A. \\(H_{3}O^{+}\\) B. Acetylide anion C. \\(NH_{4}^{+}\\) D. \\(ClO_{2}^{-}\\)\nList-II (Geometry/Shape): I. Tetrahedral II. Linear III. Pyramidal IV. Bent\nChoose the correct answer from the options given below:",
+    "options": [
+      "A(III), B(IV), C(I), D(II)",
+      "A(III), B(I), C(II), D(IV)",
+      "A(III), B(II), C(I), D(IV)",
+      "A(III), B(IV), C(II), D(I)"
+    ],
+    "answer": "A(III), B(II), C(I), D(IV)"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 36,
+    "content": "Match List-I with List-II:\nList-I: A. K B. KCl C. KOH D. Li\nList-II: I. Thermonuclear reactions II. Fertilizer III. Sodium potassium pump IV. Absorbent of \\(CO_{2}\\)",
+    "options": [
+      "A(III), B(II), C(IV), D(I)",
+      "A(III), B(IV), C(II), D(I)",
+      "A(IV), B(I), C(III), D(II)",
+      "A(IV), B(III), C(I), D(II)"
+    ],
+    "answer": "A(III), B(II), C(IV), D(I)"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 37,
+    "content": "Find out the correct statement from the options given below for the reactions shown in the figure.<br><img src='images/9/q37.png' alt='Question 37'>",
+    "options": [
+      "Reaction (i) is of \\(2^{nd}\\) order and reaction (ii) is of \\(1^{st}\\) order",
+      "Reactions (i) and (ii) both are of \\(2^{nd}\\) order",
+      "Reactions (i) is of \\(1^{st}\\) order and reaction (ii) is of \\(2^{nd}\\) order",
+      "Reaction (i) and (ii) both are of \\(1^{st}\\) order"
+    ],
+    "answer": "Reactions (i) is of \\(1^{st}\\) order and reaction (ii) is of \\(2^{nd}\\) order"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 38,
+    "content": "Thin layer chromatography of a mixture shows the following observation: The correct order of elution in the silica gel column chromatography is<br><img src='images/9/q38.png' alt='Question 38'>",
+    "options": [
+      "B, A, C",
+      "B, C, A",
+      "A, C, B",
+      "C, A, B"
+    ],
+    "answer": "A, C, B"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 39,
+    "content": "Arrange the following compounds in increasing order of rate of aromatic electrophilic substitution reaction.<br><img src='images/9/q39.png' alt='Question 39'>",
+    "options": [
+      "d, b, c, a",
+      "d, b, a, c",
+      "b, c, a, d",
+      "c, a, b, d"
+    ],
+    "answer": "c, a, b, d"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 40,
+    "content": "Given below are two statements:\nStatement-I: If BOD is 4 ppm and dissolved oxygen is 8 ppm, then it is a good quality water.\nStatement-II: If the concentration of zinc and nitrate salts are 5 ppm each, then it can be a good quality water.\nIn the light of the above statements, choose the most appropriate answer from the options given below :",
+    "options": [
+      "Statement I is correct but Statement II is incorrect",
+      "Statement I is incorrect but Statement II is correct",
+      "Both the statements I and II are incorrect",
+      "Both the statements I and II are correct"
+    ],
+    "answer": "Both the statements I and II are correct"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 41,
+    "content": "In the extraction process of copper, the product obtained after carrying out the reactions\n(i) \\(2Cu_{2}S + 3O_{2} \\rightarrow 2Cu_{2}O + 2SO_{2}\\)\n(ii) \\(2Cu_{2}O + Cu_{2}S \\rightarrow 6Cu + SO_{2}\\)\nis called",
+    "options": [
+      "Blister copper",
+      "Reduced copper",
+      "Copper scrap",
+      "Copper matte"
+    ],
+    "answer": "Blister copper"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 42,
+    "content": "Given below are two statements:\nStatement-I: Methane and steam passed over a heated Ni catalyst produces hydrogen gas.\nStatement-II: Sodium nitrite reacts with \\(NH_{4}Cl\\) to give \\(H_{2}O\\), \\(N_{2}\\) and NaCl.\nIn the light of the above statements, choose the most appropriate answer from the options given below :",
+    "options": [
+      "Statement I is incorrect but Statement II is correct",
+      "Both the statements I and II are incorrect",
+      "Statement I is correct but Statement II is incorrect",
+      "Both the statements I and II are correct"
+    ],
+    "answer": "Both the statements I and II are correct"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 43,
+    "content": "When a solution of mixture having two inorganic salts was treated with freshly prepared ferrous sulphate in acidic medium, a dark brown ring was formed whereas on treatment with neutral \\(FeCl_{3}\\) it gave deep red colour which disappeared on boiling and a brown red ppt was formed. The mixture contains",
+    "options": [
+      "\\(SO_{3}^{2-} \\& CH_{3}COO^{-}\\)",
+      "\\(CH_{3}COO^{-} \\& NO_{3}^{-}\\)",
+      "\\(SO_{3}^{2-} \\& C_{2}O_{4}^{2-}\\)",
+      "\\(C_{2}O_{4}^{2-} \\& NO_{3}^{-}\\)"
+    ],
+    "answer": "\\(CH_{3}COO^{-} \\& NO_{3}^{-}\\)"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 44,
+    "content": "The complex that dissolves in water is",
+    "options": [
+      "\\((NH_{4})_{3}[As(Mo_{3}O_{10})_{4}]\\)",
+      "\\(Fe_{4}[Fe(CN)_{6}]_{3}\\)",
+      "\\(K_{3}[Co(NO_{2})_{6}]\\)",
+      "\\([Fe_{3}(OH)_{2}(OAc)_{6}]Cl\\)"
+    ],
+    "answer": "\\([Fe_{3}(OH)_{2}(OAc)_{6}]Cl\\)"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 45,
+    "content": "The set which does not have ambidentate ligand(s) is",
+    "options": [
+      "\\(C_{2}O_{4}^{2-}\\), ethylene diamine, \\(H_{2}O\\)",
+      "\\(EDTA^{4-}\\), NCS, \\(C_{2}O_{4}^{2-}\\)",
+      "\\(NO_{2}^{-}\\), \\(C_{2}O_{4}^{2-}\\), \\(EDTA^{4-}\\)",
+      "\\(C_{2}O_{4}^{2-}\\), \\(NO_{2}^{-}\\), NCS"
+    ],
+    "answer": "\\(C_{2}O_{4}^{2-}\\), ethylene diamine, \\(H_{2}O\\)"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 46,
+    "content": "Which of the following complex has a possibility to exist as meridional isomer?",
+    "options": [
+      "\\([Co(NH_{3})_{3}(NO_{2})_{3}]\\)",
+      "\\([Pt(NH_{3})_{2}Cl_{2}]\\)",
+      "\\([Co(en)_{2}Cl_{2}]\\)",
+      "\\([Co(en)_{3}]\\)"
+    ],
+    "answer": "\\([Co(NH_{3})_{3}(NO_{2})_{3}]\\)"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 47,
+    "content": "L-isomer of tetrose X \\((C_{4}H_{8}O_{4})\\) gives positive Schiff's test and has two chiral carbons. On acetylation 'X' yields triacetate. 'X' also undergoes following reactions. 'A' and 'B' are:<br><img src='images/9/q47.png' alt='Question 47'>",
+    "options": [
+      "Structure 1",
+      "Structure 2",
+      "Structure 3",
+      "Structure 4"
+    ],
+    "answer": "Structure 2"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 48,
+    "content": "'A' and 'B' in the above reactions are:<br><img src='images/9/q48.png' alt='Question 48'>",
+    "options": [
+      "Option 1",
+      "Option 2",
+      "Option 3",
+      "Option 4"
+    ],
+    "answer": "Option 2"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 49,
+    "content": "Identify the Major Product 'X'.<br><img src='images/9/q49.png' alt='Question 49'>",
+    "options": [
+      "Option 1",
+      "Option 2",
+      "Option 3",
+      "Option 4"
+    ],
+    "answer": "Option 1"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 50,
+    "content": "The polymer X consists of linear molecules and is closely packed. It is prepared in the presence of triethylaluminium and titanium tetrachloride under low pressure. The polymer X is",
+    "options": [
+      "High density polythene",
+      "Polyacrylonitrile",
+      "Low density polythene",
+      "Polytetrafluoroethane"
+    ],
+    "answer": "High density polythene"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 51,
+    "content": "A solution of sugar is obtained by mixing 200 g of its 25% solution and 500 g of its 40% solution (both by mass). The mass percentage of the resulting sugar solution is __ (Nearest integer)",
+    "options": [],
+    "answer": "36"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 52,
+    "content": "Solid fuel used in rocket is a mixture of \\(Fe_{2}O_{3}\\) and Al (in ratio 1: 2). The heat evolved (kJ) per gram of the mixture is __ (Nearest integer)\nGiven \\(\\Delta H_{f}^{0}(Al_{2}O_{3}) = -1700\\) kJ \\(mol^{-1}\\), \\(\\Delta H_{f}^{0}(Fe_{2}O_{3}) = -840\\) kJ \\(mol^{-1}\\)\nMolar mass of Fe, Al and O are 56, 27 and 16 g \\(mol^{-1}\\) respectively",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 53,
+    "content": "A mixture of one mole of \\(H_{2}O\\) and 1 mole of CO is taken in a 10 litre container and heated to 725 K. At equilibrium 40% of water by mass reacts with carbon monoxide according to the equation: \\(CO(g) + H_{2}O(g) \\rightleftharpoons CO_{2}(g) + H_{2}(g)\\). The equilibrium constant \\(K_{c} \\times 10^{2}\\) for the reaction is __ (Nearest integer)",
+    "options": [],
+    "answer": "44"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 54,
+    "content": "The number of hyperconjugation structures involved to stabilize carbocation formed in the above reaction is __<br><img src='images/9/q54.png' alt='Question 54'>",
+    "options": [],
+    "answer": "7"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 55,
+    "content": "An atomic substance A of molar mass 12 g \\(mol^{-1}\\) has a cubic crystal structure with edge length of 300 pm. The no. of atoms present in one unit cell of A is __ (Nearest integer)\nGiven the density of A is 3.0 g \\(cm^{-3}\\) and \\(N_{A}=6.02 \\times 10^{23} mol^{-1}\\)",
+    "options": [],
+    "answer": "4"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 56,
+    "content": "0.004 M \\(K_{2}SO_{4}\\) solution is isotonic with 0.01 M glucose solution. Percentage dissociation of \\(K_{2}SO_{4}\\) is __ (Nearest integer)",
+    "options": [],
+    "answer": "75"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 57,
+    "content": "In an electrochemical reaction of lead, at standard temperature, if \\(E_{(Pb^{2+}/Pb)}^{0} = m\\) Volt and \\(E_{(Pb^{4+}/Pb)}^{0} = n\\) Volt, then the value of \\(E_{(Pb^{2+}/Pb^{4+})}^{0}\\) is given by \\(m - xn\\). The value of x is __",
+    "options": [],
+    "answer": "2"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 58,
+    "content": "\\(KClO_{3} + 6FeSO_{4} + 3H_{2}SO_{4} \\rightarrow KCl + 3Fe_{2}(SO_{4})_{3} + 3H_{2}O\\)\nThe above reaction was studied at 300 K by monitoring the concentration of \\(FeSO_{4}\\) in which initial concentration was 10 M and after half an hour became 8.8 M. The rate of production of \\(Fe_{2}(SO_{4})_{3}\\) is \\(__ \\times 10^{-6}\\) mol \\(L^{-1} s^{-1}\\) (Nearest integer)",
+    "options": [],
+    "answer": "333"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 59,
+    "content": "The ratio of spin-only magnetic moment values \\(\\mu_{eff}[Cr(CN)_{6}]^{3-} / \\mu_{eff}[Cr(H_{2}O)_{6}]^{3+}\\) is __",
+    "options": [],
+    "answer": "1"
+  },
+  {
+    "section": "Chemistry",
+    "question_number": 60,
+    "content": "The ratio x/y on completion of the above reaction is __<br><img src='images/9/q60.png' alt='Question 60'>",
+    "options": [],
+    "answer": "2"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 61,
+    "content": "The number of integral solutions x of \\(\\log_{(x+\\frac{7}{2})} (\\frac{x-7}{2x-3})^{2} \\ge 0\\) is",
+    "options": [
+      "7",
+      "8",
+      "6",
+      "5"
+    ],
+    "answer": "6"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 62,
+    "content": "Let \\(w_{1}\\) be the point obtained by the rotation of \\(z_{1}=5+4i\\) about the origin through a right angle in the anticlockwise direction, and \\(w_{2}\\) be the point obtained by the rotation of \\(z_{2}=3+5i\\) about the origin through a right angle in the clockwise direction. Then the principal argument of \\(w_{1}-w_{2}\\) is equal to",
+    "options": [
+      "\\(\\pi - \\tan^{-1}\\frac{8}{9}\\)",
+      "\\(-\\pi + \\tan^{-1}\\frac{33}{5}\\)",
+      "\\(-\\pi + \\tan^{-1}\\frac{8}{9}\\)",
+      "\\(\\pi - \\tan^{-1}\\frac{33}{5}\\)"
+    ],
+    "answer": "\\(\\pi - \\tan^{-1}\\frac{8}{9}\\)"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 63,
+    "content": "The number of triplets (x, y, z) where x, y, z are distinct non negative integers satisfying \\(x+y+z=15\\), is",
+    "options": [
+      "80",
+      "136",
+      "114",
+      "92"
+    ],
+    "answer": "114"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 64,
+    "content": "Let \\(x_{1},x_{2},...,x_{100}\\) be in an arithmetic progression, with \\(x_{1}=2\\) and their mean equal to 200. If \\(y_{i}=i(x_{i}-i), 1 \\le i \\le 100\\), then the mean of \\(y_{1},y_{2},...,y_{100}\\) is",
+    "options": [
+      "10100",
+      "10101.50",
+      "10049.50",
+      "10051.50"
+    ],
+    "answer": "10049.50"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 65,
+    "content": "The number of elements in the set \\(S=\\{\\theta \\in [0,2\\pi]: 3\\cos^{4}\\theta-5\\cos^{2}\\theta-2\\sin^{6}\\theta+2=0\\}\\) is",
+    "options": [
+      "10",
+      "8",
+      "12",
+      "9"
+    ],
+    "answer": "9"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 66,
+    "content": "Consider ellipses \\(E_{k}:kx^{2}+k^{2}y^{2}=1\\), \\(k=1,2,...,20\\). Let \\(C_{k}\\) be the circle which touches the four chords joining the end points (one on minor axis and another on major axis) of the ellipse \\(E_{k}\\). If \\(r_{k}\\) is the radius of the circle \\(C_{k}\\) then the value of \\(\\sum_{k=1}^{20} \\frac{1}{r_{k}^{2}}\\) is",
+    "options": [
+      "3080",
+      "2870",
+      "3210",
+      "3320"
+    ],
+    "answer": "3080"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 67,
+    "content": "Let R be a rectangle given by the lines \\(x=0\\), \\(x=2\\), \\(y=0\\) and \\(y=5\\). Let \\(A(\\alpha, 0)\\) and \\(B(0, \\beta)\\), \\(\\alpha \\in [0,2]\\) and \\(\\beta \\in [0,5]\\) be such that the line segment AB divides the area of the rectangle R in the ratio 4: 1. Then, the mid-point of AB lies on a",
+    "options": [
+      "straight line",
+      "parabola",
+      "hyperbola",
+      "circle"
+    ],
+    "answer": "hyperbola"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 68,
+    "content": "Let sets A and B have 5 elements each. Let the mean of the elements in sets A and B be 5 and 8 respectively and the variance of the elements in sets A and B be 12 and 20 respectively. A new set C of 10 elements is formed by subtracting 3 from each element of A and adding 2 to each element of B. Then the sum of the mean and variance of the elements of C is",
+    "options": [
+      "40",
+      "32",
+      "38",
+      "36"
+    ],
+    "answer": "38"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 69,
+    "content": "An organization awarded 48 medals in event 'A', 25 in event 'B' and 18 in event 'C'. If these medals went to total 60 men and only five men got medals in all the three events, then, how many received medals in exactly two of three events?",
+    "options": [
+      "15",
+      "21",
+      "10",
+      "9"
+    ],
+    "answer": "21"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 70,
+    "content": "Let A be a \\(2 \\times 2\\) matrix with real entries such that \\(A^{T}=\\alpha A+I\\), where \\(\\alpha \\in \\mathbb{R}-\\{-1,1\\}\\). If \\(\\det(A^{2}-A)=4\\), the sum of all possible values of \\(\\alpha\\) is equal to",
+    "options": [
+      "0",
+      "2",
+      "\\(5/2\\)",
+      "\\(3/2\\)"
+    ],
+    "answer": "2"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 71,
+    "content": "Let \\(f(x)=[x^{2}-x]+|-x+[x]|\\), where \\(x \\in \\mathbb{R}\\) and [t] denotes the greatest integer less than or equal to t. Then, f is",
+    "options": [
+      "continuous at x=0, but not continuous at x=1",
+      "continuous at x=1, but not continuous at x=0",
+      "continuous at x=0 and x=1",
+      "not continuous at x=0 and x=1"
+    ],
+    "answer": "continuous at x=1, but not continuous at x=0"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 72,
+    "content": "Let \\(f:[2,4] \\rightarrow \\mathbb{R}\\) be a differentiable function such that \\((x \\log x) f'(x) + (\\log x) f(x) + f(x) \\ge 1\\), \\(x \\in [2,4]\\) with \\(f(2)=\\frac{1}{2}\\) and \\(f(4)=\\frac{1}{4}\\). Consider the following two statements:\n(A) \\(f(x) \\le 1\\) for all \\(x \\in [2,4]\\)\n(B) \\(f(x) \\ge 1/8\\) for all \\(x \\in [2,4]\\)\nThen,",
+    "options": [
+      "Neither statement (A) nor statement (B) is true",
+      "Only statement (B) is true",
+      "Both the statements (A) and (B) are true",
+      "Only statement (A) is true"
+    ],
+    "answer": "Both the statements (A) and (B) are true"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 73,
+    "content": "The value of the integral \\(\\int_{-\\log_{e}2}^{\\log_{e}2} e^{x}(\\log_{e}(e^{x}+\\sqrt{1+e^{2x}}))dx\\) is equal to",
+    "options": [
+      "\\(\\log_{e}(\\frac{(2+\\sqrt{5})^{2}}{\\sqrt{1+\\sqrt{5}}})+\\frac{\\sqrt{5}}{2}\\)",
+      "\\(\\log_{e}(\\frac{\\sqrt{2}(2+\\sqrt{5})^{2}}{\\sqrt{1+\\sqrt{5}}})+\\frac{\\sqrt{5}}{2}\\)",
+      "\\(\\log_{e}(\\frac{2(2+\\sqrt{5})^{2}}{\\sqrt{1+\\sqrt{5}}})-\\frac{\\sqrt{5}}{2}\\)",
+      "\\(\\log_{e}(\\frac{\\sqrt{2}(3-\\sqrt{5})^{2}}{\\sqrt{1+\\sqrt{5}}})+\\frac{\\sqrt{5}}{2}\\)"
+    ],
+    "answer": "\\(\\log_{e}(\\frac{(2+\\sqrt{5})^{2}}{\\sqrt{1+\\sqrt{5}}})+\\frac{\\sqrt{5}}{2}\\)"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 74,
+    "content": "Area of the region \\(\\{(x, y): x^{2}+(y-2)^{2} \\le 4, x^{2} \\ge 2y\\}\\) is",
+    "options": [
+      "\\(\\pi + \\frac{8}{3}\\)",
+      "\\(2\\pi + \\frac{16}{3}\\)",
+      "\\(\\pi - \\frac{8}{3}\\)",
+      "\\(2\\pi - \\frac{16}{3}\\)"
+    ],
+    "answer": "\\(2\\pi - \\frac{16}{3}\\)"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 75,
+    "content": "Let \\(y=y(x)\\) be a solution curve of the differential equation, \\((1-x^{2}y^{2})dx=y dx+x dy\\). If the line \\(x=1\\) intersects the curve \\(y=y(x)\\) at \\(y=2\\) and the line \\(x=2\\) intersects the curve \\(y=y(x)\\) at \\(y=\\alpha\\), then a value of \\(\\alpha\\) is",
+    "options": [
+      "\\(\\frac{1-3e^{2}}{2(3e^{2}+1)}\\)",
+      "\\(\\frac{1+3e^{2}}{2(3e^{2}-1)}\\)",
+      "\\(\\frac{3e^{2}}{2(3e^{2}-1)}\\)",
+      "\\(\\frac{3e^{2}}{2(3e^{2}+1)}\\)"
+    ],
+    "answer": "\\(\\frac{1+3e^{2}}{2(3e^{2}-1)}\\)"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 76,
+    "content": "For any vector \\(\\vec{a}=a_{1}\\hat{i}+a_{2}\\hat{j}+a_{3}\\hat{k}\\), with \\(10|a_{i}| < 1, i=1,2,3\\), consider the following statements:\n(A): \\(\\max\\{|a_{1}|,|a_{2}|,|a_{3}|\\} \\le |\\vec{a}|\\)\n(B): \\(|\\vec{a}| \\le 3\\max\\{|a_{1}|,|a_{2}|,|a_{3}|\\}\\)",
+    "options": [
+      "Only B is true",
+      "Only A is true",
+      "Both A and B are true",
+      "Neither A nor B is true"
+    ],
+    "answer": "Both A and B are true"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 77,
+    "content": "Let \\(\\vec{a}\\) be a non-zero vector parallel to the line of intersection of the two planes described by \\(\\hat{i}+\\hat{j}\\), \\(\\hat{i}+\\hat{k}\\) and \\(\\hat{i}-\\hat{j}\\), \\(\\hat{j}-\\hat{k}\\). If \\(\\theta\\) is the angle between the vector \\(\\vec{a}\\) and the vector \\(\\vec{b}=2\\hat{i}-2\\hat{j}+\\hat{k}\\) and \\(\\vec{a} \\cdot \\vec{b}=6\\) then the ordered pair \\((\\theta, |\\vec{a} \\times \\vec{b}|)\\) is equal to",
+    "options": [
+      "\\((\\frac{\\pi}{3}, 3\\sqrt{6})\\)",
+      "\\((\\frac{\\pi}{4}, 3\\sqrt{6})\\)",
+      "\\((\\frac{\\pi}{3}, 6)\\)",
+      "\\((\\frac{\\pi}{4}, 6)\\)"
+    ],
+    "answer": "\\((\\frac{\\pi}{4}, 6)\\)"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 78,
+    "content": "Let \\((\\alpha,\\beta,\\gamma)\\) be the image of point \\(P(2,3,5)\\) in the plane \\(2x+y-3z=6\\). Then \\(\\alpha+\\beta+\\gamma\\) is equal to",
+    "options": [
+      "5",
+      "10",
+      "12",
+      "9"
+    ],
+    "answer": "10"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 79,
+    "content": "If the equation of the plane that contains the point \\((-2,3,5)\\) and is perpendicular to each of the planes \\(2x+4y+5z=8\\) and \\(3x-2y+3z=5\\) is \\(\\alpha x+\\beta y+\\gamma z+97=0\\) then \\(\\alpha+\\beta+\\gamma=\\)",
+    "options": [
+      "15",
+      "18",
+      "16",
+      "17"
+    ],
+    "answer": "15"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 80,
+    "content": "Let \\(S=\\{M=[a_{ij}], a_{ij} \\in \\{0,1,2\\}, 1 \\le i, j \\le 2\\}\\) be a sample space and \\(A=\\{M \\in S: M \\text{ is invertible}\\}\\) be an event. Then P(A) is equal to",
+    "options": [
+      "\\(16/27\\)",
+      "\\(50/81\\)",
+      "\\(49/81\\)",
+      "\\(47/81\\)"
+    ],
+    "answer": "\\(47/81\\)"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 81,
+    "content": "If a and b are the roots of the equation \\(x^{2}-7x-1=0\\), then the value of \\(\\frac{a^{21}+b^{21}+a^{17}+b^{17}}{a^{19}+b^{19}}\\) is equal to __",
+    "options": [],
+    "answer": "51"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 82,
+    "content": "In an examination, 5 students have been allotted their seats as per their roll numbers. The number of ways, in which none of the students sits on the allotted seat, is __",
+    "options": [],
+    "answer": "44"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 83,
+    "content": "Let \\(S=109+\\frac{108}{5}+\\frac{107}{5^{2}}+....+\\frac{2}{5^{107}}+\\frac{1}{5^{108}}\\). Then the value of \\(16S-(25)^{-54}\\) is equal to __",
+    "options": [],
+    "answer": "2175"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 84,
+    "content": "The number of integral terms in the expansion of \\((3^{1/2}+5^{1/4})^{680}\\) is equal to __",
+    "options": [],
+    "answer": "171"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 85,
+    "content": "The mean of the coefficients of \\(x,x^{2},......,x^{7}\\) in the binomial expression of \\((2+x)^{9}\\) is __",
+    "options": [],
+    "answer": "2736"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 86,
+    "content": "Let \\(H_{n}:\\frac{x^{2}}{1+n}-\\frac{y^{2}}{3+n}=1\\), \\(n \\in \\mathbb{N}\\). Let k be the smallest even value of n such that the eccentricity of \\(H_{k}\\) is a rational number. If \\(l\\) is the length of the latus rectum of \\(H_{k}\\), then 21l is equal to __",
+    "options": [],
+    "answer": "306"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 87,
+    "content": "The number of ordered triplets of the truth values of p, q and r such that the truth value of the statement \\((p \\vee q) \\wedge (p \\vee r) \\Rightarrow (q \\vee r)\\) is True, is equal to __",
+    "options": [],
+    "answer": "7"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 88,
+    "content": "Let \\(A=\\begin{bmatrix} 0 & 1 & 2 \\\\ a & 0 & 3 \\\\ 1 & c & 0 \\end{bmatrix}\\) where a, \\(c \\in R\\). If \\(A^{3}=A\\) and the positive value of a belongs to the interval \\((n-1, n]\\), where \\(n \\in \\mathbb{N}\\), then n is equal to __",
+    "options": [],
+    "answer": "2"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 89,
+    "content": "For m, \\(n > 0\\), let \\(I_{m, n}=\\int_{0}^{1} t^{m}(1+3t)^{n}dt\\). If \\(11I_{10, 6} + 18I_{11, 5} = p(14)^{6}\\), then p is equal to __",
+    "options": [],
+    "answer": "32"
+  },
+  {
+    "section": "Mathematics",
+    "question_number": 90,
+    "content": "Let a line L pass through the origin and be perpendicular to the lines \\(L_{1}:\\vec{r}=\\hat{i}-11\\hat{j}-7\\hat{k}+\\lambda(\\hat{i}+2\\hat{j}+3\\hat{k}), \\lambda \\in \\mathbb{R}\\) and \\(L_{2}:\\vec{r}=-\\hat{i}+\\hat{k}+\\mu(2\\hat{i}+2\\hat{j}+\\hat{k}), \\mu \\in \\mathbb{R}\\). If P is the point of intersection of L and \\(L_{1}\\) and \\(Q(\\alpha, \\beta, \\gamma)\\) is the foot of perpendicular from P on \\(L_{2}\\), then \\(9(\\alpha+\\beta+\\gamma)\\) is equal to __",
+    "options": [],
+    "answer": "5"
   }
-],
+]],
 
     };
 
